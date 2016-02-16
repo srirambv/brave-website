@@ -46,7 +46,6 @@ server.register({ register: require('crumb'), options:
         mailchimp.api(request, reply)
       }
   })
-<<<<<<< HEAD
 
   // crumb
   server.route({
@@ -70,9 +69,6 @@ server.register({ register: require('crumb'), options:
         reply({cookie: request.headers.cookie})
       }
   })
-
-=======
->>>>>>> master
 })
 
 server.register(require('inert'), (err) => {
