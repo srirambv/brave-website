@@ -130,46 +130,10 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== Main content ===-->
     
  <!--=== Parallax Counter v3 ===-->
-    <div class="parallax-counter-v3 parallaxBg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-xs-6 md-margin-bottom-50">
-<!--
-
-                    <div class="features">
-                        <span class="counter">5867</span>
-                        <span class="features-info">Customers</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6 md-margin-bottom-50">
-                    <div class="features">
-                        <span class="counter">7169</span>
-                        <span class="features-info">Downloads</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="features">
-                        <span class="counter">3146</span>
-                        <span class="features-info">Awards</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-xs-6">
-                    <div class="features">
-                        <span class="counter">9450</span>
-                        <span class="features-info">Projects</span>
-                    </div>
--->
-                </div>
-            </div>
-        </div><!--/end container-->
-    </div>
-    <!--=== End Parallax Counter v3 ===-->
-
-
    <!--=== Content Part ===-->
-    <div class="container content">
-    	<div class="row">
-            <div class="col-md-9">
+    <div class="container content margin-top-90">
+    	<div class="row margin-top-90">
+            <div class="col-md-9 margin-top-90">
     			<!-- General Questions -->
                 <div class="headline"><h2>Frequently Asked Questions</h2></div>
                 <div class="panel-group acc-v1 margin-bottom-40" id="accordion">
@@ -748,7 +712,10 @@ The Brave Vault can hold information that users would like to sync across device
             }
             // Set the csrf cookie because somehow it's not getting set consistently on master
             // This may set the cookie twice but that's fine
-            document.cookie = "crumb=" + Math.random().toString() + "; max-age=3600";
+            // document.cookie = "crumb=" + Math.random().toString() + "; max-age=3600";
+            // Not sure how that works
+            // crumb cookies look like this: "crumb=b1mVOGegIseaKwW0WUYW6TFR5_KrGdSFzf0ZYs51SB6; Secure; Path=/"
+            // A random decimal doesn't match the crumb the server sent as Set-Cookie in response header
         });
         window.onhashchange = function() {
             if (window.location.hash && window.location.hash !== '#body') {
