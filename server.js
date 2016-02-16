@@ -36,7 +36,7 @@ server.register({ register: require('crumb'), options:
         security: {
           hsts: {
             maxAge: 31536000,
-            includeSubDomains: true,
+            includeSubDomains: false,
             preload: true
           }
           , xframe: true
@@ -59,7 +59,7 @@ server.register({ register: require('crumb'), options:
         security: {
           hsts: {
             maxAge: 31536000,
-            includeSubDomains: true,
+            includeSubDomains: false,
             preload: true
           }
           , xframe: true
@@ -113,7 +113,7 @@ server.register(require('inert'), (err) => {
       security: {
         hsts: {
           maxAge: 31536000,
-          includeSubDomains: true,
+          includeSubDomains: false,
           preload: true
         }, 
         xframe: true
