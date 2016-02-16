@@ -63,7 +63,15 @@ function recursiveCrumbSubmitBuildRequest(formData, callback) {
           submitBuildRequest(data, callback)
         return false
       }
-      if(crumbTries < 3) recursiveCrumbSubmitBuildRequest(formData, callback)
+      if(crumbTries < 3) {
+        recursiveCrumbSubmitBuildRequest(formData, callback)
+      }
+      else {
+        var newcookie = Math.random().toString()
+        document.cookie = "crumb=" + newcookie + "; max-age=3600"
+        formData.crumb = newcookie
+        submitBuildRequest(formData, callback)
+      }
 
     })
   }  
