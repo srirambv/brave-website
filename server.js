@@ -111,12 +111,12 @@ server.register(require('inert'), (err) => {
         failAction: 'log' 
       }, 
       security: {
-        // hsts: {
-        //   maxAge: 31536000,
-        //   includeSubDomains: true,
-        //   preload: true
-        // }, 
-        // xframe: true
+        hsts: {
+          maxAge: 31536000,
+          includeSubDomains: true,
+          preload: true
+        }, 
+        xframe: true
       }
     },
     handler: {
