@@ -97,8 +97,41 @@ var App = function() {
     });
   }
 
+  function isPlatform(userAgent) {
+    return !!window.navigator.userAgent.match && window.navigator.userAgent.match(userAgent);
+  }
+
+  function listenToDownloadButton(url) {
+    $('#brave-download').click(function(event) {
+      return window.location.href = url;
+    });
+  }
+
+  function configureDownloadButton(platform, index) {
+    if(isPlatform(platform.userAgent)) {
+      $('.control-group').find('.label').not('a').html('For ' + platform.name + ' or later.');
+      listenToDownloadButton(platform.url);
+    }
+  }
+
+  function handleUserAgent(platforms) {
+    var buttons = $('.brave-hero').find('.btn').remove();
+    listenToDownloadButton(platforms[platforms.length - 1].url);
+    platforms.forEach(configureDownloadButton, buttons);
+  }
+
   return {
+
+    platforms: [
+      { name: 'Linux x64, Ubuntu', userAgent: 'Linux|Ubuntu', url: 'https://github.com/brave/browser-laptop/releases' },
+      { name: 'Mac OS 10.7', userAgent: 'Macintosh', url: 'https://laptop-updates.brave.com/latest/osx' },
+      { name: 'Windows 7', userAgent: 'Windows', url: 'https://laptop-updates.brave.com/latest/winx64' },
+      { name: 'iOS 7', userAgent: 'iPhone|iPod|iPad', url: 'https://itunes.apple.com/us/app/brave-web-browser/id1052879175' },
+      { name: 'Android 4.1', userAgent: 'Android', url: 'https://play.google.com/store/apps/details?id=com.linkbubble.playstore' }
+    ],
+
     init: function() {
+      handleUserAgent(this.platforms);
       handleHeader();
       handleBootstrap();
       //handleLangs();
