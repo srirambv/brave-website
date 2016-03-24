@@ -184,8 +184,12 @@ a:hover,
 
 .one-page-header ul.navbar-nav.brave-nav {
   position: static;
-  margin-top: -25px;
+  margin-top: -28px;
   right: auto;
+}
+
+#fullsize-menu.navbar-collapse ul.navbar-nav.brave-nav {
+  margin-top: -26px;
 }
 
 .one-page-header .navbar-nav > li {
@@ -649,7 +653,7 @@ a:hover,
 }
 
 #brave-hero .text-group {
-  padding-top: 18rem;
+  padding-top: 12rem;
   text-align: center;
 }
 
@@ -669,8 +673,8 @@ a:hover,
 }
 
 #brave-hero .text-group-logo {
-  background: url('../img/brave_logo_splash.png') center top / cover no-repeat;
-  width: 240px;
+  background: url('../img/brave_logo_horz.svg') left center / cover no-repeat;
+  width: 130px;
   height: 152px;
 }
 
