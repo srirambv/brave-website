@@ -120,23 +120,27 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== Main content ===-->
     
 
-   <!-- Hero Area -->
-   <div id="brave-hero">
+    <!-- Modal Overlay -->
+    <div id="brave-overlay" style="display: none;">
+        <iframe width="75%" src="https://www.youtube-nocookie.com/embed/kHWf6hRV-GM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- End Modal Overlay -->
+
+    <!-- Hero Area -->
+    <div id="brave-hero">
        <div class="text-group">
            <div class="text-group-logo"></div>
            <h2>Browse faster and safer with Brave.</h2>
-           <p>The new Brave browser automatically blocks ads and trackers,<br>
-making it faster and safer than your current browser.</p>
-           <p>Soon, micropayments and better ads will give <br>
-users and publishers a better deal.</p>
+           <p>The new Brave browser automatically blocks ads and trackers,<br>making it faster and safer than your current browser.</p>
+           <p>Soon, micropayments and better ads will give<br>users and publishers a better deal.</p>
        </div>
        <div class="control-group">
-           <button id="brave-download">Get Brave</button>
+           <button id="brave-download" class="cta-button">Get Brave</button>
            <div class="label"></div>
            <a class="label" href="https://github.com/brave/browser-laptop/releases" target="_blank">Download Brave for another platform</a>
        </div>
-   </div>
-   <!-- End Hero Area -->
+    </div>
+    <!-- End Hero Area -->
 
     <!--  Intro Section -->
     <section id="faster" class="about-section section-first">
@@ -175,8 +179,8 @@ users and publishers a better deal.</p>
         <div class="about-image bg-grey">
             <div class="container">
                 <div class="title-v1">
-                   <BR><h1>It's amazing how fast a page loads when you strip away <BR>everything but the real content. </h1>
-                    <p>Up to a whopping 60% of page load time is caused by the underlying ad technology that loads <BR>into various places each time you hit a page on your favorite news site.<BR> And 20% of this is time spent on loading things that are trying to learn more about you.  <br>
+                    <h1>It's amazing how fast a page loads when you strip away <BR>everything but the real content.</h1>
+                    <p>Up to a whopping 60% of page load time is caused by the underlying ad technology that loads <BR>into various places each time you hit a page on your favorite news site.<BR> And 20% of this is time spent on loading things that are trying to learn more about you.<br>
                    </p>
                 </div>
                 <div class="title-v1 img-center ">
@@ -184,6 +188,7 @@ users and publishers a better deal.</p>
                     <img class="img-responsive" src="assets/img/bg/pageload_graph.png" alt="">
                     <p>Same page data and load time with tracking <strong>blocked</strong> and normal ads <strong>blocked.</strong></p>
                 </div>
+                <button id="brave-video" class="cta-button">Watch Video</button>
             </div>
         </div>
 

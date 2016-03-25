@@ -107,6 +107,26 @@ var App = function() {
     });
   }
 
+  function listenToVideoButton() {
+    return $('#brave-video, #brave-overlay').click(handleVideoButton);
+  }
+
+  function toggleVideoButton() {
+    if($('#brave-overlay').hasClass('show')) {
+      $('body').removeClass('no-scroll');
+      $('#brave-overlay').removeClass('show');
+      setTimeout(function() {
+        $('#brave-overlay').css('display', 'none');
+      }, 500);
+      return;
+    }
+    $('#brave-overlay').css('display', 'block');
+    setTimeout(function() {
+      $('body').addClass('no-scroll');
+      $('#brave-overlay').addClass('show');
+    }, 100);
+  }
+
   function configureDownloadButton(platform, index) {
     if(isPlatform(platform.userAgent)) {
       $('.control-group').find('.label').not('a').html('For ' + platform.name + ' or later.');
@@ -118,6 +138,13 @@ var App = function() {
     var buttons = $('.brave-hero').find('.btn').remove();
     listenToDownloadButton('https://github.com/brave/browser-laptop/releases');
     platforms.forEach(configureDownloadButton, buttons);
+  }
+
+  function handleVideoButton(event) {
+    if((event.target.id !== 'brave-overlay') && (event.target.id !== 'brave-video')) {
+      return false;
+    }
+    return toggleVideoButton();
   }
 
   return {
@@ -137,6 +164,7 @@ var App = function() {
       //handleLangs();
       handleFullscreen();
       handleValignMiddle();
+      listenToVideoButton();
     },
 
     initCounter: function() {
