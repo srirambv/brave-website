@@ -116,14 +116,14 @@ var App = function() {
 
   function handleUserAgent(platforms) {
     var buttons = $('.brave-hero').find('.btn').remove();
-    listenToDownloadButton(platforms[platforms.length - 1].url);
+    listenToDownloadButton('https://github.com/brave/browser-laptop/releases');
     platforms.forEach(configureDownloadButton, buttons);
   }
 
   return {
 
     platforms: [
-      { name: 'Linux x64, Ubuntu', userAgent: 'Linux|Ubuntu', url: 'https://github.com/brave/browser-laptop/releases' },
+      { name: 'Linux x64, Ubuntu', userAgent: 'Linux|Ubuntu', url: 'https://laptop-updates.brave.com/latest/linux64' },
       { name: 'Mac OS 10.7', userAgent: 'Macintosh', url: 'https://laptop-updates.brave.com/latest/osx' },
       { name: 'Windows 7', userAgent: 'Windows', url: 'https://laptop-updates.brave.com/latest/winx64' },
       { name: 'iOS 7', userAgent: 'iPhone|iPod|iPad', url: 'https://itunes.apple.com/us/app/brave-web-browser/id1052879175' },

@@ -1026,3 +1026,19 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 }
 
 
+/*Interior Pages
+------------------------------------*/
+/*Interior Pages*/
+.page {
+  margin-top: 100px;
+}
+
+.page .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.copyright p {
+  font-size: 0.85em;
+  letter-spacing: 0.25px;
+}
