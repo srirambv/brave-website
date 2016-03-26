@@ -88,7 +88,7 @@ $("#formNewsletterSubscriptionSubmit").on('click', function() {
       return false
     }
     formData.call = 'newsletter'
-    formData.crumb = getCrumb()
+    formData.crumb = getCookieValue('crumb')
     $("#formNewsletterSubscriptionSubmit").text('Sending...')
     $.ajax({
        url: '/api/mailchimp',
