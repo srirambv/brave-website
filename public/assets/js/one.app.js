@@ -66,21 +66,27 @@ var App = function() {
   }
 
   function handleHeader() {
-    //jQuery to collapse the navbar on scroll
+    var offsetHeight;
+    if(window.location.pathname.match('index.html')) {
+      $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+      $('.navbar-nav.brave-nav').addClass('home');
+    }
+    else {
+      $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
+    }
     $(window).scroll(function() {
       if ($(".navbar").offset().top > 150) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
       } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        if(window.location.pathname.match('index.html')) {
+          $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+        }
       }
     });
-
-    var offsetHeight = 116;
-    $('body').scrollspy({
-      offset: offsetHeight + 1
-    });
-
-    //jQuery for page scrolling feature - requires jQuery Easing plugin
+    offsetHeight = 116;
+    $('body').scrollspy({ offset: offsetHeight + 1 });
     $(function() {
       $('.page-scroll a, .scroll-button').bind('click', function(event) {
         var $anchor = $(this);
@@ -90,8 +96,6 @@ var App = function() {
         event.preventDefault();
       });
     });
-
-    //Collapse Navbar When It's Clickicked
     $(window).scroll(function() {
       $(".navbar-collapse.in").collapse('hide');
     });

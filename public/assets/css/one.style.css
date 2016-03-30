@@ -86,10 +86,6 @@ a:hover,
   max-height: 100%;
 }
 
-.navbar-fixed-top {
-
-}
-
 /*Header
 ------------------------------------*/
 /*Containers*/
@@ -104,6 +100,10 @@ a:hover,
   .one-page-header .menu-container:after {
     content: " ";
     display: table;
+  }
+
+  #fullsize-menu .menu-container {
+      margin-top: 30px;
   }
 
   .one-page-header .menu-container:after {
@@ -122,6 +122,9 @@ a:hover,
   .one-page-header > .navbar-default > .container > .navbar-collapse {
     margin-left: 0;
     margin-right: 0;
+  }
+  .one-page-header .navbar-nav.brave-nav > li > a {
+    color: rgb(116, 116, 130);
   }
 }
 
@@ -202,15 +205,20 @@ a:hover,
 
 .one-page-header .navbar-nav > li > a {
   -webkit-font-smoothing: antialiased;
-  color: rgb(116, 116, 130);
   font-size: 1em;
   font-weight: 400;
   text-transform: uppercase;
   padding: 0 15px;
 }
 
+.one-page-header .navbar-nav.brave-nav.home > li a {
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+}
+
 .one-page-header .navbar-nav > li.download > a,
-.one-page-header.top-nav-collapse .navbar-nav > li.download > a {
+.one-page-header.top-nav-collapse .navbar-nav > li.download > a,
+.one-page-header .navbar-nav.brave-nav.home > li.download a {
   color: rgb(255, 80, 0);
   font-size: 1em;
 }
@@ -226,7 +234,6 @@ a:hover,
 .one-page-header.top-nav-collapse .dropdown-menu > .active > a:focus {
   z-index: 1;
   background: none;
-  color: #ff5000 !important;
 }
 
 /*Responsive Navbar*/
@@ -363,7 +370,7 @@ a:hover,
 }
 .top-nav-collapse .log-reg-block a,
 .top-nav-collapse .log-reg-block a:before {
-  color: #777;
+  color: rgb(116, 116, 130);
 }
 
 .top-nav-collapse #brave-logo {
@@ -406,7 +413,7 @@ a:hover,
   color: #fff !important;
 }
 .one-page-header.top-nav-collapse .navbar-nav a.dropdown-toggle {
-  color: #777 !important;
+  color: rgb(116, 116, 130) !important;
 }
 .one-page-header .dropdown-menu .active > a,
 .one-page-header .dropdown-menu li > a:hover {
@@ -458,10 +465,13 @@ a:hover,
     padding: 6px 25px;
   }
   .one-page-header.top-nav-collapse .dropdown-menu > li > a {
-    color: #777;
+    color: rgb(116, 116, 130);
+
   }
+  .one-page-header.navbar-default .navbar-nav > li > a:hover,
+  .one-page-header.navbar-default .navbar-nav .dropdown-menu > li > a:hover,
   .one-page-header.top-nav-collapse .dropdown-menu > li > a:hover {
-    color: #FF5000;
+    color: rgb(40, 40, 50);
   }
 }
 @media (max-width: 991px) {
@@ -474,7 +484,7 @@ a:hover,
     background: none !important;
   }
   .one-page-header.top-nav-collapse .dropdown-menu > li > a {
-    color: #777 !important;
+    color: rgb(116, 116, 130) !important;
   }
   .one-page-header .dropdown-menu a:hover,
   .one-page-header.top-nav-collapse .dropdown-menu > li > a:hover {
@@ -502,8 +512,8 @@ a:hover,
   margin-right: 5px;
 }
 .top-nav-collapse .top-contact-block i {
-  color: #777;
-  border-color: #777;
+  color: rgb(116, 116, 130);
+  border-color: rgb(116, 116, 130);
 }
 .top-contact-block a {
   color: #fff;
@@ -514,7 +524,7 @@ a:hover,
   text-decoration: none;
 }
 .top-nav-collapse .top-contact-block a {
-  color: #777;
+  color: rgb(116, 116, 130);
 }
 @media (max-width: 991px) {
   .top-contact-block {
@@ -549,8 +559,8 @@ a:hover,
   padding: 5px 13px;
 }
 .top-nav-collapse .log-reg-block-simple .btn-u {
-  color: #777;
-  border-color: #777;
+  color: rgb(116, 116, 130);
+  border-color: rgb(116, 116, 130);
 }
 .log-reg-block-simple .btn-u:hover,
 .top-nav-collapse .log-reg-block-simple .btn-u:hover {
@@ -632,8 +642,22 @@ a:hover,
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
 }
 
-.one-page-header.top-nav-collapse .navbar-nav > li > a {
+.one-page-header.top-nav-collapse .navbar-nav > li > a,
+.one-page-header.top-nav-collapse .navbar-nav.brave-nav.home > li > a {
   color: rgb(116, 116, 130);
+}
+
+.one-page-header.top-nav-collapse .navbar-nav > li.active > a,
+.one-page-header.top-nav-collapse .navbar-nav.brave-nav.home > li.active > a {
+  color: rgb(40, 40, 50);
+}
+
+.one-page-header.top-nav-collapse .navbar-nav.brave-nav.home > li.download a {
+  color: rgb(255, 80, 0);
+}
+
+.one-page-header.top-nav-collapse .navbar-nav > li > a:hover {
+  color: rgb(40, 40, 50);
 }
 
 /*Navbar Toggle*/
@@ -688,17 +712,20 @@ a:hover,
 }
 
 #brave-hero {
-  height: 54rem;
+  padding: 60px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
 }
 
 #brave-hero .text-group {
-  padding-top: 12rem;
+  padding-top: 10rem;
   text-align: center;
 }
 
 #brave-hero .text-group > * {
   font-size: 3.5em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 10px auto 0;
   max-width: 75%;
 }
@@ -707,8 +734,9 @@ a:hover,
 #brave-download {
   -webkit-font-smoothing:antialiased;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.75em;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
 #brave-hero .text-group-logo {
@@ -718,15 +746,15 @@ a:hover,
 }
 
 #brave-hero .text-group h2 {
-  font-weight: 200;
-  color: rgb(96, 96, 116);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 
 #brave-hero .text-group p {
-  font-size: 1.75em;
+  font-size: 1.5em;
   margin-top: 1.5rem;
-  line-height: 2em;
-  color: rgb(40, 40, 50);
+  line-height: 1.75em;
+  color: rgb(255, 255, 255);
 }
 
 #brave-hero .control-group > * {
@@ -737,7 +765,7 @@ a:hover,
   letter-spacing: 0.5px;
   font-size: 1.1em;
   font-weight: 200;
-  color: rgb(85, 85, 85);
+  color: rgb(255, 255, 255);
   margin: 10px auto;
 }
 
@@ -748,8 +776,9 @@ a:hover,
 }
 
 #brave-download.cta-button {
-  margin: 60px auto 20px;
+  margin: 40px auto 20px;
   font-weight: 800;
+  text-shadow: none;
 }
 
 #brave-video.cta-button {
@@ -759,7 +788,6 @@ a:hover,
 
 section#faster:not(#mailchimp) {
   padding: 0;
-  margin-top: 30rem;
 }
 
 section#faster:not(#mailchimp) .block-v1:first-of-type {
@@ -789,7 +817,7 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
   }
 
   #brave-hero .text-group > p {
-    font-size: 1.4em;
+    font-size: 1.25em;
   }
 
   #brave-hero .control-group {
@@ -797,17 +825,12 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
   }
 
   #brave-hero .control-group .label {
-    color: rgb(85, 85, 85);
     text-shadow: none;
     font-size: 0.9em;
   }
 
   #brave-hero .control-group a.label {
     font-size: 1em;
-  }
-
-  section#faster:not(#mailchimp) {
-    margin-top: 30rem;
   }
 
   section#faster:not(#mailchimp) .block-v1:first-of-type {
