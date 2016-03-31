@@ -25,8 +25,3 @@ li.invisible {
 		padding-top: 90px !important;
 	}
 }
-
-/* Padding for Anchor Links */
-section:not(#mailchimp){
-  padding-top: 60px;
-}

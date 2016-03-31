@@ -13,7 +13,8 @@
     <meta property="og:title" content="Brave Software" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brave.com/" />
-    <meta property="og:image" content="https://brave.com/assets/img/brave_logo_splash.png"/>
+    <meta property="og:image" content="https://brave.com/assets/img/bg/lion_blackBG.jpg"/>
+
 
     <!-- Chartbeat -->
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
@@ -78,7 +79,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                              <!-- Logo -->
             <a class="logo" href="/">
-                <img id="brave-logo" src="assets/img/brave_logo_big2.png" alt="Logo" style="float: left; padding-left:10%">
+                <img id="brave-logo" src="assets/img/brave_logo_horz_reversed.svg" alt="Logo">
             </a>
 <!-- End Logo -->
 
@@ -104,22 +105,13 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                         </li>
 
-                          <li>
-                            <a href="index.html#about">About</a>
-
-                        </li>
-
                         <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                        <li>
-                            <a href="FAQ.html">FAQ</a>
-
+                            <a href="https://blog.brave.com/" target="_blank">Blog</a>
                         </li>
 
-
-
-
+                        <li class="download">
+                            <a href="https://github.com/brave/browser-laptop/releases" target="_blank">Download</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -135,7 +127,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     
     <!--=== End main content ===-->
 
- <!--=== Footer v1 ===-->
+  <!--=== Footer v1 ===-->
 <section id="contact">
     <div id="footer-v1" class="footer-v1">
         <div class="footer">
@@ -195,7 +187,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                      </div>
                     <!-- End Link List -->
 
-                    <!-- Address --> 
+                    <!-- Address -->
                         <div class="col-md-3 map-img md-margin-bottom-40">
                             <div class="headline"><h2>Contact Us</h2></div>
                             <address class="md-margin-bottom-40">
@@ -208,19 +200,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
 
 
-                            <!-- JotForm embedded version -->
-<!--                             <form class="jotform-form" action="https://submit.jotform.us/submit/60207375294153/" method="post" name="form_60207375294153" id="60207375294153" accept-charset="utf-8" target="_blank">
-                              <input name="formID" value="60207375294153" type="hidden">
-                                      <input placeholder="your@email.address" class=" form-textbox validate[Email]" id="input_1" name="q1_input1" style="width: 180px" value="" type="email" required aria-required="true">
-                                        <button id="input_2" type="submit" class="btn-u btn-u-black ls-s-1" style="width: 180px;margin-top: 9px">
-                                          Stay In Touch
-                                        </button>
-                              <input id="simple_spc" name="simple_spc" value="60207375294153-60207375294153" type="hidden">
-                              <script type="text/javascript">
-                              document.getElementById("si" + "mple" + "_spc").value = "60207375294153-60207375294153";
-                              </script>
-                            <input value="1453425133660_60207375294153_f66GtFt" name="event_id" type="hidden"></form>
- -->
+
                             <form id="formNewsletterSubscription" class="form-vertical" onsubmit="return false">
                               <input name="call" value="newsletter" type="hidden">
                               <div class="form-group">
@@ -326,12 +306,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                               <input class="form-checkbox" id="group_16" name="group[12441][16]" value="Linux" type="checkbox"> Linux
                             </label>
                           </div>
-<!--                           <div class="checkbox">
+                          <div class="checkbox">
                             <label>
                               <input class="form-checkbox" id="group_2" name="group[12441][2]" value="iOS" type="checkbox"> iOS
                             </label>
                           </div>
- -->                          <div class="checkbox">
+                          <div class="checkbox">
                             <label>
                               <input class="form-checkbox" id="group_32" name="group[12441][32]" value="Windows 32 bit build" type="checkbox"> Windows 32 bit build
                             </label>
@@ -440,7 +420,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- End Piwik Code -->
 
     <!-- JS Page Level-->
-    <script src="assets/js/one.app.js"></script>
     <script src="assets/js/forms/login.js"></script>
     <script src="assets/js/forms/contact.js"></script>
     <script src="assets/js/forms/mailchimp.js"></script>
@@ -448,48 +427,22 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/js/plugins/owl-carousel.js"></script>
     <script src="assets/js/plugins/revolution-slider.js"></script>
     <script src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
-    <script src="assets/js/plugins/layer-slider.js"></script>
+    <script defer src="assets/js/one.app.js"></script>
     <script>
-        function showSmallLogo() {
-            if (jQuery(document.body).width() > 976) {
-                jQuery('#brave-logo').height(40)
-            }
-        }
-        function showOrigLogo() {
-            if (jQuery(document.body).width() > 976) {
-                jQuery('#brave-logo').height(76)
-            }
-        }
         jQuery(document).ready(function() {
             App.init();
-//            App.initCounter();
-//            App.initParallaxBg();
-//            LoginForm.initLoginForm();
-//            ContactForm.initContactForm();
-//            OwlCarousel.initOwlCarousel();
-//                gridContainer.cubeportfolio();
-                LayerSlider.initLayerSlider();
-            if (window.location.hash && window.location.hash !== '#body') {
-                showSmallLogo()
-            }
-            // Set the csrf cookie because somehow it's not getting set consistently on master
-            // This may set the cookie twice but that's fine
-            // document.cookie = "crumb=" + Math.random().toString() + "; max-age=3600";
+
+//          App.initCounter();
+//          App.initParallaxBg();
+//          LoginForm.initLoginForm();
+//          ContactForm.initContactForm();
+//          OwlCarousel.initOwlCarousel();
+//          gridContainer.cubeportfolio();
+// Set the csrf cookie because somehow it's not getting set consistently on master
+// This may set the cookie twice but that's fine
+// document.cookie = "crumb=" + Math.random().toString() + "; max-age=3600";
+
         });
-        window.onhashchange = function() {
-            if (window.location.hash && window.location.hash !== '#body') {
-                showSmallLogo()
-            } else {
-                showOrigLogo()
-            }
-        };
-        window.onscroll = function() {
-            if (window.pageYOffset === 0) {
-                showOrigLogo()
-            } else {
-                showSmallLogo()
-            }
-        };
     </script>
     <!--[if lt IE 9]>
         <script src="assets/plugins/respond.js"></script>
