@@ -62,22 +62,24 @@ var App;
       }, 100);
     },
 
-    handleValignMiddle: function() {
-      $('.valign__middle').each(function() {
-        $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-      });
-      $(window).resize(function() {
-        $('.valign__middle').each(function() {
-          $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-        });
-      });
-    },
-
     handleVideoButton: function(event) {
       if((event.target.id !== 'brave-overlay') && (event.target.className !== 'close') && (event.target.parentElement.className !== 'close') && (event.target.id !== 'brave-video')) {
         return false;
       }
       return this.toggleVideoButton();
+    },
+
+    handleScroll: function(event) {
+      if($('.navbar').offset().top > this.bootstrap.offsetHeight) {
+        $('.navbar-fixed-top').addClass('top-nav-collapse');
+        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
+      }
+      else {
+        $('.navbar-fixed-top').removeClass('top-nav-collapse');
+        if(this.isHomePage()) {
+          $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+        }
+      }
     },
 
     listenToDownloadButton: function(url) {
@@ -88,6 +90,19 @@ var App;
 
     listenToVideoButton: function() {
       return $('#brave-video, #brave-overlay').click(this.handleVideoButton.bind(this));
+    },
+
+    listenToScroll: function() {
+      if(this.isHomePage()) {
+        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+        $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
+      }
+      else {
+        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
+      }
+      $(window).scroll(this.handleScroll.bind(this));
+      $('body').scrollspy({ offset: this.bootstrap.offsetHeight + 1 });
+      $('.navbar-collapse.in').collapse('hide');
     },
 
     configureDownloadButton: function(platform, index) {
@@ -105,6 +120,10 @@ var App;
 
     isPlatform: function(userAgent) {
       return (window.navigator.userAgent.match && window.navigator.userAgent.match(userAgent));
+    },
+
+    isHomePage: function() {
+      return (window.location.pathname.match('index.html') || window.location.pathname === '/');
     },
 
     initCounter: function() {
@@ -127,40 +146,6 @@ var App;
       });
     },
 
-    initHeader: function() {
-      if(window.location.pathname.match('index.html')) {
-        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
-        $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
-      }
-      else {
-        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
-      }
-      $(window).scroll(function() {
-        if ($('.navbar').offset().top > 150) {
-          $('.navbar-fixed-top').addClass('top-nav-collapse');
-          $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
-        } else {
-          $('.navbar-fixed-top').removeClass('top-nav-collapse');
-          if(window.location.pathname.match('index.html')) {
-            $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
-          }
-        }
-      });
-      $('body').scrollspy({ offset: this.bootstrap.offsetHeight + 1 });
-      $(function() {
-        $('.page-scroll a, .scroll-button').bind('click', function(event) {
-          var $anchor = $(this);
-          $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - this.bootstrap.offsetHeight
-          }, 1500, 'easeInOutExpo');
-          event.preventDefault();
-        });
-      });
-      $(window).scroll(function() {
-        $('.navbar-collapse.in').collapse('hide');
-      });
-    },
-
     initBootstrapUI: function() {
       if(this.bootstrap.carousel.interval > 0) {
         jQuery('.carousel').carousel({
@@ -177,10 +162,9 @@ var App;
     },
 
     init: function(params) {
-      this.initHeader();
       this.initBootstrapUI();
       this.reactToUserAgent(this.platforms);
-      this.handleValignMiddle();
+      this.listenToScroll();
       this.listenToVideoButton();
       return this;
     }
