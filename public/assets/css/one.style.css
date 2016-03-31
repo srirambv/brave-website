@@ -91,7 +91,7 @@ a:hover,
 /*Containers*/
 @media (min-width: 768px) and (max-width: 991px) {
   .one-page-header .menu-container {
-    width: 720px;
+    margin: 0 auto;
   }
 }
 
@@ -126,6 +126,7 @@ a:hover,
   .one-page-header .navbar-nav.brave-nav > li > a {
     color: rgb(116, 116, 130);
   }
+
 }
 
 /*Navbar Logo*/
@@ -159,8 +160,8 @@ a:hover,
 /*Navbar Toggle*/
 .one-page-header .navbar-toggle {
   border: none;
-  margin-right: 3px;
-  margin-top: 10px;
+  margin-right: 19px;
+  margin-top: 9px;
   padding-right: 0;
 }
 
@@ -187,6 +188,8 @@ a:hover,
 }
 .one-page-header .container {
   position: relative;
+  width: 100vw;
+  margin: 0 auto;
 }
 
 .one-page-header ul.navbar-nav.brave-nav {
@@ -197,6 +200,7 @@ a:hover,
 
 #fullsize-menu.navbar-collapse ul.navbar-nav.brave-nav {
   margin-top: -26px;
+  background: rgb(255, 255, 255);
 }
 
 .one-page-header .navbar-nav > li {
@@ -242,7 +246,7 @@ a:hover,
 
   .one-page-header,
   .one-page-header .navbar-collapse.collapse {
-    background:rgb(255, 255, 255);
+    background: transparent;
   }
 
   .one-page-header ul.navbar-nav.brave-nav {
@@ -261,8 +265,32 @@ a:hover,
     display: none !important;
   }
 
+  .one-page-header .navbar-collapse.collapsing,
   .one-page-header .navbar-collapse.collapse.in {
     display: block !important;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-nav-collapse #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
+  .top-nav-collapse #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
+    background: rgb(255, 255, 255);
+  }
+
+  #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
+  #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
+    background: linear-gradient(transparent 10%, rgb(20, 20, 25));
+  }
+
+  #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home > li > a,
+  #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home > li > a {
+    color: rgb(255, 255, 255);
+  }
+
+  .top-nav-collapse #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home > li > a,
+  .top-nav-collapse #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home > li > a {
+    color: rgb(116, 116, 130);
   }
 
   .one-page-header .navbar-nav {
@@ -277,6 +305,11 @@ a:hover,
 
   .navbar-default .navbar-nav > li > a::before {
     content: '';
+  }
+
+  .navbar-fixed-top .container {
+    margin: 0;
+    padding: 0;
   }
 
 }
@@ -386,7 +419,7 @@ a:hover,
   #brave-logo,
   .top-nav-collapse #brave-logo {
     height: 32px;
-    margin: 10px 0 5px;
+    margin: 10px 10px 5px;
   }
 
   .top-nav-collapse #brave-logo img {
@@ -643,6 +676,18 @@ a:hover,
 .one-page-header.top-nav-collapse {
   background: rgb(255, 255, 255);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.one-page-header.navbar-default .navbar-toggle .icon-bar {
+  background: rgb(116, 116, 130);
+}
+
+.one-page-header.navbar-default .navbar-toggle.home .icon-bar {
+  background: rgb(255, 255, 255);
+}
+
+.one-page-header.top-nav-collapse.navbar-default .navbar-toggle .icon-bar {
+  background: rgb(116, 116, 130);
 }
 
 .one-page-header.top-nav-collapse .navbar-nav > li > a,
