@@ -46,17 +46,6 @@ var App;
 
     },
 
-    vAlignMiddle: function() {
-      $('.valign__middle').each(function() {
-        $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-      });
-      $(window).resize(function() {
-        $('.valign__middle').each(function() {
-          $(this).css('padding-top', $(this).parent().height() / 2 - $(this).height() / 2);
-        });
-      });
-    },
-
     toggleVideoButton: function() {
       if($('#brave-overlay').hasClass('show')) {
         $('body').removeClass('no-scroll');
@@ -78,14 +67,6 @@ var App;
         return false;
       }
       return this.toggleVideoButton();
-    },
-
-    handleScrollClick: function(event) {
-      var $anchor = $(this);
-      $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top - this.bootstrap.offsetHeight
-      }, 1500, 'easeInOutExpo');
-      event.preventDefault();
     },
 
     handleScroll: function(event) {
@@ -120,7 +101,6 @@ var App;
         $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
       }
       $(window).scroll(this.handleScroll.bind(this));
-      $('.page-scroll a, .scroll-button').bind('click', this.handleScrollClick.bind(this));
       $('body').scrollspy({ offset: this.bootstrap.offsetHeight + 1 });
       $('.navbar-collapse.in').collapse('hide');
     },
@@ -186,7 +166,6 @@ var App;
       this.reactToUserAgent(this.platforms);
       this.listenToScroll();
       this.listenToVideoButton();
-      this.vAlignMiddle();
       return this;
     }
 
