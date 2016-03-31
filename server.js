@@ -10,18 +10,18 @@ var mailchimp = require('./mailchimp.js')
 const server = new Hapi.Server()
 server.connection({ port: process.env.PORT || 3000 })
 
-server.register({ register: require('crumb'), options: 
-  { 
-    cookieOptions: { 
+server.register({ register: require('crumb'), options:
+  {
+    cookieOptions: {
       clearInvalid: true,
       isSecure: true
-   } 
+   }
   }
  }, (err) => {
   if (err) {
     console.log('Failed to load crumb.')
   }
-  
+
   /* API endpoints */
 
   // mailchimp methods
@@ -31,7 +31,7 @@ server.register({ register: require('crumb'), options:
       config: {
         state: {
           parse: true,
-          failAction: 'log' 
+          failAction: 'log'
         },
         security: {
           hsts: {
@@ -54,7 +54,7 @@ server.register({ register: require('crumb'), options:
       config: {
         state: {
           parse: true,
-          failAction: 'log' 
+          failAction: 'log'
         },
         security: {
           hsts: {
@@ -82,7 +82,7 @@ server.register(require('inert'), (err) => {
   if (err) {
     console.log('Failed to load inert.')
   }
-  
+
   // A server redirect to our favorite band, Brave Combo.
   server.route({
     method: 'GET',
@@ -102,30 +102,21 @@ server.register(require('inert'), (err) => {
     })
   })
 
-var express = require('express');
-var app = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-app.use(express.static(__dirname + '/public'));
-app.get('/', function(req, res){
-  res.sendfile('index.html');
-});
-  
   // Serves static files out of public/
   server.route({
     method: 'GET',
     path: '/{path*}',
     config: {
       state: {
-        parse: true, 
-        failAction: 'log' 
-      }, 
+        parse: true,
+        failAction: 'log'
+      },
       security: {
         hsts: {
           maxAge: 31536000,
           includeSubDomains: true,
           preload: true
-        }, 
+        },
         xframe: true
       }
     },
@@ -144,7 +135,7 @@ server.ext('onRequest', function (request, reply) {
         .redirect('https://' + request.headers.host + request.url.path)
         .code(301);
     }
-    reply.continue()      
+    reply.continue()
 })
 
 server.start(() => {
