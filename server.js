@@ -73,6 +73,7 @@ server.register({ register: require('crumb'), options:
 
 server.register(require('inert'), (err) => {
   var map = [
+      { path: '/', file: './public/index.html' },
       { path: '/privacy_android', file: './public/android_privacy.html' },
       { path: '/privacy_ios', file: './public/ios_privacy.html' },
       { path: '/terms_of_use', file: './public/termsofuse.html' }
