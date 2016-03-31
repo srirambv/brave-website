@@ -78,7 +78,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                              <!-- Logo -->
             <a class="logo" href="/">
-                <img id="brave-logo" src="assets/img/brave_logo_horz_reversed.svg" alt="Logo">
+                <img id="brave-logo" src="https://www.brave.com/assets/img/brave_logo_horz_reversed.svg" alt="Logo">
             </a>
 <!-- End Logo -->
 
@@ -134,6 +134,10 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <HR>
              <div class="col-sm-7 news">
                     <ul class="list-inline posted-info">
+                        <a href="blogpost_3.html"><li><strong>March 31, 2016</strong></li>
+                        <li>Brave's Payment Spec Out for Developer Input</li>
+                        <li>By Marshall T. Rose and Brendan Eich</li></a><BR>
+
                         <a href="blogpost_2.html"><li><strong>January 27, 2016</strong></li>
                         <li>How Brave Works for You</li>
                         <li>By Brendan Eich</li></a><BR>
@@ -155,7 +159,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li>Founder, President and CEO</li>
                         <li>Posted January 27, 2016</li>
                     </ul>
-                    <h2><a href="#">How Brave Works for You</a></h2>
+                    <h2>How Brave Works for You</h2>
                     <p>Last week <a href="blogpost_1.html">I wrote</a>:</p>
 
 <p>
@@ -520,7 +524,6 @@ This week I’d like to dive into the details of how Brave will achieve these go
     <script>
         jQuery(document).ready(function() {
             App.init();
-
 //          App.initCounter();
 //          App.initParallaxBg();
 //          LoginForm.initLoginForm();
@@ -530,7 +533,6 @@ This week I’d like to dive into the details of how Brave will achieve these go
 // Set the csrf cookie because somehow it's not getting set consistently on master
 // This may set the cookie twice but that's fine
 // document.cookie = "crumb=" + Math.random().toString() + "; max-age=3600";
-
         });
     </script>
     <!--[if lt IE 9]>
