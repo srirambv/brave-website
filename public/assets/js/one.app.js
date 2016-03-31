@@ -129,7 +129,7 @@ var App;
 
     initHeader: function() {
       if(window.location.pathname.match('index.html')) {
-        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+        $('#brave-logo').attr('src', 'https://www.brave.com/assets/img/brave_logo_horz_reversed.svg');
         $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
       }
       else {
@@ -142,7 +142,7 @@ var App;
         } else {
           $('.navbar-fixed-top').removeClass('top-nav-collapse');
           if(window.location.pathname.match('index.html')) {
-            $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+            $('#brave-logo').attr('src', 'https://www.brave.com/assets/img/brave_logo_horz_reversed.svg');
           }
         }
       });
