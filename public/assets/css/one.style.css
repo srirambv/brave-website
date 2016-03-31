@@ -671,6 +671,13 @@ a:hover,
 .one-page-header.top-nav-collapse .navbar-toggle:hover .icon-bar {
   background: #72c02c;
 }
+
+
+.clear {
+  clear: both;
+}
+
+
 /*Modal Overlay
 ------------------------------------*/
 /*Modal Overlay*/
@@ -684,8 +691,33 @@ a:hover,
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(40, 40, 50);
   z-index: 9000;
+}
+
+#brave-overlay .close {
+  position: relative;
+  float: right;
+  margin: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+#brave-overlay .close i {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 5%;
+  opacity: 0.8;
+  background: rgb(255, 255, 255);
+  border-radius: 1000px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#brave-overlay .close i:last-of-type {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 #brave-overlay.show {
@@ -694,9 +726,31 @@ a:hover,
 
 #brave-overlay iframe {
   display: block;
-  width: 60%;
-  height: 50%;
-  margin: 15% auto;
+  width: 50vw;
+  height: 30vw;
+  margin: 10% auto;
+}
+
+
+@media(max-width: 991px) {
+
+  #brave-overlay {
+    background: black;
+  }
+
+  #brave-overlay .close {
+    position: absolute;
+    opacity: 1;
+    right: 0;
+    z-index: 500;
+  }
+
+  #brave-overlay iframe {
+    width: 100vw;
+    height: 85vh;
+    margin: 15vh 0 0;
+  }
+
 }
 
 /*Hero Area

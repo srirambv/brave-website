@@ -74,7 +74,7 @@ var App;
     },
 
     handleVideoButton: function(event) {
-      if((event.target.id !== 'brave-overlay') && (event.target.id !== 'brave-video')) {
+      if((event.target.id !== 'brave-overlay') && (event.target.className !== 'close') && (event.target.parentElement.className !== 'close') && (event.target.id !== 'brave-video')) {
         return false;
       }
       return this.toggleVideoButton();
