@@ -6,6 +6,8 @@
  * Website: http://htmlstream.com
 */
 
+/* Modified */
+
 var App;
 
 (function() {
@@ -19,6 +21,30 @@ var App;
       { name: 'iOS 7', userAgent: 'iPhone|iPod|iPad', url: 'https://itunes.apple.com/us/app/brave-web-browser/id1052879175' },
       { name: 'Android 4.1', userAgent: 'Android', url: 'https://play.google.com/store/apps/details?id=com.linkbubble.playstore' }
     ],
+
+    bootstrap: {
+
+      offsetHeight: 116,
+
+      carousel: { interval: 15000 },
+
+      tooltips: [
+        { selector: '.tooltips', className: '' },
+        { selector: '.tooltips-show', className: 'show' },
+        { selector: '.tooltips-hide', className: 'hide' },
+        { selector: '.tooltips-toggle', className: 'toggle' },
+        { selector: '.tooltips-destroy', className: 'destroy' }
+      ],
+
+      popovers: [
+        { selector: '.popovers', className: '' },
+        { selector: '.popovers-show', className: 'show' },
+        { selector: '.popovers-hide', className: 'hide' },
+        { selector: '.popovers-toggle', className: 'toggle' },
+        { selector: '.popovers-destroy', className: 'destroy' }
+      ]
+
+    },
 
     toggleVideoButton: function() {
       if($('#brave-overlay').hasClass('show')) {
@@ -102,7 +128,6 @@ var App;
     },
 
     initHeader: function() {
-      var offsetHeight;
       if(window.location.pathname.match('index.html')) {
         $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
         $('.navbar-nav.brave-nav').addClass('home');
@@ -121,13 +146,12 @@ var App;
           }
         }
       });
-      offsetHeight = 116;
-      $('body').scrollspy({ offset: offsetHeight + 1 });
+      $('body').scrollspy({ offset: this.bootstrap.offsetHeight + 1 });
       $(function() {
         $('.page-scroll a, .scroll-button').bind('click', function(event) {
           var $anchor = $(this);
           $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - offsetHeight
+            scrollTop: $($anchor.attr('href')).offset().top - this.bootstrap.offsetHeight
           }, 1500, 'easeInOutExpo');
           event.preventDefault();
         });
@@ -138,20 +162,18 @@ var App;
     },
 
     initBootstrapUI: function() {
-      jQuery('.carousel').carousel({
-        interval: 15000,
-        pause: 'hover'
+      if(this.bootstrap.carousel.interval > 0) {
+        jQuery('.carousel').carousel({
+          interval: this.bootstrap.carousel.interval,
+          pause: 'hover'
+        });
+      }
+      this.bootstrap.tooltips.forEach(function(t, i) {
+        jQuery(t.selector).tooltip(t.className.length > 1 ? t.className : null);
       });
-      jQuery('.tooltips').tooltip();
-      jQuery('.tooltips-show').tooltip('show');
-      jQuery('.tooltips-hide').tooltip('hide');
-      jQuery('.tooltips-toggle').tooltip('toggle');
-      jQuery('.tooltips-destroy').tooltip('destroy');
-      jQuery('.popovers').popover();
-      jQuery('.popovers-show').popover('show');
-      jQuery('.popovers-hide').popover('hide');
-      jQuery('.popovers-toggle').popover('toggle');
-      jQuery('.popovers-destroy').popover('destroy');
+      this.bootstrap.popovers.forEach(function(p, i) {
+        jQuery(p.selector).popover(p.className.length > 1 ? p.className : null);
+      });
     },
 
     init: function(params) {
