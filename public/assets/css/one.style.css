@@ -200,7 +200,6 @@ a:hover,
 
 #fullsize-menu.navbar-collapse ul.navbar-nav.brave-nav {
   margin-top: -26px;
-  background: rgb(255, 255, 255);
 }
 
 .one-page-header .navbar-nav > li {
@@ -275,6 +274,10 @@ a:hover,
 
   .top-nav-collapse #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
   .top-nav-collapse #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
+    background: rgb(255, 255, 255);
+  }
+
+  #fullsize-menu.navbar-collapse ul.navbar-nav.brave-nav {
     background: rgb(255, 255, 255);
   }
 
