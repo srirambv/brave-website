@@ -128,7 +128,7 @@ var App;
     },
 
     initHeader: function() {
-      if (document.location.pathname.indexOf("/") {
+      if (document.location.pathname.indexOf("/")) {
         $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
         $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
       }
