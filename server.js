@@ -73,6 +73,7 @@ server.register({ register: require('crumb'), options:
 
 server.register(require('inert'), (err) => {
   var map = [
+      { path: '/', file: './public/index.html' },
       { path: '/privacy_android', file: './public/android_privacy.html' },
       { path: '/privacy_ios', file: './public/ios_privacy.html' },
       { path: '/terms_of_use', file: './public/termsofuse.html' }
@@ -101,6 +102,15 @@ server.register(require('inert'), (err) => {
     })
   })
 
+var express = require('express');
+var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+app.use(express.static(__dirname + '/public'));
+app.get('/', function(req, res){
+  res.sendfile('index.html');
+});
+  
   // Serves static files out of public/
   server.route({
     method: 'GET',
