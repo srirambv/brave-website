@@ -188,7 +188,6 @@ a:hover,
 }
 .one-page-header .container {
   position: relative;
-  width: 100vw;
   margin: 0 auto;
 }
 
@@ -296,6 +295,12 @@ a:hover,
     color: rgb(116, 116, 130);
   }
 
+  .one-page-header.navbar-fixed-top .container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
   .one-page-header .navbar-nav {
     margin: 0 0 5px;
     float: none !important;
@@ -308,11 +313,6 @@ a:hover,
 
   .navbar-default .navbar-nav > li > a::before {
     content: '';
-  }
-
-  .navbar-fixed-top .container {
-    margin: 0;
-    padding: 0;
   }
 
 }
