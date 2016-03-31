@@ -211,7 +211,8 @@ a:hover,
   padding: 0 15px;
 }
 
-.one-page-header .navbar-nav.brave-nav.home > li a {
+.one-page-header .navbar-nav.brave-nav.home > li a,
+.navbar-default .navbar-nav.home > li > a {
   font-size: 1em;
   color: rgb(255, 255, 255);
 }
