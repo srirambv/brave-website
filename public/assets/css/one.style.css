@@ -404,12 +404,12 @@ a:hover,
 }
 
 .top-nav-collapse #brave-logo {
-  height: 32px;
+  width: 96px;
   margin: 0;
 }
 
 #brave-logo {
-  height: 44px;
+  width: 128px;
   margin: 20px 0 0;
 }
 
