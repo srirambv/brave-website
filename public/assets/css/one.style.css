@@ -415,6 +415,10 @@ a:hover,
 
 @media (max-width: 991px) {
 
+  #brave-logo {
+    width: 108px;
+  }
+
   .one-page-header .navbar-nav > li.cd-log_reg {
     opacity: 0.5;
   }
