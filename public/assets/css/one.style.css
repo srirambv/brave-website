@@ -130,6 +130,7 @@ a:hover,
 }
 
 /*Navbar Logo*/
+
 .logo img {
 
 }
@@ -237,6 +238,11 @@ a:hover,
 .one-page-header.top-nav-collapse .dropdown-menu > .active > a:focus {
   z-index: 1;
   background: none;
+}
+
+.parallax-counter-v3.parallaxBg,
+.parallax-counter-v3:after {
+  display: none;
 }
 
 /*Responsive Navbar*/
@@ -1198,7 +1204,7 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 ------------------------------------*/
 /*Interior Pages*/
 .page {
-  margin-top: 100px;
+  padding-top: 140px;
 }
 
 .page .row {
