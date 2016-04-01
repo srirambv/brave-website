@@ -834,12 +834,12 @@ a:hover,
 }
 
 #brave-hero .text-group {
-  padding-top: 7rem;
+  padding-top: 6rem;
   text-align: center;
 }
 
 #brave-hero .text-group > * {
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 400;
   margin: 10px auto 0;
   max-width: 75%;
@@ -924,6 +924,19 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
     width: 100%;
     -webkit-flex: none;
     flex: none;
+  }
+
+  #brave-hero .text-group {
+    padding-top: 0;
+  }
+
+  #brave-hero .text-group-logo {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  #brave-hero .text-group > h2 {
+    margin-top: -20px;
   }
 
   #brave-hero .text-group > * {
