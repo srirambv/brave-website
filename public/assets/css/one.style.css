@@ -982,7 +982,39 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 
 /*Team section
 ------------------------------------*/
+
+
+#team ul.container {
+  list-style: none;
+  display: flex;
+}
+
+#team ul.container li {
+  position: relative;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+#team ul.container > * {
+  margin: 5% 2.5%;
+}
+
+#team ul.container li > p:before {
+  display: none;
+}
+
+#team ul.container > li .team-img img {
+  width: 100%;
+  height: 100%;
+}
+
 /* hack for the Team grid not stacking right */
+@media (max-width: 991px) {
+  .col-xs-6 {
+    width: 48%;
+  }
+}
+
 @media (max-width: 770px) {
   #team .col-sm-3 {
     min-height: 450px;
