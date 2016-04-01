@@ -828,7 +828,7 @@ a:hover,
 }
 
 #brave-hero .text-group {
-  padding-top: 10rem;
+  padding-top: 7rem;
   text-align: center;
 }
 
@@ -850,8 +850,8 @@ a:hover,
 
 #brave-hero .text-group-logo {
   background: url('../img/brave_logo_horz.svg') left center / cover no-repeat;
-  width: 130px;
-  height: 152px;
+  width: 108px;
+  height: 128px;
 }
 
 #brave-hero .text-group h2 {
