@@ -102,7 +102,6 @@ var App;
       }
       $(window).scroll(this.handleScroll.bind(this));
       $('body').scrollspy({ offset: this.bootstrap.offsetHeight + 1 });
-      $('.navbar-collapse.in').collapse('hide');
     },
 
     configureDownloadButton: function(platform, index) {

@@ -409,11 +409,11 @@ a:hover,
 }
 
 #brave-logo {
-  height: 44px;
+  width: 128px;
   margin: 20px 0 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
 
   .one-page-header .navbar-nav > li.cd-log_reg {
     opacity: 0.5;
@@ -421,7 +421,7 @@ a:hover,
 
   #brave-logo,
   .top-nav-collapse #brave-logo {
-    height: 32px;
+    width: 96px;
     margin: 10px 10px 5px;
   }
 
