@@ -46,6 +46,24 @@ var App;
 
     },
 
+    collapseHeader: function() {
+      return $('.navbar-fixed-top').addClass('top-nav-collapse');
+    },
+
+    unCollapseHeader: function() {
+      return $('.navbar-fixed-top').removeClass('top-nav-collapse');
+    },
+
+    unInvertHeader: function() {
+      $('#brave-logo').removeClass('invert');
+      $('.navbar-nav.brave-nav, .navbar-toggle').removeClass('home');
+    },
+
+    invertHeader: function() {
+      $('#brave-logo').addClass('invert');
+      $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
+    },
+
     toggleVideoButton: function() {
       if($('#brave-overlay').hasClass('show')) {
         $('body').removeClass('no-scroll');
@@ -70,14 +88,16 @@ var App;
     },
 
     handleScroll: function(event) {
-      if($('.navbar').offset().top > this.bootstrap.offsetHeight) {
-        $('.navbar-fixed-top').addClass('top-nav-collapse');
-        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
+      if(this.isNearPageTop()) {
+        this.unCollapseHeader();
+        if(this.isHomePage()) {
+          this.invertHeader();
+        }
       }
       else {
-        $('.navbar-fixed-top').removeClass('top-nav-collapse');
+        this.collapseHeader();
         if(this.isHomePage()) {
-          $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
+          this.unInvertHeader();
         }
       }
     },
@@ -93,12 +113,11 @@ var App;
     },
 
     listenToScroll: function() {
-      if(this.isHomePage()) {
-        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz_reversed.svg');
-        $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
+      if(this.isHomePage() && this.isNearPageTop()) {
+        this.invertHeader();
       }
       else {
-        $('#brave-logo').attr('src', 'assets/img/brave_logo_horz.svg');
+        this.unInvertHeader();
       }
       $(window).scroll(this.handleScroll.bind(this));
       $('body').scrollspy({ offset: this.bootstrap.offsetHeight + 1 });
@@ -117,12 +136,16 @@ var App;
       platforms.forEach(this.configureDownloadButton.bind(this), buttons);
     },
 
-    isPlatform: function(userAgent) {
-      return (window.navigator.userAgent.match && window.navigator.userAgent.match(userAgent));
+    isNearPageTop: function() {
+      return ($('.navbar').offset().top < this.bootstrap.offsetHeight);
     },
 
     isHomePage: function() {
       return (window.location.pathname.match('index.html') || window.location.pathname === '/');
+    },
+
+    isPlatform: function(userAgent) {
+      return (window.navigator.userAgent.match && window.navigator.userAgent.match(userAgent));
     },
 
     initCounter: function() {
