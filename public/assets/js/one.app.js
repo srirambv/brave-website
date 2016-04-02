@@ -261,10 +261,3 @@ var View, App, Blog;
   });
 
 }());
-
-
-/*
-  Initialize App
-*/
-
-jQuery(document).ready(App.init.call(App));
