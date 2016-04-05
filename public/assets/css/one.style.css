@@ -39,6 +39,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #555;
 }
 
+h1.heading {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.headline h2 {
+  margin: 20px 0;
+}
+
 p,
 li,
 li a {
