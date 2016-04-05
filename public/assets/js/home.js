@@ -117,7 +117,7 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     isNearPageTop: function() {
-      return ($(document.body).scrollTop() < this.properties.bootstrap.offsetHeight);
+      return ($(window).scrollTop() < this.properties.bootstrap.offsetHeight);
     },
 
     initBootstrapUI: function() {
