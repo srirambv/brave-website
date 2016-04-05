@@ -96,6 +96,11 @@ server.register(require('inert'), (err) => {
     server.route({
       method: 'GET',
       path: entry.path,
+      config: {
+        state: {
+          failAction: 'log'
+        }
+      },
       handler: function (request, reply) {
         reply.file(entry.file)
       }
