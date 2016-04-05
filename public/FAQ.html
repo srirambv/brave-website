@@ -583,10 +583,13 @@ The Brave Vault can hold information that users would like to sync across device
         </div>
     </div>
 
+</section>
+
     <!-- JS Global Compulsory -->
     <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script src="assets/plugins/jquery/jquery-migrate.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
     <!-- JS Implementing Plugins -->
     <script src="assets/plugins/jquery.easing.min.js"></script>
     <script src="assets/plugins/jquery.parallax.js"></script>
@@ -596,20 +599,20 @@ The Brave Vault can hold information that users would like to sync across device
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
     <!-- Chartbeat -->
     <script type="text/javascript">
-     var _sf_async_config = { uid: 62395, domain: 'brave.com', useCanonical: true };
-     (function() {
-       function loadChartbeat() {
-         window._sf_endpt = (new Date()).getTime();
-         var e = document.createElement('script');
-         e.setAttribute('language', 'javascript');
-         e.setAttribute('type', 'text/javascript');
-         e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
-         document.body.appendChild(e);
-       };
-       var oldonload = window.onload;
-       window.onload = (typeof window.onload != 'function') ?
-         loadChartbeat : function() { oldonload(); loadChartbeat(); };
-     })();
+        var _sf_async_config = { uid: 62395, domain: 'brave.com', useCanonical: true };
+        (function() {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+            document.body.appendChild(e);
+        };
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
     </script>
 
     <!-- Piwik -->
@@ -634,7 +637,7 @@ The Brave Vault can hold information that users would like to sync across device
     <script src="assets/js/forms/mailchimp.js"></script>
     <script src="assets/js/brave.js"></script>
     <script src="assets/js/home.js"></script>
-    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/about.js"></script>
     <script>
       jQuery(document).ready(function() {
         Brave.app.home.init();

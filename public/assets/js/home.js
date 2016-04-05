@@ -89,13 +89,13 @@ var Brave = Brave || window.Brave || { app: {} };
       if(this.isNearPageTop()) {
         this.unCollapseHeader();
         if(this.isHomePage()) {
-          this.invertHeader();
+          requestAnimationFrame(this.invertHeader.bind(this));
         }
       }
       else {
         this.collapseHeader();
         if(this.isHomePage()) {
-          this.unInvertHeader();
+          requestAnimationFrame(this.unInvertHeader.bind(this));
         }
       }
     },
@@ -117,7 +117,7 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     isNearPageTop: function() {
-      return ($('.navbar').offset().top < this.properties.bootstrap.offsetHeight);
+      return ($(document.body).scrollTop() < this.properties.bootstrap.offsetHeight);
     },
 
     initBootstrapUI: function() {
