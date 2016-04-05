@@ -39,6 +39,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #555;
 }
 
+h1.heading {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.headline h2 {
+  margin: 20px 0;
+}
+
 p,
 li,
 li a {
@@ -405,12 +414,21 @@ a:hover,
 
 .top-nav-collapse #brave-logo {
   width: 96px;
+  height: 32px;
   margin: 0;
 }
 
 #brave-logo {
-  width: 128px;
+  background: url('../img/brave_logo_horz.svg') left center / contain no-repeat;
+  text-indent: -99999px;
+  font-size: 0;
+  width: 108px;
+  height: 44px;
   margin: 20px 0 0;
+}
+
+#brave-logo.invert {
+  background: url('../img/brave_logo_horz_reversed.svg') left center / contain no-repeat;
 }
 
 @media (max-width: 992px) {
@@ -1276,7 +1294,7 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 ------------------------------------*/
 /*Interior Pages*/
 .page {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .page .row {

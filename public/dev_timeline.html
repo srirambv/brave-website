@@ -7,7 +7,7 @@
 
     <!-- Meta -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta property="og:title" content="Brave Software" />
@@ -20,10 +20,6 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- Web Fonts -->
-    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
-    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Source+Sans+Pro'>
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -38,13 +34,6 @@
     <link rel="stylesheet" href="assets/plugins/animate.css">
     <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/pace/pace-flash.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
-    <link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
-    <link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
-    <!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
 
     <!-- Style Switcher -->
     <link rel="stylesheet" href="assets/css/plugins/style-switcher.css">
@@ -57,15 +46,13 @@
 
     <!-- Extra per-page stylesheets -->
     
-    <link rel="stylesheet" href="assets/css/shortcode_timeline2.css">
-
 </head>
 
 <!--
 The #page-top ID is part of the scrolling feature.
 The data-spy and data-target are part of the built-in Bootstrap scrollspy function.
 -->
-<body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+<body id="body" data-spy="scroll" data-target=".one-page-header">
     <!--=== Header ===-->
     <nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -77,12 +64,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <span class="icon-bar"></span>
                 </button>
 
-
-                             <!-- Logo -->
-            <a class="logo" href="/">
-                <img id="brave-logo" src="https://www.brave.com/assets/img/brave_logo_horz_reversed.svg" alt="Logo">
-            </a>
-<!-- End Logo -->
+                <a class="logo" href="/">
+                    <div id="brave-logo">Brave</div>
+                </a>
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -126,485 +110,20 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
     <!--=== Main content ===-->
     
+ <!--=== header BG ===-->
+    <div class="parallax-counter-v3 parallaxBg" style="padding-bottom:20px; padding-left:10px">
+        <div class="container">
+            <div class="row">
+                <div style="text-align:left; font-size:20px">
 
-<!--=== Content Part ===-->
-
-  <!-- Begin Content -->
-  <div class="page col-md-12 bg-light">
-    <ul class="timeline-v2">
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column"></div>
-        <div class="cbp_tmlabel equal-height-column">
-          <p></p>
-          <h1>Development Timeline</h1>
-          <p></p>
-          <p>Disclaimer: This is a living document and may be updated at any
-          time with better progress estimates.</p>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>01/15/16</span> <span>January</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p><br>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Base
-              functionality</li>
-              <li><i class="fa fa-check color-green"></i> Tracker Blocking</li>
-              <li><i class="fa fa-check color-green"></i> Ad Blocking</li>
-              <li><i class="fa fa-check color-green"></i> HTTPS Everywhere
-              integration</li>
-            </ul>
-          </div>
-          <hr>
-          <hr>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>0.7 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>--</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>--</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>0.7 is complete as of launch. Pre-packaged builds will be
-                  available for those who can't build Brave from GitHub.</p>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>02/26/16</span> <span>February</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Placeholder Ads</li>
-              <li><i class="fa fa-check color-green"></i> Bookmark Management
-              &amp; import bookmarks</li>
-              <li><i class="fa fa-check color-green"></i> Multiple update
-              channel support</li>
-              <li><i class="fa fa-check color-green"></i> Content Process
-              Sandbox</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Block third party
-              cookies</li>
-              <li><i class="fa fa-check color-green"></i> Prefs system</li>
-              <li><i class="fa fa-check color-green"></i> HTTPS UI (cert
-              warning pages, etc.)</li>
-              <li><i class="fa fa-check color-green"></i> Permissions
-              dialogs</li>
-            </ul>
-          </div>
-          <hr>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>0.8 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>0.7 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>--</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>This phase will allow users to control/override blocking
-                  and privacy features on a per-site basis. In-browser
-                  preference modeling will allow the browser to use its own
-                  browsing history to determine what the user is interested in
-                  without revealing browsing activity to advertisers.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>04/08/16</span> <span>April</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Wallets &amp; Payment
-              System</li>
-              <li><i class="fa fa-check color-green"></i> Safe Browsing
-              integration</li>
-              <li><i class="fa fa-check color-green"></i> Some Extensions
-              Support</li>
-              <li><i class="fa fa-check color-green"></i> Customization over
-              tracking / adblock</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Password
-              management</li>
-              <li><i class="fa fa-check color-green"></i> In-browser preference
-              modeling</li>
-              <li><i class="fa fa-check color-green"></i> Private Browsing
-              (iOS)</li>
-              <li><i class="fa fa-check color-green"></i> Activity Based
-              Webview (Android)</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>0.9 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>0.8 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>0.7 stable</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>Bitcoin wallets will be created for each publisher
-                  automatically so they can receive ad revenue and
-                  micropayments.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>05/20/16</span> <span>May</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Anonymous
-              Confirmation System</li>
-              <li><i class="fa fa-check color-green"></i> Monthly accounting UI
-              (AdFree mode)</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>1.0 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>0.9 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>0.8 stable</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>This phase will include the automated accounting UI that
-                  tallies amount of content read per-site and divides monthly
-                  user donation into micropayments as needed. The anonymous
-                  confirmation system will allow advertisers to confirm ad
-                  impressions using zero-knowledge proofs so that the
-                  confirmation is unlinkable to any particular user.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>07/01/16</span> <span>July</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Import from other
-              browsers</li>
-              <li><i class="fa fa-check color-green"></i> Signals viewer
-              UI</li>
-              <li><i class="fa fa-check color-green"></i> Script blocking</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-            </ul>
-          </div>
-          <hr>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>1.1 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>1.0 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>0.9 stable</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>This phase includes features to help users move from other
-                  browsers to Brave, as well as an interface for users to see
-                  their own anonymous ad inference data over time.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>08/26/16</span> <span>August</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Sync Management</li>
-              <li><i class="fa fa-check color-green"></i> History
-              Management</li>
-              <li><i class="fa fa-check color-green"></i> History Manager
-              UI</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> Download
-              Management</li>
-              <li><i class="fa fa-check color-green"></i> Download Manager
-              UI</li>
-              <li><i class="fa fa-check color-green"></i> Form Autofill</li>
-            </ul>
-          </div>
-          <hr>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>1.2 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>1.1 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>1.0 stable</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>This release will have various features for Brave to
-                  achieve parity with other browsers, making it easier to
-                  adopt.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>10/07/16</span> <span>October</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> TBD</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              ---</li>
-            </ul>
-          </div>
-          <hr>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>1.3 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>1.2 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>1.1 stable</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>Schedule defined but functionality is still TBD based on
-                  user feedback.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="equal-height-columns">
-        <div class="cbp_tmtime equal-height-column">
-          <span>11/18/16</span> <span>November</span>
-        </div><i class="cbp_tmicon rounded-x hidden-xs"></i>
-        <div class="cbp_tmlabel equal-height-column">
-          <p>Crucial Features</p>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li><i class="fa fa-check color-green"></i> TBD</li>
-            </ul>
-          </div>
-          <div class="col-sm-6">
-            <ul class="list-unstyled">
-              <li class="invisible"><i class="fa fa-check color-green"></i>
-              TBD</li>
-            </ul>
-          </div>
-          <hr>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="col-md-4">
-              <p>Dev Channel</p>
-              <h2>1.4 dev</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Beta Channel</p>
-              <h2>1.3 beta</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-            <div class="col-md-4">
-              <p>Stable Channel</p>
-              <h2>1.2 stable</h2>
-              <div class="md-margin-bottom-20"></div>
-            </div>
-          </div>
-          <div class="row"></div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="row">
-                <div class="col-md-10">
-                  <p>Schedule defined but functionality is still TBD based on
-                  user feedback.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-
+    </div>
+    <!--=== End header BG ===-->
+<div style='text-align:center; padding:20px;'>
+    <h2>This page has been moved to <a href="https://github.com/brave/browser-laptop/wiki/Brave-Development-Timeline">Github</a>.</h2>
+</div>
 
     <!--=== End main content ===-->
 
@@ -628,7 +147,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <div class="headline"><h2>Recent News</h2></div>
                             <ul class="list-unstyled latest-list">
                                 <li><small>January 20, 2016</small><BR>
-                                    <a href="http://www.forbes.com/sites/roberthof/2016/01/20/brave-softwares-new-browser-nukes-ads-that-track-you/#2715e4857a0b630d5bad76b9" target="_blank"><p>Brave Software's New Browser Nukes Ads That Track You</p></a><BR>
+                                    <a href="https://www.forbes.com/sites/roberthof/2016/01/20/brave-softwares-new-browser-nukes-ads-that-track-you/#2715e4857a0b630d5bad76b9" target="_blank"><p>Brave Software's New Browser Nukes Ads That Track You</p></a><BR>
 
                                 </li>
                                 <li><small>January 20, 2016</small><BR>
@@ -636,7 +155,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                                 </li>
                                 <li><small>January 20, 2016</small><BR>
-                                    <a href="http://www.mediapost.com/publications/article/267089/new-browser-offers-brave-solution-to-ad-blocking.html" target="_blank"><p>New Browser Offers 'Brave' Solution To Ad Blocking, Literally: Will Cut Users And Publishers In</p></a>
+                                    <a href="https://www.mediapost.com/publications/article/267089/new-browser-offers-brave-solution-to-ad-blocking.html" target="_blank"><p>New Browser Offers 'Brave' Solution To Ad Blocking, Literally: Will Cut Users And Publishers In</p></a>
 
                                 </li>
                             </ul>
@@ -650,15 +169,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <div class="headline"><h2> <BR></h2></div>
                             <ul class="list-unstyled latest-list">
                              <li><small>January 20, 2016</small><BR>
-                                    <a href="http://www.businessinsider.com/former-mozilla-ceo-brendan-eich-launches-ad-blocking-web-browser-brave-2016-1?r=UK&IR=T" target="_blank"><p>The former CEO of Mozilla is launching a web browser that blocks all ads by default</p></a><BR>
+                                    <a href="https://www.businessinsider.com/former-mozilla-ceo-brendan-eich-launches-ad-blocking-web-browser-brave-2016-1?r=UK&IR=T" target="_blank"><p>The former CEO of Mozilla is launching a web browser that blocks all ads by default</p></a><BR>
 
                                 </li>
                                 <li><small>January 20, 2016</small><BR>
-                                    <a href="http://www.cnet.com/news/ex-mozilla-ceo-try-braves-new-browser-for-a-faster-private-web/" target="_blank"><p>Brave browser promises faster Web by banishing intrusive ads</p></a><BR>
+                                    <a href="https://www.cnet.com/news/ex-mozilla-ceo-try-braves-new-browser-for-a-faster-private-web/" target="_blank"><p>Brave browser promises faster Web by banishing intrusive ads</p></a><BR>
 
                                 </li>
                                 <li><small>January 20, 2016</small><BR>
-                                    <a href="http://venturebeat.com/2016/01/20/brave-browser/" target="_blank"><p>Mozilla cofounder Brendan Eich’s startup, Brave, launches browser for Mac, Windows, iOS, Android</p></a>
+                                    <a href="https://venturebeat.com/2016/01/20/brave-browser/" target="_blank"><p>Mozilla cofounder Brendan Eich’s startup, Brave, launches browser for Mac, Windows, iOS, Android</p></a>
 
                                 </li>
                             </ul>
@@ -749,7 +268,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== End Footer v1 ===-->
 <section id="mailchimp">
 
-
     <!-- Mailchimp Subscription Bootstrap Modals -->
     <div class="modal fade" id="mailchimpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -822,7 +340,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <div style="text-align: center;font-weight: bold">
                         <img src="/assets/img/brave_logo_splash.png" alt="" style="width:60%" />
-                        <p style="font-size: 120%">Thanks for joining our email newletter! Say hi on Twitter at <a href="http://twitter.com/brave" target="_blank">@brave</a></p>
+                        <p style="font-size: 120%">Thanks for joining our email newletter! Say hi on Twitter at <a href="https://twitter.com/brave" target="_blank">@brave</a></p>
                     </div>
 
                 </div>
@@ -834,13 +352,9 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         <div style="text-align: center;font-weight: bold">
             <img src="/assets/img/brave_logo_splash.png" alt="" style="width:60%" />
             <p style="font-size: 120%">You are now in the queue for Brave! We have a waitlist but will send you a download link soon.</p>
-            <p style="font-size: 150%">Stay in touch! Say hi on Twitter at <a href="http://twitter.com/brave" target="_blank">@brave</a></p>
+            <p style="font-size: 150%">Stay in touch! Say hi on Twitter at <a href="https://twitter.com/brave" target="_blank">@brave</a></p>
         </div>
     </div>
-
-
-
-
 
     <!-- JS Global Compulsory -->
     <script src="assets/plugins/jquery/jquery.min.js"></script>
@@ -848,24 +362,11 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- JS Implementing Plugins -->
     <script src="assets/plugins/jquery.easing.min.js"></script>
-    <script src="assets/plugins/pace/pace.min.js"></script>
     <script src="assets/plugins/jquery.parallax.js"></script>
     <script src="assets/plugins/counter/waypoints.min.js"></script>
     <script src="assets/plugins/counter/jquery.counterup.min.js"></script>
-    <script src="assets/plugins/owl-carousel/owl.carousel.js"></script>
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-    <script src="assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/plugins/revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-    <script src="assets/plugins/owl-carousel/owl.carousel.js"></script>
-    <script src="assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
-    <script src="assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
-    <script src="assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
-<!--
-    <script type="text/javascript" src="assets/plugins/horizontal-parallax/js/sequence.jquery-min.js"></script>
-    <script type="text/javascript" src="assets/plugins/horizontal-parallax/js/horizontal-parallax.js"></script>
--->
     <!-- Chartbeat -->
     <script type="text/javascript">
      var _sf_async_config = { uid: 62395, domain: 'brave.com', useCanonical: true };
@@ -904,24 +405,13 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/js/forms/login.js"></script>
     <script src="assets/js/forms/contact.js"></script>
     <script src="assets/js/forms/mailchimp.js"></script>
-    <script src="assets/js/plugins/pace-loader.js"></script>
-    <script src="assets/js/plugins/owl-carousel.js"></script>
-    <script src="assets/js/plugins/revolution-slider.js"></script>
-    <script src="assets/js/plugins/cube-portfolio/cube-portfolio-lightbox.js"></script>
-    <script defer src="assets/js/one.app.js"></script>
+    <script src="assets/js/brave.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/blog.js"></script>
     <script>
-        jQuery(document).ready(function() {
-            App.init();
-//          App.initCounter();
-//          App.initParallaxBg();
-//          LoginForm.initLoginForm();
-//          ContactForm.initContactForm();
-//          OwlCarousel.initOwlCarousel();
-//          gridContainer.cubeportfolio();
-// Set the csrf cookie because somehow it's not getting set consistently on master
-// This may set the cookie twice but that's fine
-// document.cookie = "crumb=" + Math.random().toString() + "; max-age=3600";
-        });
+      jQuery(document).ready(function() {
+        Brave.app.home.init();
+      });
     </script>
     <!--[if lt IE 9]>
         <script src="assets/plugins/respond.js"></script>
