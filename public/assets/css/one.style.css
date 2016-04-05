@@ -52,7 +52,7 @@ p,
 li,
 li a {
   color: #555;
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 
 a {
@@ -845,7 +845,7 @@ a:hover,
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
 }
 
 #brave-hero .text-group {
@@ -928,6 +928,11 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 .bg-grey {
   border-top: none;
 }
+
+.title-v1 p {
+  font-weight: 400;
+}
+
 
 @media(max-width: 991px) {
 
