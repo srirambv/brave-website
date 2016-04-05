@@ -835,14 +835,16 @@ a:hover,
 }
 
 #brave-hero {
+  min-height: 100vh;
   padding: 60px 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center top;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
 }
 
 #brave-hero .text-group {
-  padding-top: 10rem;
+  padding-top: 10%;
   text-align: center;
 }
 
@@ -934,9 +936,15 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
     flex: none;
   }
 
+  #brave-hero .text-group-logo {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+
   #brave-hero .text-group > * {
     max-width: 90%;
-    font-size: 2em;
+    font-size: 1.8em;
+    margin: 0 auto;
   }
 
   #brave-hero .text-group > p {
