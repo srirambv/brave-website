@@ -24,6 +24,10 @@ var Brave = Brave || window.Brave || { app: {} };
       this.properties = {};
 
       // Shared View Utilities
+      this.isMenuShown = function() {
+        return !!$('#fullsize-menu')[0] && $('#fullsize-menu').hasClass('in');
+      };
+
       this.isOverlayShown = function() {
         return $('#brave-overlay').hasClass('show');
       };

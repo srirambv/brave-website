@@ -19,7 +19,7 @@ var Brave = Brave || window.Brave || { app: {} };
       [window, 'scroll', 'handleScroll'],
       ['#brave-video, #brave-overlay', 'click', 'handleVideoButton'],
       ['#brave-download', 'click', 'handleDownloadButtonClick'],
-      ['.navbar-fixed-top ul.navbar-nav li', 'click', 'toggleMenu']
+      ['.navbar-fixed-top ul.navbar-nav li', 'click', 'handleMenuItemClick']
     ],
 
     state: {
@@ -62,10 +62,6 @@ var Brave = Brave || window.Brave || { app: {} };
 
     },
 
-    toggleMenu: function(event) {
-      return $('button.navbar-toggle').click();
-    },
-
     unInvertHeader: function() {
       $('#brave-logo').removeClass('invert');
       $('.navbar-nav.brave-nav, .navbar-toggle').removeClass('home');
@@ -102,6 +98,12 @@ var Brave = Brave || window.Brave || { app: {} };
         if(this.isHomePage()) {
           requestAnimationFrame(this.unInvertHeader.bind(this));
         }
+      }
+    },
+
+    handleMenuItemClick: function(event) {
+      if(this.isMenuShown()) {
+        return $('button.navbar-toggle').click();
       }
     },
 
