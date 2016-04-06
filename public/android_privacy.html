@@ -491,6 +491,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script>
       jQuery(document).ready(function() {
         Brave.app.home.init();
+        if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
+
+        }
+        if(window.location.pathname.match('about.html')) {
+            Brave.app.about.init();
+        }
       });
     </script>
     <!--[if lt IE 9]>

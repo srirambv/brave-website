@@ -18,7 +18,8 @@ var Brave = Brave || window.Brave || { app: {} };
     events: [],
 
     init: function() {
-
+    	window.location.href = '/';
+    	return this;
     }
 
   });
