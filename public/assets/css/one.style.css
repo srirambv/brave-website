@@ -1132,10 +1132,21 @@ h1.fixed-page-heading.invert {
   font-size: 0.9em;
 }
 
+#about-page ul.page-submenu li a {
+  color: rgb(40, 50, 60);
+  text-decoration: none;
+}
+
 @media(max-width: 991px) {
+
+  #about-page {
+    background-position: center -100rem;
+  }
+
   #about-page ul.page-submenu li {
     width: 25%;
   }
+
 }
 
 /*Team section
