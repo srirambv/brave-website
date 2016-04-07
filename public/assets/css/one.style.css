@@ -1019,10 +1019,6 @@ a.button.blog-button:hover {
     flex: none;
   }
 
-  #brave-hero > div:first-of-type {
-    margin-top: 25px;
-  }
-
   #brave-hero .text-group-logo {
     display: none;
   }
