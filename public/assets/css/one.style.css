@@ -39,11 +39,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #555;
 }
 
+h1.heading {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.headline h2 {
+  margin: 20px 0;
+}
+
 p,
 li,
 li a {
   color: #555;
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 
 a {
@@ -256,7 +265,12 @@ a:hover,
   }
 
   .one-page-header .navbar-toggle {
+    position: absolute;
     display: block;
+    right: 0;
+    padding: 8px 10px;
+    z-index: 500;
+    margin: 10px;
   }
 
   .one-page-header .navbar-collapse.collapse {
@@ -361,7 +375,6 @@ a:hover,
   }
 }
 
-
 /* Top Log-Reg */
 .log-reg-block {
   float: right;
@@ -404,13 +417,24 @@ a:hover,
 }
 
 .top-nav-collapse #brave-logo {
+  width: 96px;
   height: 32px;
   margin: 0;
 }
 
 #brave-logo {
+  background: url('../img/brave_logo_horz.svg') left center / contain no-repeat;
+  text-indent: -99999px;
+  font-size: 0;
+  width: 108px;
   height: 44px;
   margin: 20px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#brave-logo.invert {
+  background: url('../img/brave_logo_horz_reversed.svg') left center / contain no-repeat;
 }
 
 @media (max-width: 992px) {
@@ -817,14 +841,16 @@ a:hover,
 }
 
 #brave-hero {
+  min-height: 100vh;
   padding: 60px 0;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
+  background-position: center top;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
 }
 
 #brave-hero .text-group {
-  padding-top: 10rem;
+  padding-top: 10%;
   text-align: center;
 }
 
@@ -869,7 +895,7 @@ a:hover,
 #brave-hero .control-group .label {
   letter-spacing: 0.5px;
   font-size: 1.1em;
-  font-weight: 200;
+  font-weight: 300;
   color: rgb(255, 255, 255);
   margin: 10px auto;
 }
@@ -904,6 +930,83 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
   border-top: none;
 }
 
+.title-v1 p {
+  font-weight: 400;
+}
+
+.news-v3 p {
+  color: rgba(40, 50, 60, 0.9);
+  line-height: 2.25em;
+}
+
+.news-v3 .posted-info li {
+  color: rgb(116, 116, 130);
+}
+
+.news-v3 .news-v3-in-sm h2 {
+  font-weight: 400;
+  color: rgb(40, 50, 60);
+}
+
+.news-v3 {
+  padding: 0 30px;
+}
+
+.news ul.list-inline {
+  display: block;
+  width: 100%;
+}
+
+.news ul.list-inline li {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: solid 1px rgba(116, 116, 130, 0.4);
+}
+
+.news ul.list-inline li a {
+  color: rgb(116, 116, 130);
+  font-size: 1em;
+}
+
+#devs .content-boxes-v2 > div {
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+#devs .content-boxes-v2 > div > .icon-custom {
+  margin: 20px auto;
+  display: block;
+}
+
+#devs .heading-sm h3 {
+  margin: 40px auto;
+  text-align: center;
+  line-height: 5em;
+}
+
+a.button.blog-button {
+  display: block;
+  width: 12vw;
+  height: 3.5vw;
+  line-height: 3.5vw;
+  vertical-align: middle;
+  background: transparent;
+  border-radius: 8px;
+  border: solid 1px rgb(255, 80, 0);
+  color: rgb(255, 80, 0);
+  font-size: 1.25em;
+  text-align: center;
+  margin: 20px auto;
+  appearance: none;
+}
+
+a.button.blog-button:hover {
+  text-decoration: none;
+}
+
 @media(max-width: 991px) {
 
   #brave-hero {
@@ -916,9 +1019,14 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
     flex: none;
   }
 
+  #brave-hero .text-group-logo {
+    display: none;
+  }
+
   #brave-hero .text-group > * {
     max-width: 90%;
-    font-size: 2em;
+    font-size: 1.8em;
+    margin: 0 auto;
   }
 
   #brave-hero .text-group > p {
@@ -949,6 +1057,16 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
     width: 100%;
   }
 
+  a.button.blog-button {
+    width: 100%;
+    height: 5rem;
+    line-height: 4.5rem;
+  }
+
+}
+
+#contact {
+  margin-top: 60px;
 }
 
 /*Intro Section
@@ -980,10 +1098,49 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
   padding-top: 100px;
 }
 
+/*About Page
+------------------------------------*/
+/*About Page*/
+#about-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-sf-sky.jpg');
+  background-position: center -60rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1.fixed-page-heading.invert {
+  margin-top: 7rem;
+  font-size: 2.5em;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+#about-page ul.page-submenu {
+  background: rgb(255, 255, 255);
+  list-style: none;
+  margin-top: 40px;
+  padding: 0;
+}
+
+#about-page ul.page-submenu li {
+  display: inline-block;
+  width: 8%;
+  float: right;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
 /*Team section
 ------------------------------------*/
 #team {
-  margin-top: 60px;
+  margin: 16rem auto;
+  background: rgb(255, 255, 255);
+}
+
+#team div.title-v1 h2 {
+  padding-top: 60px;
 }
 
 #team ul.team-container {
@@ -1020,7 +1177,6 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 
 #team ul.team-container > li .team-img {
   width: 100%;
-  height: 100%;
 }
 
 #team ul.team-container > li .team-img img,
@@ -1277,7 +1433,7 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 ------------------------------------*/
 /*Interior Pages*/
 .page {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .page .row {
