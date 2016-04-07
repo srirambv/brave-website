@@ -1098,10 +1098,49 @@ a.button.blog-button:hover {
   padding-top: 100px;
 }
 
+/*About Page
+------------------------------------*/
+/*About Page*/
+#about-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-sf-sky.jpg');
+  background-position: center -60rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1.fixed-page-heading.invert {
+  margin-top: 7rem;
+  font-size: 2.5em;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+#about-page ul.page-submenu {
+  background: rgb(255, 255, 255);
+  list-style: none;
+  margin-top: 40px;
+  padding: 0;
+}
+
+#about-page ul.page-submenu li {
+  display: inline-block;
+  width: 8%;
+  float: right;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
 /*Team section
 ------------------------------------*/
 #team {
-  margin-top: 60px;
+  margin: 16rem auto;
+  background: rgb(255, 255, 255);
+}
+
+#team div.title-v1 h2 {
+  padding-top: 60px;
 }
 
 #team ul.team-container {

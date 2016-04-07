@@ -28,6 +28,8 @@ var Brave = Brave || window.Brave || { app: {} };
 
     properties: {
 
+      hasPhotographicHeader: true,
+
       platforms: [
         { name: 'Linux x64, Ubuntu', userAgent: 'Linux|Ubuntu', url: 'https://laptop-updates.brave.com/latest/linux64' },
         { name: 'Mac OS 10.9', userAgent: 'Macintosh', url: 'https://laptop-updates.brave.com/latest/osx' },
@@ -89,13 +91,13 @@ var Brave = Brave || window.Brave || { app: {} };
     handleScroll: function(event) {
       if(this.isNearPageTop()) {
         this.unCollapseHeader();
-        if(this.isHomePage()) {
+        if(this.properties.hasPhotographicHeader) {
           requestAnimationFrame(this.invertHeader.bind(this));
         }
       }
       else {
         this.collapseHeader();
-        if(this.isHomePage()) {
+        if(this.properties.hasPhotographicHeader) {
           requestAnimationFrame(this.unInvertHeader.bind(this));
         }
       }
@@ -150,7 +152,7 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     init: function() {
-      if(this.isHomePage() && this.isNearPageTop()) {
+      if(this.properties.hasPhotographicHeader && this.isNearPageTop()) {
         this.invertHeader();
       }
       else {

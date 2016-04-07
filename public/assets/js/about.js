@@ -17,8 +17,10 @@ var Brave = Brave || window.Brave || { app: {} };
 
     events: [],
 
+    hasPhotographicHeader: true,
+
     init: function() {
-    	window.location.href = '/';
+    	//window.location.href = '/';
     	return this;
     }
 
