@@ -68,6 +68,20 @@ var Brave = Brave || window.Brave || { app: {} };
         }, 100);
       };
 
+      this.isNearPageTop = function() {
+        return ($(window).scrollTop() < this.properties.bootstrap.offsetHeight);
+      };
+
+      this.unInvertHeader = function() {
+        $('#brave-logo').removeClass('invert');
+        $('.navbar-nav.brave-nav, .navbar-toggle').removeClass('home');
+      };
+
+      this.invertHeader = function() {
+        $('#brave-logo').addClass('invert');
+        $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
+      };
+
       // Merge custom params
       for(var key in params) {
         this[key] = params[key];
