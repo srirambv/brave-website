@@ -1132,6 +1132,12 @@ h1.fixed-page-heading.invert {
   font-size: 0.9em;
 }
 
+@media(max-width: 991px) {
+  #about-page ul.page-submenu li {
+    width: 25%;
+  }
+}
+
 /*Team section
 ------------------------------------*/
 #team {
