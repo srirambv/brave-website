@@ -483,18 +483,27 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/js/forms/mailchimp.js"></script>
     <script src="assets/js/brave.js"></script>
     <script src="assets/js/home.js"></script>
+    <script src="assets/js/interior.js"></script>
     <script src="assets/js/about.js"></script>
     <script>
-      jQuery(document).ready(function() {
-        if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
-            Brave.app.about.off();
-            Brave.app.home.on();
-        }
-        if(window.location.pathname.match('about.html')) {
+        jQuery(document).ready(function() {
+            // Home route
+            if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
+                Brave.app.interior.off();
+                Brave.app.about.off();
+                return Brave.app.home.on();
+            }
+            // About route
+            if(window.location.pathname.match('about.html')) {
+                Brave.app.interior.off();
+                Brave.app.home.off();
+                return Brave.app.about.on();
+            }
+            // Interior page route
             Brave.app.home.off();
-            Brave.app.about.on();
-        }
-      });
+            Brave.app.about.off();
+            return Brave.app.interior.on();
+        });
     </script>
     <!--[if lt IE 9]>
         <script src="assets/plugins/respond.js"></script>
