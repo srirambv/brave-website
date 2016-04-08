@@ -1265,6 +1265,26 @@ h1.fixed-page-heading.invert {
   }
 }
 
+/*FAQ Page
+------------------------------------*/
+ul#faq-list {
+  list-style: none;
+}
+
+ul#faq-list li.panel p.panel-title {
+  color: rgb(40, 50, 60);
+}
+
+ul#faq-list li.panel p.panel-body {
+  list-style: none;
+  font-size: 0.9em;
+  color: rgb(40, 50, 60);
+}
+
+ul#faq-list li.panel p.panel-body a {
+  display: inline;
+}
+
 /*Icon Lists*/
 .content-boxes-v3 i.icon-custom {
   margin-right: 8px;
