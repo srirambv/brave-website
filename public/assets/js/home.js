@@ -84,6 +84,9 @@ var Brave = Brave || window.Brave || { app: {} };
         if(this.properties.hasPhotographicHeader) {
           requestAnimationFrame(this.invertHeader.bind(this));
         }
+        else {
+          requestAnimationFrame(this.unInvertHeader.bind(this));
+        }
       }
       else {
         this.collapseHeader();
@@ -149,7 +152,7 @@ var Brave = Brave || window.Brave || { app: {} };
       }
       this.initBootstrapUI();
       this.reactToUserAgent(this.properties.platforms);
-      $('body').scrollspy({ offset: this.properties.bootstrap.offsetHeight + 1 });
+      return $('body').scrollspy({ offset: this.properties.bootstrap.offsetHeight + 1 });
     }
 
   });

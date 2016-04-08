@@ -295,7 +295,7 @@ a:hover,
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
   #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
-    background: linear-gradient(transparent 10%, rgb(20, 20, 25));
+    background: linear-gradient(transparent 5%, rgba(20, 20, 25, 0.75) 25%, rgba(20, 20, 25, 1))
   }
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home > li > a,

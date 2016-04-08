@@ -45,8 +45,7 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     init: function() {
-      this.invertHeader();
-      return this;
+      return this.invertHeader();
     }
 
   });

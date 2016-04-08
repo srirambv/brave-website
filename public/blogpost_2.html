@@ -503,12 +503,14 @@ This week I’d like to dive into the details of how Brave will achieve these go
     <script src="assets/js/about.js"></script>
     <script>
       jQuery(document).ready(function() {
-        Brave.app.home.init();
+        Brave.app.home.on();
         if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
-
+            Brave.app.about.off();
+            Brave.app.home.on();
         }
         if(window.location.pathname.match('about.html')) {
-            Brave.app.about.init();
+            Brave.app.home.off();
+            Brave.app.about.on();
         }
       });
     </script>

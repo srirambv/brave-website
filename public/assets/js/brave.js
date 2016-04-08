@@ -82,15 +82,30 @@ var Brave = Brave || window.Brave || { app: {} };
         $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
       };
 
+      this.off = function() {
+        this.isOn = false;
+        this.events.forEach(function(e, i) {
+          $(e[0]).off(e[1]);
+        }, this);
+      };
+
+      this.on = function() {
+        this.isOn = true;
+        this.events.forEach(function(e, i) {
+          $(e[0]).on(e[1], this[e[2]].bind(this));
+        }, this);
+        return this.init();
+      };
+
+      // Bind initial events
+      this.events.forEach(function(e, i) {
+        $(e[0]).on(e[1], this[e[2]].bind(this));
+      }, this);
+
       // Merge custom params
       for(var key in params) {
         this[key] = params[key];
       }
-
-      // Bind listeners in events hash
-      this.events.forEach(function(e, i) {
-        $(e[0]).on(e[1], this[e[2]].bind(this));
-      }, this);
 
     }
     return new View;
