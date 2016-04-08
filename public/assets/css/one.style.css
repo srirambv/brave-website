@@ -1292,6 +1292,16 @@ ul#faq-list li.panel p.panel-body a {
   display: inline;
 }
 
+/**/
+.blogpost li,
+.blogpost .img-responsive {
+  margin: 30px auto;
+}
+
+.blogpost .list-inline li {
+  margin: 0 auto;
+}
+
 /*Icon Lists*/
 .content-boxes-v3 i.icon-custom {
   margin-right: 8px;
