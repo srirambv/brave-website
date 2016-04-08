@@ -1292,7 +1292,8 @@ ul#faq-list li.panel p.panel-body a {
   display: inline;
 }
 
-/**/
+/*Blog Page
+------------------------------------*/
 .blogpost li,
 .blogpost .img-responsive {
   margin: 30px auto;
@@ -1300,6 +1301,20 @@ ul#faq-list li.panel p.panel-body a {
 
 .blogpost .list-inline li {
   margin: 0 auto;
+}
+
+.blog-disclaimer {
+  background:rgba(255, 80, 0, 0.05);
+  padding: 15px;
+  border: solid 1px rgba(116, 116, 130, 0.2);
+}
+
+.blog-disclaimer li {
+  margin: 20px auto;
+}
+
+.blog-disclaimer li a {
+  word-wrap: break-word;
 }
 
 /*Icon Lists*/
