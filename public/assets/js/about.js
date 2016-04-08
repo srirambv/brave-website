@@ -30,7 +30,6 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     handleScroll: function(event) {
-      console.log(this);
       if(this.isNearPageTop()) {
         this.unCollapseHeader();
         if(this.properties.hasPhotographicHeader) {
