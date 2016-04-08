@@ -1280,10 +1280,12 @@ ul#faq-list li.panel h4.panel-title {
   font-size: 1.2em;
 }
 
-ul#faq-list li.panel p.panel-body {
-  list-style: none;
+ul#faq-list li.panel p.panel-body,
+ul#faq-list li.panel ol li {
   font-size: 1em;
   color: rgb(116, 116, 130);
+  margin: 20px auto;
+  padding: 0;
 }
 
 ul#faq-list li.panel p.panel-body a {
