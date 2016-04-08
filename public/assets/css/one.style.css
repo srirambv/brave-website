@@ -1271,14 +1271,19 @@ ul#faq-list {
   list-style: none;
 }
 
-ul#faq-list li.panel p.panel-title {
+ul#faq-list li.panel {
+  margin-top: 20px;
+}
+
+ul#faq-list li.panel h4.panel-title {
   color: rgb(40, 50, 60);
+  font-size: 1.2em;
 }
 
 ul#faq-list li.panel p.panel-body {
   list-style: none;
-  font-size: 0.9em;
-  color: rgb(40, 50, 60);
+  font-size: 1em;
+  color: rgb(116, 116, 130);
 }
 
 ul#faq-list li.panel p.panel-body a {
