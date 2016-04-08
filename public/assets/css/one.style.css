@@ -1054,6 +1054,7 @@ a.button.blog-button:hover {
   #devs .col-sm-4.md-margin-bottom-40,
   #devs .col-sm-4.sm-margin-bottom-80  {
     width: 100%;
+    float: none;
   }
 
   a.button.blog-button {
