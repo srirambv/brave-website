@@ -15,11 +15,38 @@ var Brave = Brave || window.Brave || { app: {} };
 
     name: 'about',
 
-    events: [],
+    events: [
+      [window, 'scroll', 'handleScroll']
+    ],
+
+    properties: {
+
+      hasPhotographicHeader: true,
+
+      bootstrap: {
+        offsetHeight: 116
+      }
+
+    },
+
+    handleScroll: function(event) {
+      if(this.isNearPageTop()) {
+        this.unCollapseHeader();
+        if(this.properties.hasPhotographicHeader) {
+          requestAnimationFrame(this.invertHeader.bind(this));
+        }
+      }
+      else {
+        this.collapseHeader();
+        if(this.properties.hasPhotographicHeader) {
+          requestAnimationFrame(this.unInvertHeader.bind(this));
+        }
+      }
+    },
 
     init: function() {
-    	window.location.href = '/';
-    	return this;
+      this.invertHeader();
+      return this;
     }
 
   });
