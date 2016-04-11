@@ -22,21 +22,22 @@
   "homepage": "https://github.com/brave/brave-website",
   "dependencies": {
     "babel-cli": "^6.1.2",
+    "crumb": "^6.0.0",
     "fastly": "^1.2.1",
-    "hapi": "^12.1.0",
-    "hapi-async-handler": "^1.0.3",
-    "hapi-permanent-redirect": "^1.0.1",
-    "inert": "^3.0.1",
+    "fs": "latest",
     "gulp": "^3.9.0",
     "gulp-concat-util": "^0.5.4",
     "gulp-minify-css": "^1.2.3",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglifyjs": "^0.6.2",
+    "hapi": "^12.1.0",
     "hapi-assets": "^0.3.0",
-    "standard": "^5.3.1",
+    "hapi-async-handler": "^1.0.3",
+    "hapi-permanent-redirect": "^1.0.1",
+    "inert": "^3.0.1",
     "mailchimp-api": "^2.0.7",
-    "crumb": "^6.0.0",
-    "fs": "latest"
+    "standard": "^5.3.1",
+    "useragent": "^2.1.9"
   },
   "engines": {
     "node": "^5.0.0"

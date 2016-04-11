@@ -9,6 +9,7 @@ const mailchimp = require('./mailchimp.js')
 var assets = require('./assets.js')
 
 const server = new Hapi.Server()
+var useragent = require('useragent')
 
 // temporary workaround to allow localhost with HSTS
 var connections = [
@@ -95,6 +96,33 @@ server.register({ register: require('crumb'), options:
         reply({cookie: request.headers.cookie})
       }
   })
+
+   const downloadRedirects = (ua) => {
+     var agent = useragent.parse(ua)
+     var os = agent.os.toString()
+     if (os.match(/^iOS/)) {
+       return "https://itunes.apple.com/ca/app/brave-web-browser/id1052879175?mt=8#"
+     }
+     if (os.match(/^Android/)) {
+       return 'https://play.google.com/store/apps/details?id=com.linkbubble.playstore'
+     }
+     return 'https://github.com/brave/browser-laptop/releases'
+   }
+
+   // Download links
+   server.route({
+     method: 'GET',
+     path: '/api/download',
+     config: {
+       state: {
+         failAction: 'log'
+       }
+     },
+     handler: function (request, reply) {
+       reply().redirect(downloadRedirects(request.headers['user-agent']))
+     }
+   })
+
 })
 
 server.register(require('inert'), (err) => {
