@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title></title>
+    <title>Brave Software | How Brave Works for You</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Extra per-page stylesheets -->
-
+    
 </head>
 
 <!--
@@ -108,6 +108,118 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== End Header ===-->
 
     <!--=== Main content ===-->
+    
+
+    <!--=== Content Part ===-->
+    <!-- Begin Content -->
+    <div class="page container content-md">
+        <div class="row">
+            <div class="col-sm-5 sm-margin-bottom-20">
+                <p><img class="img-responsive" src="assets/img/team/brendan_couch.jpg" alt="Brendan Eich"></p>
+                <hr>
+                <div class="news">
+                    <ul class="list-inline posted-info">
+                        <li>
+                            <a href="blogpost_5.html">
+                                <strong>April 8, 2016</strong><br>
+                                #BeBraveDay<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_4.html">
+                                <strong>April 7, 2016</strong><br>
+                                Brave's Response to the NAA: A Better Deal for Publishers<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_3.html">
+                                <strong>March 31, 2016</strong><br>
+                                Brave's Payment Spec Out for Developer Input<br>
+                                By Marshall T. Rose and Brendan Eich<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_2.html">
+                                <strong>January 27, 2016</strong><br>
+                                How Brave Works For You<br>
+                                By Brendan Eich<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_1.html">
+                                <strong>January 20, 2016</strong><br>
+                                How to Fix the Web<br>
+                                By Brendan Eich<br>
+                            </a>
+                        </li>
+                    </ul>
+               </div>
+            </div>
+            <div class="col-sm-7 news-v3">
+                <div class="news-v3-in-sm no-padding">
+                    <ul class="list-inline posted-info">
+                        <li>By Brendan Eich</li>
+                        <li>Founder, President and CEO</li>
+                        <li>Posted January 27, 2016</li>
+                    </ul>
+                    <h2>How Brave Works for You</h2>
+                    <p>Last week <a href="blogpost_1.html">I wrote</a>:</p>
+
+<p>
+“<strong>Brave is the only approach to the Web that puts users first in ownership and control of their browsing data by blocking trackers by default, with no exceptions.</strong>”</p>
+<p>
+Our premise is that the Web requires ads for much of its funding, but not the poorly performing ads and trackers that drive users to ad-blockers. And we want to enable micropayments as an alternative, without requiring infrastructure changes from websites and publishers. Finally, we must protect Brave users from tracking and malvertisement.</p>
+<p>
+This week I’d like to dive into the details of how Brave will achieve these goals of better ads for the Web, micropayments where users want them, and better revenue for everyone through cutting out the tracking middle-players. I will use examples based on the items from what we’re calling the <strong><a href="https://github.com/brave/browser-laptop/issues/330" target="_blank">Bravery Menu</a></strong>:</p>
+                    <p><img class="img-responsive" src="assets/img/contents/bravery_menu_crop.png" alt=""></p>
+                    <p>
+                    This mock user interface design will evolve to cover global defaults and site-specific override settings. It shows the major choices that Brave enables:
+</p>
+                    <UL>
+                    <li>
+                    You’re game to try our default mode of operation, for a better ad-supported Web. Just leave the <strong>Replace Ads</strong> item checked. This is the default mode of operation. We insert ads after blocking without hurting page load speed, and those ads will support the sites you browse. We choose ads based on browser-private user data with no remote tracking -- not even by our servers.</li>
+
+                    <li>You want to block all ads and trackers, but you’re not sure about our plan to insert better ads with high performance and privacy. You can do this with Brave by checking <strong>Block Ads</strong>. We want you on board even if you’re just blocking everything.
+</li>
+                    <li>You’d like to try Brave without ad blocking or replacing, to get whatever ads and trackers you would experience in other browsers. Check <strong>Allow Ads and Tracking</strong>. We still protect you with HTTPS Everywhere and other defense by default.
+</li></UL>
+
+
+                    <p>
+                    Once you’ve chosen to replace, block, or allow ads and tracking, things get more interesting, since we give every person using Brave a <strong>user wallet</strong>. This feature will become available in the <a href= "https://github.com/brave/browser-laptop/wiki/Brave-Development-Timeline">coming months</a>, and we want you to draw from this wallet to support sites you favor with micropayments. The sites you micropay will be ad-free, even if you chose <strong>Replace Ads</strong> -- we won’t insert ads after blocking.
+</p>
+                    <ul><li>Replacing ads means you get the same share of gross ad revenue (15%) that we do. Once we have enough users to attract advertisers who meet our quality standards, this revenue will flow into your user wallet as payments arrive from the ad buyers. Again, the purpose of this revenue share is to support your preferred sites via micropayments.</li>
+
+                        <li>You’ll also be able to add your own funds to your wallet, to micropay even more sites that you wish to support. Note that this option exists whether you block, replace, or allow ads.
+
+                        </li></ul>
+
+                     <p>
+                     However you fill your wallet with enough funds to get started, you can choose to pay sites individually, or pay your top 20 sites with one click (the limit of 20 is adjustable), and go ad-free on those sites. You’ll pay a fixed amount per ad-free article you load each month, up to a monthly maximum that you can set.</p>
+                     <p>
+                     Payments accumulate as pending for the current month of browsing. Then at the end of the month, after a few days for you to finalize who gets paid, they will flow to the designated sites’ wallets. Thus you’ll have time to remove any sites or articles you don’t wish to support.
+</p>
+                     <p>
+                    If your wallet balance goes to zero, you’ll revert to whichever replace/block/allow mode you chose as your default. With <Strong>Replace Ads</Strong>, as you resume browsing you’ll build up a new positive balance in your wallet. When the system is running at scale, <Strong>we hope that most users will be able to zero their wallets each month by micro-paying their top sites</Strong>, to reward those sites a bonus earned from ad replacement on other sites.
+</p>
+                    <p>
+                    If you own a website, or even just a blog or other sub-domain on a hosting site, we’ll create a <strong>site wallet</strong> for you. Each month, we will deposit a large share of the revenue from all ads that performed on your pages, plus all the micropayments directed by users who support you, into your site wallet.  We aim to pay at least 55%, better than the current revenue share <a href="https://www.iab.net/media/file/PwC_IAB_Programmatic_Study.pdf" target="_blank">estimated at 45% or lower</a>. We hope that 70% to publishers is not out of reach, but we need to prove it.
+</p>
+                    <p>
+                    To get funds out of your wallet, you’ll need to certify your identity with our wallet partner, BitGo. We will detail this process in the forthcoming milestones as we build toward 1.0.</p>
+                    <p>
+                        We believe this system, which puts users in charge of their Web experiences and helps create a direct relationship with their favored publishers, will finally reset the ad tech ecosystem in favor of consumers and content providers. <strong>This is a win-win for everyone who has a stake in the open Web and who is weary of giving up privacy and revenue to the ad-tech intermediaries and their high “ad tax”.</strong></p>
+                    <p>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About Section -->
+
 
     <!--=== End main content ===-->
 

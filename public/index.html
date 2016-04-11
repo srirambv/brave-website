@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title></title>
+    <title>Brave Software | Building a Better Web</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Extra per-page stylesheets -->
-
+    
 </head>
 
 <!--
@@ -74,24 +74,24 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 <div class="menu-container">
                         <ul class="nav navbar-nav brave-nav" style="">
 
-                        <li class="home">
-                            <a href="index.html#faster">Faster</a>
-                        </li>
-                        <li>
-                            <a href="index.html#safer">Safer</a>
-                        </li>
 
-                         <li>
-                            <a href="index.html#devs">Devs</a>
-                        </li>
+    <li class="home">
+        <a href="#faster">Faster</a>
+    </li>
+    <li>
+        <a href="#safer">Safer</a>
+    </li>
 
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
+     <li>
+        <a href="#devs">Devs</a>
+    </li>
+    <li>
+        <a href="about.html">About</a>
+    </li>
+    <li>
+        <a href="blogpost_5.html" target="_blank">Blog</a>
+    </li>
 
-                        <li>
-                            <a href="blogpost_5.html" target="_blank">Blog</a>
-                        </li>
 
                         <li class="download">
                             <a href="/api/download" target="_blank">Download</a>
@@ -108,6 +108,224 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== End Header ===-->
 
     <!--=== Main content ===-->
+    
+
+    <!-- Modal Overlay -->
+    <div id="brave-overlay" style="display: none;">
+        <div class="close"><i></i><i></i></div>
+        <div class="clear"><i></i><i></i></div>
+        <iframe width="72%" src="https://www.youtube-nocookie.com/embed/kHWf6hRV-GM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <!-- End Modal Overlay -->
+
+    <!-- Hero Area -->
+    <div id="brave-hero">
+       <div class="text-group">
+           <div class="text-group-logo"></div>
+           <h2>Browse faster and safer with Brave.</h2>
+           <p>The new Brave browser automatically blocks ads and trackers, making it faster and safer than your current browser.</p>
+           <p>Soon, micropayments and better ads will give users and <a href="blogpost_4.html" target="_blank">publishers</a> a better deal.</p>
+       </div>
+       <div class="control-group">
+           <button id="brave-download" class="cta-button">Get Brave</button>
+           <div class="label"></div>
+           <a class="label" href="https://github.com/brave/browser-laptop/releases" target="_blank">Download Brave for another platform</a>
+       </div>
+    </div>
+    <!-- End Hero Area -->
+
+    <!--  Intro Section -->
+    <section id="faster" class="about-section section-first">
+        <div class="block-v1">
+            <div class="container">
+                <div class="row content-boxes-v3">
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-rocket"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Browse Faster</h2>
+                            <p>Brave blocks trackers and intrusive ads that can slow you down on the web.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-shield"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Browse Safer</h2>
+                            <p>Brave keeps you and your information safer, effectively shielding you from 3rd party tracking and malvertisement.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-btc"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Browse Better</h2>
+                            <p>With Brave, you can choose whether to see <a href="about_ad_replacement.html">ads that respect your privacy</a> or pay sites directly. Either way, you can feel good about helping fund content creators.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  End Intro Section -->
+
+    <!--  Faster Section -->
+    <div class="about-image bg-grey">
+        <div class="container">
+            <div class="title-v1">
+                <h1>It's amazing how fast a page loads when you strip away <BR>everything but the real content.</h1>
+                <p>Up to a whopping 60% of page load time is caused by the underlying ad technology that loads <BR>into various places each time you hit a page on your favorite news site.<BR> And 20% of this is time spent on loading things that are trying to learn more about you.<br>
+               </p>
+            </div>
+            <div class="title-v1 img-center ">
+                <p>Example news page data and load time with tracking allowed and normal ads allowed.</p>
+                <img class="img-responsive" src="assets/img/bg/pageload_graph.png" alt="">
+                <p>Same page data and load time with tracking <strong>blocked</strong> and normal ads <strong>blocked.</strong></p>
+            </div>
+            <button id="brave-video" class="cta-button">Watch Video</button>
+        </div>
+    </div>
+    <!--  End Faster Section -->
+
+    <!--  Safer Section -->
+    <section id="safer">
+        <div class="container content-sm">
+            <div class="title-v1">
+                <h2>Browse Safer with Brave on Your Side</h2>
+                <p>At Brave, our goal is to block everything on the web that can cramp your style and compromise your privacy. <br>
+                Annoying ads are yesterday's news, and cookies stay in your jar where they belong.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 content-boxes-v3">
+                    <div class="clearfix margin-bottom-30">
+                        <i class="icon-custom icon-md rounded-x icon-bg-orange fa fa-warning"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Brave blocks harmful advertising</h2>
+                            <p>There's a new ad game in town. It's called "Malvertising". The latest display ad technology can install malware on your laptop without your knowledge. But not with Brave watching your back.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix margin-bottom-30">
+                        <i class="icon-custom icon-md rounded-x icon-bg-orange fa fa-random"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Brave redirects sites to HTTPS</h2>
+                            <p>We've integrated <a href="https://eff.org/https-everywhere" target="_blank">HTTPS Everywhere</a> into every Brave browser to make sure you are always moving your bits across the safest possible pipe.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix margin-bottom-30">
+                        <i class="icon-custom icon-md rounded-x icon-bg-orange fa fa-ban"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Brave blocks Tracking Pixels and Tracking Cookies</h2>
+                            <p>Do you ever get that feeling that someone is watching you when you see an ad for something you bought a few days ago? We make sure you aren't being tracked while you shop online and browse your favorite sites.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-responsive" src="assets/img/bg/lion_blackBG.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  End Safer Section -->
+
+    <!--  Devs Section -->
+    <section id="devs">
+        <div class="about-image bg-color-grey">
+            <div class="container content-md">
+                <div class="title-v1">
+                    <h1>Brave is open source!<br>Join us on GitHub and contribute to Brave as we build the web of the future.</h1>
+                    <p>We believe in having an open source community. It’s our web and we want to fix it as a team, so everything from our backend to the frontend is open. We are progressing quickly so expect to see new commits on an hourly basis.</p>
+                </div>
+            </div>
+            <div class="content-boxes-v2 container margin-bottom-40">
+                <div class="col-sm-4 sm-margin-bottom-40 ">
+                    <i class="icon-custom icon-lg icon-bg-dark fa fa-github"></i>
+                    <h2 class="heading-sm">
+                        <span>Brave for iOS</span>
+                    </h2>
+                    <p>GitHub Repo:</p><p><a href="https://github.com/brave/browser-ios">https://github.com/brave/browser-ios</a></p>
+                </div>
+                <div class="col-md-4 sm-margin-bottom-40 ">
+                    <i class="icon-custom  icon-lg icon-bg-dark fa fa-github"></i>
+                    <h2 class="heading-sm">
+                        <span>Brave for OS X / Windows / Linux</span>
+                    </h2>
+                     <p>GitHub Repo:</p><p><a href="https://github.com/brave/browser-laptop">https://github.com/brave/browser-laptop</a></p>
+                </div>
+                <div class="col-sm-4 sm-margin-bottom-80 ">
+                    <i class="icon-custom  icon-lg icon-bg-dark fa fa-github"></i>
+                    <h2 class="heading-sm">
+                        <span>Brave for Android</span>
+                    </h2>
+                    <p>GitHub Repo:</p><p><a href="https://github.com/brave/browser-android">https://github.com/brave/browser-android</a></p>
+                </div>
+            </div>
+            <div class="heading-sm">
+                <h3>
+                    <a href="https://github.com/brave/browser-laptop/wiki/Brave-Development-Timeline">View Brave's Development Timeline</a>
+                </h3>
+            </div>
+        </div>
+    </section>
+    <!--  End Devs Section -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container content-md">
+            <div class="row">
+                <div class="col-sm-5 sm-margin-bottom-20">
+                <p><img class="img-responsive" src="assets/img/team/brendan_couch.jpg" alt="Brendan Eich"></p>
+                <hr>
+                <div class="news">
+                    <ul class="list-inline posted-info">
+                        <li>
+                            <a href="blogpost_5.html">
+                                <strong>April 8, 2016</strong><br>
+                                #BeBraveDay<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_4.html">
+                                <strong>April 7, 2016</strong><br>
+                                Brave's Response to the NAA: A Better Deal for Publishers<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_3.html">
+                                <strong>March 31, 2016</strong><br>
+                                Brave's Payment Spec Out for Developer Input<br>
+                                By Marshall T. Rose and Brendan Eich<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_2.html">
+                                <strong>January 27, 2016</strong><br>
+                                How Brave Works For You<br>
+                                By Brendan Eich<br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blogpost_1.html">
+                                <strong>January 20, 2016</strong><br>
+                                How to Fix the Web<br>
+                                By Brendan Eich<br>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-7 news-v3">
+                <div class="news-v3-in-sm no-padding">
+                    <ul class="list-inline posted-info">
+                        <li>Brave Software</li>
+                        <li>Posted April 8, 2016</li>
+                    </ul>
+                    <h2>#BeBraveDay</h2>
+                    <p>We've been busy at Brave building a solution designed to give users and publishers the fair deal they deserve on the Web. Today we're releasing our 0.9 developer version, which delivers what thousands have been asking for: the beginning of support for Chrome extensions with 1Password support, to help users better manage their security and privacy. Other password managers will follow soon. Another notable feature is the capacity to block phishing and malware, to make sure our users don't get hacked by dangerous domains. We are also introducing defenses against browser fingerprinting.</p>
+                    <p>We've added these features because browsing the Web should be fast AND safe, and because users deserve to be in control of their data. Users are increasingly reacting to being treated like products, weary of being analyzed, surveyed, and monetized for the profit of third parties. Being a customer should not be equated to being a product. The problem is not with advertising per se (users want to support their favorite sites and agree with ads done right), but rather with ...</p>
+                        <a class="button blog-button" href="blogpost_5.html">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
 
     <!--=== End main content ===-->
 
