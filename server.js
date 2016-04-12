@@ -106,7 +106,7 @@ server.register(require('inert'), (err) => {
       { path: '/', file: './public/index.html' },
       { path: '/privacy_android', file: './public/android_privacy.html' },
       { path: '/privacy_ios', file: './public/ios_privacy.html' },
-      { path: '/terms_of_use', file: './public/termsofuse.html' }
+      { path: '/terms_of_use', file: './public/terms_of_use.html' }
   ]
 
   if (err) {
