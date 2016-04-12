@@ -17,7 +17,6 @@ var Brave = Brave || window.Brave || { app: {} };
 
     events: [
       [window, 'scroll', 'handleScroll'],
-      ['#brave-video, #brave-overlay', 'click', 'handleVideoButton'],
       ['#brave-download', 'click', 'handleDownloadButtonClick'],
       ['.navbar-fixed-top ul.navbar-nav li', 'click', 'handleMenuItemClick']
     ],

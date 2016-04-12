@@ -114,7 +114,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <div id="brave-overlay" style="display: none;">
         <div class="close"><i></i><i></i></div>
         <div class="clear"><i></i><i></i></div>
-        <iframe width="72%" src="https://www.youtube-nocookie.com/embed/kHWf6hRV-GM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <!-- End Modal Overlay -->
 
@@ -179,7 +178,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 <img class="img-responsive" src="assets/img/bg/pageload_graph.png" alt="">
                 <p>Same page data and load time with tracking <strong>blocked</strong> and normal ads <strong>blocked.</strong></p>
             </div>
-            <button id="brave-video" class="cta-button">Watch Video</button>
+            <a id="brave-video" class="btn cta-button" href="https://www.youtube.com/watch?v=kHWf6hRV-GM" target="_blank">Watch Video</a>
         </div>
     </div>
     <!--  End Faster Section -->
@@ -572,6 +571,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/plugins/counter/jquery.counterup.min.js"></script>
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+
     <!-- Chartbeat -->
     <script type="text/javascript">
         var _sf_async_config = { uid: 62395, domain: 'brave.com', useCanonical: true };
@@ -589,22 +589,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         loadChartbeat : function() { oldonload(); loadChartbeat(); };
     })();
     </script>
-
-    <!-- Piwik -->
-    <script type="text/javascript">
-        var _paq = _paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-        var u="https://brave.piwikpro.com/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 1]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-        })();
-        </script>
-    <noscript><p><img src="https://brave.piwikpro.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
 
     <!-- JS Page Level-->
     <script src="assets/js/forms/login.js"></script>
