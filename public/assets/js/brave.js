@@ -24,6 +24,17 @@ var Brave = Brave || window.Brave || { app: {} };
       this.properties = {};
 
       // Shared View Utilities
+      this.cooldown = function(element, duration) {
+        this.events.forEach(function(e, i) {
+          if((e[0] + '') === element) {
+            $(e[0]).off(e[1]);
+            setTimeout(function() {
+              $(e[0]).on(e[1], this[e[2]].bind(this));
+            }.bind(this), duration);
+          }
+        }, this);
+      };
+
       this.isMenuShown = function() {
         return !!$('#fullsize-menu')[0] && $('#fullsize-menu').hasClass('in');
       };
