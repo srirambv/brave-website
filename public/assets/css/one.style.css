@@ -1143,11 +1143,11 @@ h1.fixed-page-heading.invert {
 
 #about-page ul.page-submenu li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
   float: right;
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 #about-page ul.page-submenu li a {
@@ -1177,18 +1177,21 @@ h1.fixed-page-heading.invert {
   left: 0;
 }
 
-.press-carousel-controls .arrow {
+.press-carousel-controls .arrow,
+.press-carousel-controls .arrow:active {
   color: rgb(40, 50, 60);
   opacity: 0.5;
   position: absolute;
   width: 80px;
   height: 80px;
   left: 0;
+  top: 40px;
   vertical-align: middle;
   text-align: center;
   display: inline-block;
   font-size: 2.5em;
   cursor: pointer;
+  z-index: 500;
 }
 
 .press-carousel-controls .arrow:hover {
@@ -1269,8 +1272,8 @@ ul#press-carousel > li > ul > li article > a:hover {
 @media(max-width: 991px) {
 
   ul#press-carousel {
-    height: 40rem;
-    max-height: 40rem;
+    height: 48rem;
+    max-height: 48rem;
   }
 
   ul#press-carousel > li > ul {
