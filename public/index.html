@@ -15,8 +15,9 @@
     <meta property="og:url" content="https://brave.com/" />
     <meta property="og:image" content="https://brave.com/assets/img/bg/lion_blackBG.jpg"/>
 
-    <!-- Chartbeat -->
+    <!-- Chartbeat
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    -->
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -572,7 +573,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
     <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
 
-    <!-- Chartbeat -->
+    <!-- Chartbeat
     <script type="text/javascript">
         var _sf_async_config = { uid: 62395, domain: 'brave.com', useCanonical: true };
         (function() {
@@ -589,6 +590,27 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
         loadChartbeat : function() { oldonload(); loadChartbeat(); };
     })();
     </script>
+    -->
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+      _paq.push(["setCookieDomain", "*.brave.com"]);
+      _paq.push(["setDomains", ["*.brave.com"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="//analytics.brave.com/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 2]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="//analytics.brave.com/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+
 
     <!-- JS Page Level-->
     <script src="assets/js/forms/login.js"></script>
