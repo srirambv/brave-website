@@ -17,6 +17,7 @@ var Brave = Brave || window.Brave || { app: {} };
 
     events: [
       [window, 'scroll', 'handleScroll'],
+      [window, 'resize', 'resizeTeamImages'],
       ['.arrow', 'click', 'handleArrowClick']
     ],
 
@@ -38,6 +39,10 @@ var Brave = Brave || window.Brave || { app: {} };
         offsetHeight: 116
       }
 
+    },
+
+    resizeTeamImages: function(event) {
+      return $('.team-img').height($('.team-img').width());
     },
 
     stopCarousel: function() {
@@ -90,6 +95,7 @@ var Brave = Brave || window.Brave || { app: {} };
 
     init: function() {
       this.startCarousel();
+      this.resizeTeamImages();
       return this.invertHeader();
     }
 

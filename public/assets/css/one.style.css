@@ -1107,7 +1107,7 @@ a.button.blog-button:hover {
 /*About Page*/
 #about-page {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-sf-sky.jpg');
-  background-position: center -60rem;
+  background-position: center -96rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1158,7 +1158,7 @@ h1.fixed-page-heading.invert {
 @media(max-width: 991px) {
 
   #about-page {
-    background-position: center -100rem;
+    background-position: center -180rem;
   }
 
 }
@@ -1290,11 +1290,13 @@ ul#press-carousel > li > ul > li article > a:hover {
 
 /*Team section
 ------------------------------------*/
-#team div.title-v1 h2 {
+#team div.title-v1 h2,
+#assets div.title-v1 h2 {
   padding-top: 60px;
 }
 
-#team ul.team-container {
+#team ul.team-container,
+#assets ul.assets-container {
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -1304,12 +1306,10 @@ ul#press-carousel > li > ul > li article > a:hover {
   flex-wrap: wrap;
 }
 
-#team ul.team-container > * {
-
-}
-
 #team ul.container > li,
-#team ul.team-container > li {
+#assets ul.container > li,
+#team ul.team-container > li,
+#assets ul.assets-container > li {
   position: relative;
   display: block;
   float: left;
@@ -1317,36 +1317,54 @@ ul#press-carousel > li > ul > li article > a:hover {
   margin: 2.5%;
 }
 
-#team ul.container li.title-v1 {
+#team ul.container li.title-v1,
+#assets ul.container li.title-v1 {
   width: 100%;
   float: none;
 }
 
-#team ul.container li > p:before {
+#team ul.container li > p:before,
+#assets ul.container li > p:before {
   display: none;
 }
 
-#team ul.team-container > li .team-img {
+#team ul.team-container > li .team-img,
+#assets ul.assets-container > li .team-img {
   width: 100%;
 }
 
 #team ul.team-container > li .team-img img,
-#team ul.team-container > li .team-img:after {
-  max-width: 100%;
-  max-height: 100%;
+#team ul.team-container > li .team-img:after,
+#assets ul.assets-container > li .team-img img,
+#assets ul.assets-container > li .team-img:after {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-#team li > h3 {
+#assets ul.assets-container > li .icon-sm {
+  padding: 5px;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+}
+
+#team li > h3,
+#assets li > h3 {
   font-size: 1.1em;
 }
 
-#team li > h4 {
+#team li > h4,
+#assets li > h4 {
   font-size: 0.75em;
 }
 
 #team ul.team-container > li h3,
 #team ul.team-container > li h4,
-#team ul.team-container > li p {
+#team ul.team-container > li p,
+#assets ul.assets-container > li h3,
+#assets ul.assets-container > li h4,
+#assets ul.assets-container > li p {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1355,48 +1373,21 @@ ul#press-carousel > li > ul > li article > a:hover {
 
 @media (max-width: 991px) {
 
-  #team ul.team-container > li {
+  #team ul.team-container > li,
+  #assets ul.assets-container > li {
     width: 40%;
     margin: 5%;
   }
 
-  #team ul.team-container > li .team-img img,
-  #team ul.team-container > li .team-img:after {
-
-  }
-
   #team ul.team-container > li h3,
   #team ul.team-container > li h4
-  #team ul.team-container > li p {
+  #team ul.team-container > li p,
+  #assets ul.assets-container > li h3,
+  #assets ul.assets-container > li h4
+  #assets ul.assets-container > li p {
     font-size: 0.8em;
   }
 
-}
-
-@media (max-width: 770px) {
-  #team .col-sm-3 {
-    min-height: 450px;
-  }
-}
-@media (max-width: 550px) {
-  #team .col-sm-3 {
-    min-height: 345px;
-  }
-}
-@media (max-width: 500px) {
-  #team .col-sm-3 {
-    min-height: 320px;
-  }
-}
-@media (max-width: 450px) {
-  #team .col-sm-3 {
-    min-height: 300px;
-  }
-}
-@media (max-width: 400px) {
-  #team .col-sm-3 {
-    min-height: 295px;
-  }
 }
 
 /*FAQ Page
