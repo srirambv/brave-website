@@ -414,6 +414,9 @@ Replacing ads means our users get a share of the gross ad revenue. Brave will pa
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
       })();
+      document.getElementById('brave-download').addEventListener('click', function () {
+        _paq.push(['trackEvent', 'Downloads', 'Clicked'])
+      })
     </script>
     <noscript><p><img src="//analytics.brave.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
     <!-- End Piwik Code -->
