@@ -1371,6 +1371,10 @@ ul#press-carousel > li > ul > li article > a:hover {
   white-space: nowrap;
 }
 
+#assets ul.assets-container > li h4 {
+  text-align: center;
+}
+
 @media (max-width: 991px) {
 
   #team ul.team-container > li,
