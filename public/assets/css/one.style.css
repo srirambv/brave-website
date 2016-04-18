@@ -1270,18 +1270,52 @@ ul#press-carousel > li > ul > li article {
 }
 
 ul#press-carousel > li > ul > li article > * {
-  font-size: 0.75em;
+  font-size: 0.7em;
   color:rgb(116, 116, 130);
 }
 
 ul#press-carousel > li > ul > li article > a {
-  display: block;
+  display: inline-block;
   color:rgb(40, 50, 60);
   margin-top: 10px;
+  line-height: 28px;
+  vertical-align: middle;
 }
 
 ul#press-carousel > li > ul > li article > a:hover {
   color: rgb(255, 80, 0);
+}
+
+ul#press-carousel > li > ul > li article > a i.icon {
+  background: url('../img/icons/press/forbes.jpg') 0 0 / cover no-repeat;
+  display: inline-block;
+  text-indent: -99999px;
+  font-size: 0;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.techcrunch {
+  background: url('../img/icons/press/techcrunch.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.mediapost {
+  background: url('../img/icons/press/mediapost.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.businessinsider {
+  background: url('../img/icons/press/businessinsider.jpg') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.cnet {
+  background: url('../img/icons/press/cnet.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.venturebeat {
+  background: url('../img/icons/press/venturebeat.png') 0 0 / cover no-repeat;
 }
 
 @media(max-width: 991px) {
