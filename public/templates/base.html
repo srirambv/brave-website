@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>{% block title %}{% endblock %}</title>
+    <title></title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 
     <!-- Extra per-page stylesheets -->
-    {% block stylesheets %}{% endblock %}
+
 </head>
 
 <!--
@@ -70,7 +70,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse">
                 <div class="menu-container">
                         <ul class="nav navbar-nav brave-nav" style="">
-{% block navMenu %}
+
                         <li class="home">
                             <a href="index.html#faster">Faster</a>
                         </li>
@@ -89,7 +89,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li>
                             <a href="blogpost_5.html" target="_blank">Blog</a>
                         </li>
-{% endblock %}
+
                         <li class="download">
                             <a href="/api/download" target="_blank">Download</a>
                         </li>
@@ -105,7 +105,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== End Header ===-->
 
     <!--=== Main content ===-->
-    {% block mainContent %}{% endblock %}
+
     <!--=== End main content ===-->
 
   <!--=== Footer v1 ===-->
@@ -169,7 +169,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <!-- End Link List -->
 
                     <!-- Address -->
-                        <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="col-md-3 md-margin-bottom-40">
                             <div class="headline"><h2>Contact Us</h2></div>
                             <address class="md-margin-bottom-40">
                                 1161 Mission St. STE 113<BR>

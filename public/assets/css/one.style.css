@@ -44,8 +44,16 @@ h1.heading {
   margin: 40px auto;
 }
 
+.headline {
+  border-bottom: none;
+}
+
 .headline h2 {
   margin: 20px 0;
+}
+
+.container {
+  min-width: 300px;
 }
 
 p,
@@ -1107,10 +1115,23 @@ a.button.blog-button:hover {
 ------------------------------------*/
 /*About Page*/
 #about-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-sf-sky.jpg');
-  background-position: center -60rem;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-san-francisco.png');
+  background-position: center top;
+  background-size: contain;
   background-repeat: no-repeat;
+}
+
+#about-page section:first-of-type {
+  margin: 16rem auto;
+  background: rgb(255, 255, 255);
+}
+
+#overview {
+  margin-top: 40px;
+}
+
+#overview p:first-of-type {
+  margin-top: 40px;
 }
 
 h1.fixed-page-heading.invert {
@@ -1126,15 +1147,16 @@ h1.fixed-page-heading.invert {
   list-style: none;
   margin-top: 40px;
   padding: 0;
+  overflow: hidden;
 }
 
 #about-page ul.page-submenu li {
   display: inline-block;
-  width: 8%;
+  margin-left: 30px;
   float: right;
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 #about-page ul.page-submenu li a {
@@ -1142,30 +1164,193 @@ h1.fixed-page-heading.invert {
   text-decoration: none;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 768px) {
 
-  #about-page {
-    background-position: center -100rem;
+  #about-page section:first-of-type {
+    margin: 0 auto;
+  }
+
+  #about-page h1.fixed-page-heading.invert {
+    margin-top: 2rem;
   }
 
   #about-page ul.page-submenu li {
-    width: 25%;
+    display: block;
+    float: none;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+}
+
+/*Press Section
+------------------------------------*/
+
+#press {
+  position: relative;
+}
+
+.press-carousel-controls {
+  position: absolute;
+  display: block;
+  width: 100%;
+  left: 0;
+}
+
+.press-carousel-controls .arrow,
+.press-carousel-controls .arrow:active {
+  color: rgb(40, 50, 60);
+  opacity: 0.5;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  top: 40px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  font-size: 2.5em;
+  cursor: pointer;
+  z-index: 500;
+}
+
+.press-carousel-controls .arrow:hover {
+  opacity: 1;
+}
+
+.press-carousel-controls .arrow:last-of-type {
+  left: auto;
+  right: 0;
+}
+
+ul#press-carousel {
+  margin-bottom: 20px;
+  padding: 0;
+  width: 75%;
+  height: 16rem;
+  max-height: 16rem;
+  overflow: hidden;
+}
+
+ul#press-carousel > li {
+  float: left;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+ul#press-carousel > li.active {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+ul#press-carousel > li.active.inactive {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+ul#press-carousel > li.stop {
+  -webkit-transform: none;
+  transform: none;
+}
+
+ul#press-carousel > li > ul {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+}
+
+ul#press-carousel > li > ul > li {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 20px;
+}
+
+ul#press-carousel > li > ul > li article {
+  line-height: 1.25em;
+}
+
+ul#press-carousel > li > ul > li article > * {
+  font-size: 0.7em;
+  color:rgb(116, 116, 130);
+}
+
+ul#press-carousel > li > ul > li article > a {
+  display: inline-block;
+  color:rgb(40, 50, 60);
+  margin-top: 10px;
+  line-height: 28px;
+  vertical-align: middle;
+}
+
+ul#press-carousel > li > ul > li article > a:hover {
+  color: rgb(255, 80, 0);
+}
+
+ul#press-carousel > li > ul > li article > a i.icon {
+  background: url('../img/icons/press/forbes.jpg') 0 0 / cover no-repeat;
+  display: inline-block;
+  text-indent: -99999px;
+  font-size: 0;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.techcrunch {
+  background: url('../img/icons/press/techcrunch.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.mediapost {
+  background: url('../img/icons/press/mediapost.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.businessinsider {
+  background: url('../img/icons/press/businessinsider.jpg') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.cnet {
+  background: url('../img/icons/press/cnet.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.venturebeat {
+  background: url('../img/icons/press/venturebeat.png') 0 0 / cover no-repeat;
+}
+
+@media(max-width: 991px) {
+
+  ul#press-carousel {
+    height: 48rem;
+    max-height: 48rem;
+  }
+
+  ul#press-carousel > li > ul {
+    display: block;
+  }
+
+  ul#press-carousel > li > ul > li {
+    -webkit-flex: none;
+    flex: none;
+    width: 100%;
   }
 
 }
 
 /*Team section
 ------------------------------------*/
-#team {
-  margin: 16rem auto;
-  background: rgb(255, 255, 255);
-}
-
-#team div.title-v1 h2 {
+#team div.title-v1 h2,
+#assets div.title-v1 h2 {
   padding-top: 60px;
 }
 
-#team ul.team-container {
+#team ul.team-container,
+#assets ul.assets-container {
   margin: 0 auto;
   padding: 0;
   list-style: none;
@@ -1175,12 +1360,10 @@ h1.fixed-page-heading.invert {
   flex-wrap: wrap;
 }
 
-#team ul.team-container > * {
-
-}
-
 #team ul.container > li,
-#team ul.team-container > li {
+#assets ul.container > li,
+#team ul.team-container > li,
+#assets ul.assets-container > li {
   position: relative;
   display: block;
   float: left;
@@ -1188,86 +1371,81 @@ h1.fixed-page-heading.invert {
   margin: 2.5%;
 }
 
-#team ul.container li.title-v1 {
+#team ul.container li.title-v1,
+#assets ul.container li.title-v1 {
   width: 100%;
   float: none;
 }
 
-#team ul.container li > p:before {
+#team ul.container li > p:before,
+#assets ul.container li > p:before {
   display: none;
 }
 
-#team ul.team-container > li .team-img {
+#team ul.team-container > li .team-img,
+#assets ul.assets-container > li .team-img {
   width: 100%;
 }
 
 #team ul.team-container > li .team-img img,
-#team ul.team-container > li .team-img:after {
-  max-width: 100%;
-  max-height: 100%;
+#team ul.team-container > li .team-img:after,
+#assets ul.assets-container > li .team-img img,
+#assets ul.assets-container > li .team-img:after {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-.team-v1 li > h3 {
+#assets ul.assets-container > li .icon-sm {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+
+#team li > h3,
+#assets li > h3 {
   font-size: 1.1em;
 }
 
-.team-v1 li > h4 {
+#team li > h4,
+#assets li > h4 {
   font-size: 0.75em;
 }
 
 #team ul.team-container > li h3,
 #team ul.team-container > li h4,
-#team ul.team-container > li p {
+#team ul.team-container > li p,
+#assets ul.assets-container > li h3,
+#assets ul.assets-container > li h4,
+#assets ul.assets-container > li p {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+#assets ul.assets-container > li h4 {
+  text-align: center;
+}
+
 @media (max-width: 991px) {
 
-  #team ul.team-container > li {
+  #team ul.team-container > li,
+  #assets ul.assets-container > li {
     width: 40%;
     margin: 5%;
   }
 
-  #team ul.team-container > li .team-img img,
-  #team ul.team-container > li .team-img:after {
-
-  }
-
   #team ul.team-container > li h3,
   #team ul.team-container > li h4
-  #team ul.team-container > li p {
+  #team ul.team-container > li p,
+  #assets ul.assets-container > li h3,
+  #assets ul.assets-container > li h4
+  #assets ul.assets-container > li p {
     font-size: 0.8em;
   }
 
-}
-
-@media (max-width: 770px) {
-  #team .col-sm-3 {
-    min-height: 450px;
-  }
-}
-@media (max-width: 550px) {
-  #team .col-sm-3 {
-    min-height: 345px;
-  }
-}
-@media (max-width: 500px) {
-  #team .col-sm-3 {
-    min-height: 320px;
-  }
-}
-@media (max-width: 450px) {
-  #team .col-sm-3 {
-    min-height: 300px;
-  }
-}
-@media (max-width: 400px) {
-  #team .col-sm-3 {
-    min-height: 295px;
-  }
 }
 
 /*FAQ Page
