@@ -1110,9 +1110,9 @@ a.button.blog-button:hover {
 ------------------------------------*/
 /*About Page*/
 #about-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-sf-sky.jpg');
-  background-position: center -96rem;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-san-francisco.png');
+  background-position: center top;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -1159,10 +1159,21 @@ h1.fixed-page-heading.invert {
   text-decoration: none;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 768px) {
 
-  #about-page {
-    background-position: center -180rem;
+  #about-page section:first-of-type {
+    margin: 0 auto;
+  }
+
+  #about-page h1.fixed-page-heading.invert {
+    margin-top: 2rem;
+  }
+
+  #about-page ul.page-submenu li {
+    display: block;
+    float: none;
+    margin: 30px auto;
+    text-align: center;
   }
 
 }
@@ -1347,10 +1358,10 @@ ul#press-carousel > li > ul > li article > a:hover {
 }
 
 #assets ul.assets-container > li .icon-sm {
-  padding: 5px;
   box-sizing: border-box;
   width: 50px;
   height: 50px;
+  line-height: 50px;
 }
 
 #team li > h3,

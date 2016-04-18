@@ -96,7 +96,7 @@ var Brave = Brave || window.Brave || { app: {} };
     init: function() {
       this.startCarousel();
       this.resizeTeamImages();
-      return this.invertHeader();
+      return this.handleScroll();
     }
 
   });
