@@ -32,7 +32,8 @@ var Brave = Brave || window.Brave || { app: {} };
       platforms: [
         { name: 'Linux x64, Ubuntu', userAgent: 'Linux|Ubuntu', url: 'https://github.com/brave/browser-laptop/blob/master/docs/linuxInstall.md' },
         { name: 'Mac OS 10.9', userAgent: 'Macintosh', url: 'https://laptop-updates.brave.com/latest/osx' },
-        { name: 'Windows 7 x64', userAgent: 'Windows', url: 'https://laptop-updates.brave.com/latest/winx64' },
+        { name: 'Windows 7', userAgent: 'Windows', url: 'https://laptop-updates.brave.com/latest/winia32' },
+        { name: 'Windows 7 x64', userAgent: 'WOW64|Win64', url: 'https://laptop-updates.brave.com/latest/winx64' },
         { name: 'iOS 8', userAgent: 'iPhone|iPod|iPad', url: 'https://itunes.apple.com/us/app/brave-web-browser/id1052879175' },
         { name: 'Android 4.1', userAgent: 'Android', url: 'https://play.google.com/store/apps/details?id=com.linkbubble.playstore' }
       ],
