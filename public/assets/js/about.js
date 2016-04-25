@@ -29,9 +29,11 @@ var Brave = Brave || window.Brave || { app: {} };
 
         index: 1,
 
-        length: 6,
+        length: 4,
 
-        interval: 6000,
+        // set interval to 0 to disable auto-pagination,
+        // otherwise 1000 is a reasonable minimum
+        interval: 0,
 
         duration: 500,
 
@@ -82,7 +84,9 @@ var Brave = Brave || window.Brave || { app: {} };
       this.cooldown('.arrow', this.properties.carousel.timeout);
       this.stopCarousel();
       this.tick();
-      setTimeout(this.startCarousel.bind(this), this.properties.carousel.duration);
+      if(this.properties.carousel.interval > 0) {
+        setTimeout(this.startCarousel.bind(this), this.properties.carousel.duration);
+      }
     },
 
     handleScroll: function(event) {
@@ -101,7 +105,9 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     init: function() {
-      this.startCarousel();
+      if(this.properties.carousel.interval > 0) {
+        this.startCarousel();
+      }
       this.resizeTeamImages();
       return this.handleScroll();
     }
