@@ -29,7 +29,7 @@ var Brave = Brave || window.Brave || { app: {} };
 
         index: 1,
 
-        length: 4,
+        length: 6,
 
         interval: 6000,
 
