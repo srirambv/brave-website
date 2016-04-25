@@ -1323,6 +1323,46 @@ ul#press-carousel > li > ul > li article > a i.icon.venturebeat {
   background: url('../img/icons/press/venturebeat.png') 0 0 / cover no-repeat;
 }
 
+ul#press-carousel > li > ul > li article > a i.icon.bitcoin {
+  background: url('../img/icons/press/bitcoin.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.opensource {
+  background: url('../img/icons/press/opensource.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.editorandpublisher {
+  background: url('../img/icons/press/editorandpublisher.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.bitcoinmagazine {
+  background: url('../img/icons/press/bitcoinmagazine.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.infoworld {
+  background: url('../img/icons/press/infoworld.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.pcworld {
+  background: url('../img/icons/press/pcworld.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.boingboing {
+  background: url('../img/icons/press/boingboing.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.urbanophile {
+  background: url('../img/icons/press/urbanophile.png') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.theglobeandmail {
+  background: url('../img/icons/press/theglobeandmail.jpg') 0 0 / cover no-repeat;
+}
+
+ul#press-carousel > li > ul > li article > a i.icon.theguardian {
+  background: url('../img/icons/press/theguardian.png') 0 0 / cover no-repeat;
+}
+
 @media(max-width: 991px) {
 
   ul#press-carousel {
