@@ -27,6 +27,10 @@ var Brave = Brave || window.Brave || { app: {} };
 
       carousel: {
 
+        index: 1,
+
+        length: 4,
+
         interval: 6000,
 
         duration: 500,
@@ -41,34 +45,37 @@ var Brave = Brave || window.Brave || { app: {} };
 
     },
 
+    makeSlideActive: function(index, element) {
+      $(element).css({ display: 'block' });
+      this.state.timeout = setTimeout(function() { $(element).addClass('active'); }, this.properties.carousel.duration);
+      return element;
+    },
+
+    makeSlideInactive: function(index, element) {
+      return $(element).removeClass('inactive').removeClass('active').css({ display: 'none' });
+    },
+
     resizeTeamImages: function(event) {
       return $('.team-img').height($('.team-img').width());
     },
 
     stopCarousel: function() {
-      clearInterval(this.state.interval);
+      return clearInterval(this.state.interval);
     },
 
     startCarousel: function() {
       this.state.interval = setInterval(this.tick.bind(this), this.properties.carousel.interval);
+      return this.state.interval;
     },
 
     tick: function() {
-      $('#press-carousel').children().each(function(i, e) {
-        if($(e).hasClass('active')) {
-          $(e).addClass('inactive');
-          setTimeout(function() {
-            $(e).removeClass('inactive').removeClass('active').css({ display: 'none' });
-            $('#press-carousel').append($('#press-carousel').children().first());
-          }, this.properties.carousel.duration);
-        }
-        else {
-          $(e).css({ display: 'block' });
-          setTimeout(function() {
-            $(e).addClass('active');
-          }, this.properties.carousel.duration);
-        }
-      }.bind(this));
+      var index = this.properties.carousel.index++;
+      $('#press-carousel').children().each(this.makeSlideInactive.bind(this));
+      this.makeSlideActive(index, $('#press-carousel')[0].children[index]);
+      if(index === (this.properties.carousel.length - 1)) {
+        this.properties.carousel.index = 0;
+      }
+      return this.state.timeout;
     },
 
     handleArrowClick: function(event) {
