@@ -168,7 +168,7 @@ server.register(require('inert'), (err) => {
   // will make too many requests to Heroku and latency to responses
   server.ext('onPreResponse', function(request, reply) {
     if (request.response.statusCode === 200) {
-      request.response.headers['Cache-Control'] = 'public' // override no-cache
+      request.response.headers['cache-control'] = 'public' // override no-cache
       // send surrogate control headers for Fastly
       // this will cache files at the fastly edge servers for a long
       // period of time or until purged, but the browser will
@@ -178,15 +178,6 @@ server.register(require('inert'), (err) => {
     }
     reply(request.response)
   })
-})
-
-server.ext('onRequest', function (request, reply) {
-    if (request.headers['x-forwarded-proto'] != 'https') {
-      return reply()
-        .redirect('https://' + request.headers.host + request.url.path)
-        .code(301);
-    }
-    reply.continue()
 })
 
 server.start(() => {
