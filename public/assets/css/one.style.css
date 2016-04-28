@@ -81,6 +81,19 @@ a:hover,
   color: #ff5000;
   text-decoration: underline;
 }
+a.block-link {
+  display: block;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+@media(max-width: 991px) {
+  a.block-link {
+    font-size: 1.25em;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
 
 .margin-top-90 ul {
   list-style: none;
