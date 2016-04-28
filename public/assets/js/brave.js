@@ -118,6 +118,8 @@ var Brave = Brave || window.Brave || { app: {} };
         this[key] = params[key];
       }
 
+      this.isOn = false;
+
     }
     return new View;
   };
