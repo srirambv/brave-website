@@ -107,20 +107,38 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== Main content ===-->
     
 
-
       <div class="page" id="downloads-page">
+        <div class="container">
+            <ul class="page-submenu">
+                <li>
+                    <a href="#android">Android</a>
 
+                </li>
+                <li>
+                    <a href="#ios">iOS</a>
+                </li>
+                <li>
+                    <a href="#linux">Linux</a>
+                </li>
+                <li>
+                    <a href="#mac">Mac</a>
+                </li>
+                <li>
+                    <a href="#windows">Windows</a>
+                </li>
+            </ul>
+        </div>
         <!--=== Container Part ===-->
-        <div class="container content-sm">
+        <div id="windows" class="container content-sm">
             <div class="title-v1">
                 <h2>Download Brave for Your Device</h2>
             </div>
-            <div class="row"><BR><BR><BR>
+            <!--=== Windows download ===-->
+            <div class="row">
                 <div class="col-md-6 md-margin-bottom-50">
                     <img class="img-responsive" src="assets/img/contents/win_surface_braved.jpg" alt="" width="400">
                 </div>
                 <div class="col-md-6">
-                    <br><br><br>
                     <div class="headline-left margin-bottom-30">
                         <img class="responsive"  src="assets/img/contents/windows10-compatible.png" alt="" width="60">
                         <h2 class="headline-brd">Brave 0.9.dev for Windows 7+</h2>
@@ -139,17 +157,17 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 </div><!--/end row-->
             </div>
         </div>
-                <HR>
+        <hr>
         <!--=== End Container Part ===-->
 
-         <!--=== Mac download ===-->
-        <div class="container content-sm">
+        <!--=== Mac download ===-->
+        <div id="mac" class="container content-sm">
             <div class="row">
                 <div class="col-md-6 md-margin-bottom-50">
                     <img class="img-responsive" src="assets/img/contents/mackbook_braved.jpg" alt="" width="400">
                 </div>
                 <div class="col-md-6">
-            <div class="headline-left margin-bottom-30">
+                    <div class="headline-left margin-bottom-30">
                         <img class="responsive"  src="assets/img/contents/MacOS_large.svg" alt="" width="60">
                         <h2 class="headline-brd">Brave 0.9.dev for Mac OS</h2>
                         <p>To run Brave, you must have Mac OS 10.9 or newer.</p>
@@ -167,22 +185,24 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 </div><!--/end row-->
             </div>
         </div>
-                <HR>
+        <hr>
         <!--=== End mac ===-->
 
-       <!--=== Linux download ===-->
-        <div class="container content-sm">
+        <!--=== Linux download ===-->
+        <div id="linux" class="container content-sm">
             <div class="row">
                 <div class="col-md-6 md-margin-bottom-50">
                     <img class="img-responsive" src="assets/img/contents/linux_braved.jpg" alt="" width="400">
                 </div>
                 <div class="col-md-6">
-
                     <div class="headline-left margin-bottom-30">
                         <img class="responsive"  src="assets/img/contents/Linux_icon.png" alt="" width="60">
                         <h2 class="headline-brd">Brave 0.9.dev for Linux</h2>
-                        <p><strong>Brave for Linux comes in two flavors:</strong> <BR>64 bit .deb for Debian/Ubuntu and
-     64 bit .rpm for Fedora/openSUSE. <BR>Please download the correct installer for your OS.</p>
+                        <p>
+                            <strong>Brave for Linux comes in two flavors:</strong><br>
+                            64 bit .deb for Debian/Ubuntu and 64 bit .rpm for Fedora/openSUSE.<br>
+                            Please download the correct installer for your OS.
+                        </p>
                     </div>
     <!--
                     <ul class="list-unstyled lists-v2 margin-bottom-30">
@@ -198,17 +218,16 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 </div><!--/end row-->
             </div>
         </div>
-                <HR>
+        <hr>
         <!--=== End linux ===-->
 
-       <!--=== iOS download ===-->
-        <div class="container content-sm">
+        <!--=== iOS download ===-->
+        <div id="ios" class="container content-sm">
             <div class="row">
                 <div class="col-md-6 md-margin-bottom-50">
                     <img class="img-responsive" src="assets/img/contents/ipad_braved.jpg" alt="" width="450">
                 </div>
                 <div class="col-md-6">
-
                     <div class="headline-left margin-bottom-30">
                         <img class="responsive"  src="assets/img/contents/ios_icon.png" alt="" width="60">
                         <h2 class="headline-brd">Brave 1.0 for iOS</h2>
@@ -219,22 +238,19 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li><i class="fa fa-check"></i> Works with iPhone and iPad</li>
                     </ul>
                     <a href="https://itunes.apple.com/us/app/brave-web-browser/id1052879175" class="btn cta-button pull-left">Download Brave for iOS</a>
-
-
                 </div><!--/end row-->
             </div>
         </div>
-                <HR>
+        <hr>
         <!--=== End iOS ===-->
 
-                     <!--=== Android download ===-->
-        <div class="container content-sm">
+        <!--=== Android download ===-->
+        <div id="android" class="container content-sm">
             <div class="row">
                 <div class="col-md-6 md-margin-bottom-50">
                     <img class="img-responsive" src="assets/img/contents/droids_braved.jpg" alt="" width="400">
                 </div>
                 <div class="col-md-6">
-
                     <div class="headline-left margin-bottom-30">
                         <img class="responsive"  src="assets/img/contents/android_icon.png" alt="" width="60">
                         <h2 class="headline-brd">Brave Browser 1.9 for Android</h2>
