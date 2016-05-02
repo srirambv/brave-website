@@ -1010,6 +1010,116 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
   margin: 40px auto;
   text-align: center;
   line-height: 5em;
+  font-size: 1.2em;
+}
+
+#devs .orange-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 25px 90vw;
+  border-color: transparent transparent transparent rgb(255, 80, 0);
+  -webkit-transform: translate3d(0, -25px, 0);
+  -moz-transform: translate3d(0, -25px, 0);
+  -ms-transform: translate3d(0, -25px, 0);
+  -o-transform: translate3d(0, -25px, 0);
+  transform: translate3d(0, -25px, 0);
+}
+
+#devs .orange-triangle:last-of-type {
+  border-width: 5px 0 5px 90vw;
+  -webkit-transform: translate3d(0, 5px, 0);
+  -moz-transform: translate3d(0, 5px, 0);
+  -ms-transform: translate3d(0, 5px, 0);
+  -o-transform: translate3d(0, 5px, 0);
+  transform: translate3d(0, 5px, 0);
+}
+
+@media(max-width: 991px) {
+  #devs .orange-triangle:first-of-type {
+    border-width: 5px 0 5px 90vw;
+    -webkit-transform: translate3d(0, -5px, 0);
+    -moz-transform: translate3d(0, -5px, 0);
+    -ms-transform: translate3d(0, -5px, 0);
+    -o-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+  #devs .orange-triangle:last-of-type {
+    border-width: 5px 0 5px 90vw;
+    -webkit-transform: translate3d(0, 5px, 0);
+    -moz-transform: translate3d(0, 5px, 0);
+    -ms-transform: translate3d(0, 5px, 0);
+    -o-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+#github-logo {
+  width: 421px;
+  height: 407px;
+  background: url('../img/icons/github-large.png') 0 0 / contain no-repeat;
+  text-indent: -99999px;
+  margin: 0 auto;
+}
+
+#devs .content-boxes {
+  margin-top: 60px;
+  margin-left: 80px;
+  width: 436px;
+}
+
+#devs .content-boxes .btn.cta-button {
+  width: 100%;
+  height: 72px;
+  text-align: left;
+  margin: 20px;
+  padding: 0;
+}
+
+#devs .content-boxes .btn.cta-button > * {
+  max-width: 72%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#devs .content-boxes .btn.cta-button span,
+#devs .content-boxes .btn.cta-button a {
+  margin: 10px;
+}
+
+#devs .content-boxes .btn.cta-button a {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 0.6em;
+}
+
+#devs .content-boxes .btn.cta-button span.arrow {
+  line-height: 72px;
+  vertical-align: middle;
+  width: 72px;
+  height: 72px;
+  background: rgb(255, 165, 0);
+  text-align: center;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin: 0;
+}
+
+@media(max-width:991px) {
+  #devs .content-boxes {
+    width: 100%;
+    margin-left: 0;
+  }
+  #devs .content-boxes .btn.cta-button {
+    width: 90%;
+  }
+  #github-logo {
+    width: 300px;
+    max-width: 100vw;
+    float: none !important;
+    margin: 0 auto;
+  }
 }
 
 a.button.blog-button {

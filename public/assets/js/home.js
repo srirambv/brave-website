@@ -18,7 +18,8 @@ var Brave = Brave || window.Brave || { app: {} };
     events: [
       [window, 'scroll', 'handleScroll'],
       ['#brave-download', 'click', 'handleDownloadButtonClick'],
-      ['.navbar-fixed-top ul.navbar-nav li', 'click', 'handleMenuItemClick']
+      ['.navbar-fixed-top ul.navbar-nav li', 'click', 'handleMenuItemClick'],
+      ['#devs .btn', 'click', 'handleDevButtonClick']
     ],
 
     state: {
@@ -94,6 +95,10 @@ var Brave = Brave || window.Brave || { app: {} };
           requestAnimationFrame(this.unInvertHeader.bind(this));
         }
       }
+    },
+
+    handleDevButtonClick: function(event) {
+      window.location.href = event.target.dataset ? event.target.dataset.href : event.target.href;
     },
 
     handleMenuItemClick: function(event) {
