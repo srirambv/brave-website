@@ -1846,8 +1846,7 @@ ul#faq-list li.panel p.panel-body a {
 }
 
 #footer-linklist div a {
-  font-size: 0.9em;
-  text-transform: uppercase;
+  font-size: 1.05em;
 }
 
 @media(max-width: 991px) {
