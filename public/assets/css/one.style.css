@@ -1824,6 +1824,66 @@ ul#faq-list li.panel p.panel-body a {
   font-size: 1em;
 }
 
+#newsletteremail,
+#formNewsletterSubscriptionSubmit {
+  display: block;
+  width: 75%;
+  border-radius: 2px;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+  height: 44px;
+}
+
+#footer-linklist {
+  padding-left: 60px;
+}
+
+#footer-linklist div {
+  margin: 10px 0;
+}
+
+#footer-linklist div a {
+  color: rgb(255, 255, 255);
+}
+
+#footer-linklist div a {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+@media(max-width: 991px) {
+
+  #newsletteremail,
+  #formNewsletterSubscriptionSubmit {
+    margin: 0 auto;
+  }
+
+  #logo-footer {
+    margin: 0 auto;
+    display: block;
+  }
+
+  #newsletter-form .headline,
+  #footer-about p:last-of-type,
+  #footer-linklist .headline,
+  #footer-address .headline,
+  #footer-address address,
+  #footer-linklist div {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
+
+  #footer-linklist {
+    padding: 0;
+  }
+
+  #footer-address {
+    width: 100%;
+    float: none;
+  }
+
+}
 
 .footer-simple {
   padding: 20px 0;
