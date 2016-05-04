@@ -1055,17 +1055,16 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 }
 
 #github-logo {
-  width: 421px;
-  height: 407px;
+  width: 316px;
+  height: 306px;
   background: url('../img/icons/github-large.png') 0 0 / contain no-repeat;
   text-indent: -99999px;
-  margin: 0 auto;
+  margin: 0 0 0 120px;
 }
 
 #devs .content-boxes {
-  margin-top: 60px;
-  margin-left: 80px;
-  width: 436px;
+  margin: 20px 0 0 120px;
+  max-width: 360px;
 }
 
 #devs .content-boxes .btn.cta-button {
@@ -1108,8 +1107,9 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
 
 @media(max-width:991px) {
   #devs .content-boxes {
-    width: 100%;
-    margin-left: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    float: none !important;
   }
   #devs .content-boxes .btn.cta-button {
     width: 90%;
