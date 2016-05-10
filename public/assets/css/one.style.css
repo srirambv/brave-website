@@ -1933,10 +1933,11 @@ ul#faq-list li.panel p.panel-body a {
     font-size: 1.1em;
     line-height: 6rem;
     vertical-align: middle;
-    margin: 0 2rem 2rem 0;
+    margin: 1.5rem auto;
     padding: 0;
     min-width: 260px;
-    display: inline-block;
+    width: 80%;
+    display: block;
 }
 
 #downloads-page .title-v1 {
@@ -1946,6 +1947,26 @@ ul#faq-list li.panel p.panel-body a {
 
 #downloads-page .container .title-v1 {
   margin-bottom: 10rem;
+}
+
+.well img.responsive {
+  display: block;
+  margin: 20px auto;
+}
+
+.well h2,
+.well p {
+  text-align: center;
+}
+
+.well p,
+.well li {
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+.well a.block-link {
+  text-align: center;
 }
 
 @media(max-width: 991px) {
@@ -1965,5 +1986,8 @@ ul#faq-list li.panel p.panel-body a {
   }
   .headline-left .headline-brd:after {
     width: 100%;
+  }
+  .well > div {
+    margin-top: 80px;
   }
 }
