@@ -37,6 +37,26 @@ server.register(require('inert'), (err) => {
 
 /* API endpoints */
 
+// fastly purge
+server.route({
+  method: 'POST',
+  path: '/api/purge',
+  handler: function (request, reply) {
+    if (request.query['fastly_api_key'] ===  process.env.FASTLY_API_KEY) {
+      require('fastly')(process.env.FASTLY_API_KEY).purgeAll(process.env.FASTLY_SERVICE_ID, function (err, obj) {
+        if (err) {
+          console.dir(err)
+          reply(err)
+        } else {
+          reply('sucess')
+        }
+      })
+    } else {
+      reply('bad api key')
+    }
+  }
+})
+
 // mailchimp methods
 server.route({
   method: 'POST',
