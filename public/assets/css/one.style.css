@@ -854,6 +854,7 @@ a.block-link {
   border-radius: 6px;
   border: none;
   min-width: 200px;
+  max-width: 120px;
   width: 18%;
   height: 6rem;
   color: rgb(255, 255, 255);
