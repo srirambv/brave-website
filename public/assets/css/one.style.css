@@ -1384,8 +1384,6 @@ ul.page-submenu li a {
 
   ul.page-submenu li {
     display: block;
-    float: none;
-    margin: 30px auto;
     text-align: center;
   }
 
