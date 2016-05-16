@@ -1253,14 +1253,14 @@ a.button.blog-button:hover {
 }
 
 #safer {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), rgb(8, 8, 8) url('../img/bg/lion-transparent.png') no-repeat calc(108%) center / contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), rgb(8, 8, 8) url('../img/bg/lion-transparent.png') no-repeat calc(109%) center / contain;
 }
 
 #safer .title-v1 h2,
 #safer .row h2.heading-sm,
 #safer .row p {
   color: rgb(255, 255, 255);
-  font-size: 1.2em;
+  font-size: 1.25em;
   line-height: 2.4em;
   font-weight: 500;
 }
