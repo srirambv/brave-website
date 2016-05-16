@@ -1253,26 +1253,26 @@ a.button.blog-button:hover {
 }
 
 #safer {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), rgb(8, 8, 8) url('../img/bg/lion-transparent.png') no-repeat right center / contain;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), rgb(8, 8, 8) url('../img/bg/lion-transparent.png') no-repeat calc(110%) center / contain;
 }
 
 #safer .title-v1 h2,
 #safer .row h2.heading-sm,
 #safer .row p {
   color: rgb(255, 255, 255);
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 2.4em;
   font-weight: 500;
 }
 
 #safer .row p {
   font-weight: 400;
-  color: rgb(116, 116, 130);
+  color: rgb(160, 160, 172);
 }
 
 #safer .title-v1 h2,
 #safer .title-v1 p {
-  font-size: 2.2em;
+  font-size: 2em;
   font-weight: 400;
   text-align: left;
   margin: 0;
@@ -1283,8 +1283,8 @@ a.button.blog-button:hover {
 }
 
 #safer .title-v1 p {
-  color: rgb(116, 116, 130);
-  font-size: 1.6em;
+  color: rgb(160, 160, 172);
+  font-size: 1.5em;
   font-weight: 200;
   line-height: 2em;
   width: 56%;
