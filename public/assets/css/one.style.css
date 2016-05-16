@@ -2048,6 +2048,10 @@ ul#faq-list li.panel p.panel-body a {
   text-align: center;
 }
 
+.well a.block-link .mobile-download-button {
+  margin: 10px;
+}
+
 @media(max-width: 991px) {
   #downloads-page .img-responsive {
     display: none;
@@ -2060,7 +2064,8 @@ ul#faq-list li.panel p.panel-body a {
     margin: 20px auto;
   }
   #downloads-page .headline-left .headline-brd,
-  #downloads-page .headline-left p {
+  #downloads-page .headline-left p,
+  .well ul.list-unstyled li {
     text-align: center;
   }
   .headline-left .headline-brd:after {
