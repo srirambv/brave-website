@@ -57,7 +57,7 @@ function recursiveCrumbSubmitBuildRequest(formData, callback) {
     getCrumbFromApi(formData, function(data, err) {
       crumbTries++
       if(err) console.log(err)
-      if (data) 
+      if (data)
       {
         if (data.crumb)
           submitBuildRequest(data, callback)
@@ -74,7 +74,7 @@ function recursiveCrumbSubmitBuildRequest(formData, callback) {
       }
 
     })
-  }  
+  }
  }
 
 /* Newsletter Subscription Form */
@@ -177,4 +177,4 @@ function getCrumbFromApi(formData, callback) {
       }
    }
   })
- } 
+ }
