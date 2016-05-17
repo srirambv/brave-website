@@ -1911,6 +1911,11 @@ ul#faq-list li.panel p.panel-body a {
   height: 44px;
 }
 
+#newsletteremail {
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
 #footer-linklist {
   padding-left: 60px;
 }
