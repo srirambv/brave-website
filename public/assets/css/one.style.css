@@ -2072,6 +2072,9 @@ ul#faq-list li.panel p.panel-body a {
   }
   #downloads-page .btn.cta-button {
     width: 100%;
+    min-width: auto;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
   }
   #downloads-page .headline-left img {
     display: block;
