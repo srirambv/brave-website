@@ -1105,7 +1105,7 @@ section#faster:not(#mailchimp) .block-v1:first-of-type {
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin: 8px;
+  margin: 5px 0;
 }
 
 #devs .content-boxes .btn.cta-button span,
