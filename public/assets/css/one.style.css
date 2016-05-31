@@ -861,10 +861,6 @@ a.block-link {
   font-size: 1.5em;
 }
 
-.btn.cta-button:hover {
-  color: rgb(255, 255, 255);
-}
-
 #brave-hero {
   min-height: 100vh;
   padding: 60px 0;
@@ -934,20 +930,24 @@ a.block-link {
 #brave-download {
   margin: 40px auto 20px;
   font-weight: 500;
-  background: radial-gradient(ellipse at 50% 0%, rgb(255, 160, 0) 0%, rgb(255, 80, 0) 60%, rgb(255, 80, 0) 100%);
-  border: solid 1px rgba(255, 255, 255, 0);
+  background: radial-gradient(ellipse at 75% 0%, rgb(255, 160, 0) 0%, rgb(255, 80, 0) 60%, rgb(255, 80, 0) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-  transition: all 0.2s linear;
 }
 
 #brave-download:hover {
-  border: solid 1px rgba(255, 255, 255, 1);
+  background: rgb(255, 255, 255);
+  color: rgb(56, 44, 72);
 }
 
 #brave-video {
   margin: 20px auto 60px;
-  font-weight: 400;
   line-height: 5rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+#brave-video:hover {
+  background: rgb(255, 255, 255);
+  color: rgb(56, 44, 72);
 }
 
 section#faster:not(#mailchimp) {
