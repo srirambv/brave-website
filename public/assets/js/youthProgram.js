@@ -6,19 +6,18 @@
 var Brave = Brave || window.Brave || { app: {} };
 
 /*
-  About View
+  Youth Program View
 */
 
 (function() {
 
-  Brave.app.about = new Brave.View({
+  Brave.app.youthProgram = new Brave.View({
 
-    name: 'about',
+    name: 'youth-program',
 
     events: [
       [window, 'scroll', 'handleScroll'],
-      [window, 'resize', 'resizeTeamImages'],
-      ['.arrow', 'click', 'handleArrowClick']
+      ['.pager > li', 'click', 'handlePagerClick']
     ],
 
     properties: {
@@ -27,10 +26,10 @@ var Brave = Brave || window.Brave || { app: {} };
 
       carousel: {
         index: 1,
-        length: 4,
-        interval: 0,   /* 1000 minimum interval for auto-pagination; 0 disables auto-pagination */
+        length: 5,
+        interval: 5000,
         duration: 500,
-        timeout: 1000
+        timeout: 2000
       },
 
       bootstrap: {
@@ -39,27 +38,21 @@ var Brave = Brave || window.Brave || { app: {} };
 
     },
 
-    resizeTeamImages: function(event) {
-      return $('.team-img').height($('.team-img').width());
-    },
-
     tick: function() {
       var index = this.properties.carousel.index++;
-      $('#press-carousel').children().each(this.makeSlideInactive.bind(this));
-      this.makeSlideActive(index, $('#press-carousel')[0].children[index]);
+      $('#gallery-carousel').children().each(this.makeSlideInactive.bind(this));
+      $('.pager > li').removeClass('active');
+      setTimeout(function() { $('.pager > li').eq(index).addClass('active'); }, 1);
+      this.makeSlideActive(index, $('#gallery-carousel')[0].children[index]);
       if(index === (this.properties.carousel.length - 1)) {
         this.properties.carousel.index = 0;
       }
       return this.state.timeout;
     },
 
-    handleArrowClick: function(event) {
-      this.cooldown('.arrow', this.properties.carousel.timeout);
-      this.stopCarousel();
-      this.tick();
-      if(this.properties.carousel.interval > 0) {
-        setTimeout(this.startCarousel.bind(this), this.properties.carousel.duration);
-      }
+    handlePagerClick: function(event) {
+      this.cooldown('.pager > li', this.properties.carousel.timeout);
+      return false;
     },
 
     handleScroll: function(event) {
@@ -81,7 +74,6 @@ var Brave = Brave || window.Brave || { app: {} };
       if(this.properties.carousel.interval > 0) {
         this.startCarousel();
       }
-      this.resizeTeamImages();
       return this.handleScroll();
     }
 

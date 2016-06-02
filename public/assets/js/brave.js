@@ -35,6 +35,31 @@ var Brave = Brave || window.Brave || { app: {} };
         }, this);
       };
 
+      this.startCarousel = function() {
+        if(!this.properties || !this.properties.carousel) {
+          return false;
+        }
+        this.state.interval = setInterval(this.tick.bind(this), this.properties.carousel.interval);
+        return this.state.interval;
+      };
+
+      this.stopCarousel = function() {
+        return !this.properties && !this.properties.carousel ? false : clearInterval(this.state.interval);
+      };
+
+      this.makeSlideInactive = function(index, element) {
+        return !this.properties && !this.properties.carousel ? false : $(element).removeClass('inactive').removeClass('active').css({ display: 'none' });
+      };
+
+      this.makeSlideActive = function(index, element) {
+        if(!this.properties || !this.properties.carousel) {
+          return false;
+        }
+        $(element).css({ display: 'block' });
+        this.state.timeout = setTimeout(function() { $(element).addClass('active'); }, this.properties.carousel.duration);
+        return element;
+      };
+
       this.isMenuShown = function() {
         return !!$('#fullsize-menu')[0] && $('#fullsize-menu').hasClass('in');
       };
@@ -93,6 +118,18 @@ var Brave = Brave || window.Brave || { app: {} };
         $('.navbar-nav.brave-nav, .navbar-toggle').addClass('home');
       };
 
+      this.bindEvents = function() {
+        this.events.forEach(function(e, i) {
+          $(e[0]).on(e[1], this[e[2]].bind(this));
+        }, this);
+      };
+
+      this.absorb = function(obj) {
+        for(var key in obj) {
+          this[key] = obj[key];
+        }
+      };
+
       this.off = function() {
         this.isOn = false;
         this.events.forEach(function(e, i) {
@@ -102,22 +139,13 @@ var Brave = Brave || window.Brave || { app: {} };
 
       this.on = function() {
         this.isOn = true;
-        this.events.forEach(function(e, i) {
-          $(e[0]).on(e[1], this[e[2]].bind(this));
-        }, this);
+        this.bindEvents();
         return this.init();
       };
 
-      // Bind initial events
-      this.events.forEach(function(e, i) {
-        $(e[0]).on(e[1], this[e[2]].bind(this));
-      }, this);
-
-      // Merge custom params
-      for(var key in params) {
-        this[key] = params[key];
-      }
-
+      // Absorb custom params, bind events, default to 'off' state
+      this.absorb(params);
+      this.bindEvents();
       this.isOn = false;
 
     }

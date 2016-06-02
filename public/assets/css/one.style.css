@@ -222,12 +222,15 @@ a.block-link {
 
 .one-page-header ul.navbar-nav.brave-nav {
   position: static;
-  margin-top: -28px;
   right: auto;
 }
 
-#fullsize-menu.navbar-collapse ul.navbar-nav.brave-nav {
-  margin-top: -26px;
+#fullsize-menu ul.navbar-nav.brave-nav {
+  margin-top: 34px;
+}
+
+.top-nav-collapse #fullsize-menu ul.navbar-nav.brave-nav {
+  margin-top: 6px;
 }
 
 .one-page-header .navbar-nav > li {
@@ -1701,6 +1704,244 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
     font-size: 0.8em;
   }
 
+}
+
+/*Brave Youth Program Page
+------------------------------------*/
+/*Brave Youth Program*/
+#youth-program-page.page {
+  background: white;
+  padding-top: 0;
+}
+
+#youth-program-page #brave-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/bg/brave_youth_program.png');
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#youth-program-page #brave-hero .text-group-logo {
+  background: url('../img/brave_youth_program_logo.png') center center / contain no-repeat;
+  width: 280px;
+  height: 280px;
+  margin-bottom: 60px;
+}
+
+#youth-program-page #brave-hero p.container {
+  font-size: 2em;
+  width: 45%;
+}
+
+#brave-ambassador {
+  background: white;
+  color: rgb(0, 152, 206);
+  font-size: 0.9em;
+  min-width: 204px;
+  max-height: 36px;
+  line-height: 36px;
+  margin-top: -10px;
+  padding: 0;
+}
+
+.top-nav-collapse #brave-ambassador {
+  margin-top: -5px;
+  background: rgb(0, 152, 206);
+  color: white;
+}
+
+#mission > h3,
+#structure > h3,
+#chapters > h3 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  margin: 60px auto;
+  font-size: 1.4em;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 991px) {
+  #chapters,
+  #gallery-carousel,
+  .pager,
+  #youth-program-page hr {
+    display: none;
+  }
+
+  #youth-program-page #brave-hero .text-group-logo {
+    display:block;
+  }
+}
+
+/*Brave Youth Page: Mission
+------------------------------------*/
+
+#mission {
+  background: rgb(255, 80, 0);
+}
+
+#mission,
+#mission h2,
+#mission p {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+#mission p {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+#mission > div {
+  margin: 60px;
+}
+
+#gallery-carousel {
+  height: 480px;
+  padding: 0;
+}
+
+#gallery-carousel li {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: opacity 500ms linear;
+}
+
+#gallery-carousel li.active {
+  opacity: 1;
+}
+
+#gallery-carousel li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.pager {
+  width: 154px;
+  margin: 0 auto;
+  opacity: 0.4;
+}
+
+.pager li {
+  width: 20px;
+  height: 20px;
+  border: solid 1px white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 4px;
+}
+
+.pager li.active {
+  background: white;
+}
+
+#mission i.icon-custom {
+  color: white;
+  border: none;
+  font-size: 4em;
+  text-align: right;
+  margin-right: 40px;
+}
+
+@media(max-width: 991px) {
+  #mission i.icon-custom {
+    display: block;
+    float: none;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  #mission .content-boxes-v3 .content-boxes-in-v3 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  #mission .content-boxes-v3 .content-boxes-in-v3 h2 {
+    margin: 20px auto;
+  }
+}
+
+/*Brave Youth Page: Structure
+------------------------------------*/
+
+#structure {
+  background: url('../img/bg/separator.png') center top / 100% no-repeat;
+}
+
+#structure > h3 {
+  color: rgb(255, 80, 0);
+  margin-top: 100px;
+}
+
+#structure .block-v1 {
+  text-align: center;
+}
+
+#structure .content-boxes-v3 i.icon-custom {
+  float: none;
+  margin: 20px;
+}
+
+#structure .content-boxes-v3:last-of-type {
+  float: none;
+  margin: 40px auto;
+}
+
+#structure i.icon-custom {
+  line-height: 1.9em;
+}
+
+@media(max-width: 991px) {
+  #structure .content-boxes-v3:last-of-type,
+  #structure .content-boxes-v3 .content-boxes-in-v3 {
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+}
+
+/*Brave Youth Page: Chapters
+------------------------------------*/
+
+#chapters > h3 {
+  color: rgb(0, 152, 206);
+  margin-top: 100px;
+}
+
+#world {
+  position: relative;
+  background: url('../img/world.svg') center top / contain no-repeat;
+  width: 1170px;
+  height: 640px;
+  margin: 60px auto;
+}
+
+#world .marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: solid;
+  border: solid 2px rgb(255, 80, 0);
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+}
+
+#world .marker[title="San Francisco"] {
+  left: 171px;
+  top: 324px;
 }
 
 /*FAQ Page
