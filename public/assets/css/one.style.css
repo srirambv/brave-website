@@ -786,7 +786,7 @@ a.block-link {
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgb(40, 40, 50);
+  background: rgba(40, 40, 50, 0.75);
   z-index: 9000;
 }
 
@@ -803,7 +803,6 @@ a.block-link {
   display: block;
   width: 100%;
   height: 5%;
-  opacity: 0.8;
   background: rgb(255, 255, 255);
   border-radius: 1000px;
   -webkit-transform: rotate(45deg);
@@ -1712,6 +1711,62 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
 #youth-program-page.page {
   background: white;
   padding-top: 0;
+}
+
+#ambassador-form {
+  background: white;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px black;
+  margin-top: 15vh;
+}
+
+#ambassador-form input,
+#ambassador-form textarea {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-indent: 20px;
+  outline: none;
+  margin: 20px auto;
+}
+
+#ambassador-form textarea {
+  height: 200px;
+}
+
+#ambassador-form input.pull-left,
+#ambassador-form input.pull-right {
+  width: 48.5%;
+  display: inline-block;
+}
+
+#ambassador-form > img {
+  display: block;
+  width: 160px;
+  margin: 20px auto;
+  clear: both;
+}
+
+#ambassador-form .close {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+#ambassador-form .close i {
+  background: black;
+}
+
+#ambassador-submit {
+  margin: 0 auto;
+  background: rgb(0, 152, 206);
 }
 
 #youth-program-page #brave-hero {

@@ -95,8 +95,17 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
       <!-- Modal Overlay -->
       <div id="brave-overlay" style="display: none;">
-          <div class="close"><i></i><i></i></div>
-          <div class="clear"><i></i><i></i></div>
+          <div class="clear"></div>
+          <form id="ambassador-form">
+            <div class="close"><i></i><i></i></div>
+            <img src="assets/img/brave_youth_program_logo.png" alt="Brave Youth Program">
+            <input placeholder="Name">
+            <input placeholder="Email address" type="email">
+            <input placeholder="City" class="pull-left">
+            <input placeholder="Country" class="pull-right">
+            <textarea placeholder="Tell us why you want to be Brave"></textarea>
+            <button id="ambassador-submit" class="btn cta-button">Submit</button>
+          </form>
       </div>
       <!-- End Modal Overlay -->
 

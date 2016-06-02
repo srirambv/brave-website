@@ -17,7 +17,10 @@ var Brave = Brave || window.Brave || { app: {} };
 
     events: [
       [window, 'scroll', 'handleScroll'],
-      ['.pager > li', 'click', 'handlePagerClick']
+      ['.pager > li', 'click', 'handlePagerClick'],
+      ['#brave-ambassador', 'click', 'showOverlay'],
+      ['#brave-overlay, #ambassador-form > .close', 'click', 'handleClose'],
+      ['#ambassador-submit', 'click', 'handleAmbassadorSubmit']
     ],
 
     properties: {
@@ -48,6 +51,17 @@ var Brave = Brave || window.Brave || { app: {} };
         this.properties.carousel.index = 0;
       }
       return this.state.timeout;
+    },
+
+    handleAmbassadorSubmit: function(event) {
+      return alert('Yayyyy nothing happens yet.');
+    },
+
+    handleClose: function(event) {
+      if((event.target.id === 'ambassador-form' || (event.target.className !== 'close' && event.target.parentElement.id === 'ambassador-form'))) {
+        return false;
+      }
+      return this.hideOverlay();
     },
 
     handlePagerClick: function(event) {
