@@ -319,7 +319,7 @@ a.block-link {
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
   #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
-    background: linear-gradient(transparent 5%, rgba(20, 20, 25, 0.75) 25%, rgba(20, 20, 25, 1))
+    background: linear-gradient(transparent 5%, rgba(20, 20, 25, 0.75) 80%, rgba(20, 20, 25, 1));
   }
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home > li > a,
@@ -1805,7 +1805,7 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   color: white;
 }
 
-#mission > h3,
+#mission .container > h3,
 #structure > h3,
 #chapters > h3 {
   text-align: center;
@@ -1827,6 +1827,11 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
 
   #youth-program-page #brave-hero .text-group-logo {
     display:block;
+  }
+  #brave-ambassador {
+    float: none !important;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -1850,12 +1855,11 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   line-height: 2em;
 }
 
-#mission > div {
-  margin: 60px;
+#mission .container {
+  margin: 0 auto;
 }
 
 #gallery-carousel {
-  height: 480px;
   padding: 0;
 }
 
