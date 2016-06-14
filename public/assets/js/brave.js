@@ -143,9 +143,8 @@ var Brave = Brave || window.Brave || { app: {} };
         return this.init();
       };
 
-      // Absorb custom params, bind events, default to 'off' state
+      // Absorb custom params, default to 'off' state
       this.absorb(params);
-      this.bindEvents();
       this.isOn = false;
 
     }

@@ -1279,11 +1279,12 @@ a.button.blog-button:hover {
 #safer .row p {
   font-weight: 400;
   color: rgb(160, 160, 172);
+  line-height: 1.6em;
 }
 
 #safer .title-v1 h2,
 #safer .title-v1 p {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: 400;
   text-align: left;
   margin: 0;
@@ -1295,7 +1296,7 @@ a.button.blog-button:hover {
 
 #safer .title-v1 p {
   color: rgb(160, 160, 172);
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 200;
   line-height: 2em;
   width: 56%;
@@ -1821,7 +1822,8 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   #chapters,
   #gallery-carousel,
   .pager,
-  #youth-program-page hr {
+  #youth-program-page hr,
+  #ambassador-form > img {
     display: none;
   }
 
@@ -1832,6 +1834,16 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
     float: none !important;
     margin: 0 auto;
     width: 100%;
+  }
+  #ambassador-form {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  #ambassador-form textarea {
+    height: auto;
   }
 }
 

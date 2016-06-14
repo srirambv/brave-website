@@ -54,7 +54,7 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     handleAmbassadorSubmit: function(event) {
-      return alert('Yayyyy nothing happens yet.');
+      return alert('Ambassador applications are not being accepted yet.');
     },
 
     handleClose: function(event) {
