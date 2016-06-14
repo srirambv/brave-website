@@ -35,6 +35,15 @@ server.register(require('inert'), (err) => {
   }
 })
 
+// 404
+server.ext('onPostHandler', function (request, reply) {
+  var res = request.response
+  if (res && res.isBoom && res.output.statusCode === 404) {
+    return reply.file('public/404.html').code(404)
+  }
+  return reply.continue()
+})
+
 /* API endpoints */
 
 // fastly purge
