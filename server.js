@@ -189,6 +189,15 @@ server.route({
   }
 })
 
+// 404
+server.ext('onPostHandler', function (request, reply) {
+  var res = request.response
+  if (res && res.isBoom && res.output.statusCode === 404) {
+    return reply.file('public/404.html').code(404)
+  }
+  return reply.continue()
+})
+
 // DO NOT CHANGE OR REMOVE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
 // We want Fastly to serve all of the static content and only update
 // edge caches when purges are triggered. Other methods (etags, etc...)
