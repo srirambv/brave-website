@@ -29,7 +29,7 @@
     "gulp-minify-css": "^1.2.3",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglifyjs": "^0.6.2",
-    "hapi": "^12.1.0",
+    "hapi": ">=13.4.1",
     "hapi-assets": "^0.3.0",
     "hapi-async-handler": "^1.0.3",
     "hapi-permanent-redirect": "^1.0.1",

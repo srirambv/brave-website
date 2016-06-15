@@ -158,8 +158,8 @@ map.forEach((entry) => {
         failAction: 'log'
       }
     },
-    handler: function (request, reply) {
-      reply.file(entry.file)
+    handler: {
+      file: entry.file
     }
   })
 })
@@ -192,8 +192,14 @@ server.route({
 // 404
 server.ext('onPostHandler', function (request, reply) {
   var res = request.response
-  if (res && res.isBoom && res.output.statusCode === 404) {
-    return reply.file('public/404.html').code(404)
+  if (res && res.isBoom) {
+    if (res.output.statusCode === 404) {
+      var out = reply.file('public/404.html').code(404)
+      out.headers['cache-control'] = 'private'
+      return out
+    } else {
+      request.response.output.headers['cache-control'] = 'private'
+    }
   }
   return reply.continue()
 })
