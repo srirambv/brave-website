@@ -131,7 +131,6 @@ server.route({
 
 
 var map = [
-  { path: '/', file: './public/index.html' },
   { path: '/privacy_android', file: './public/android_privacy.html' },
   { path: '/privacy_ios', file: './public/ios_privacy.html' },
   { path: '/terms_of_use', file: './public/terms_of_use.html' },
@@ -192,10 +191,14 @@ server.route({
 // 404
 server.ext('onPostHandler', function (request, reply) {
   var res = request.response
-  if (res && res.isBoom && res.output.statusCode === 404) {
-    return reply.file('public/404.html').code(404)
+  if (res.output.statusCode === 404) {
+    var out = reply.file('public/404.html').code(404)
+    // this can be removed when https://github.com/hapijs/hapi/issues/3205 is closed
+    out.headers['cache-control'] = 'private'
+    return out
+  } else {
+    res.output.headers['cache-control'] = 'private'
   }
-  return reply.continue()
 })
 
 // DO NOT CHANGE OR REMOVE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
