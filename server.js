@@ -199,6 +199,7 @@ server.ext('onPostHandler', function (request, reply) {
   } else {
     res.output.headers['cache-control'] = 'private'
   }
+  return reply.continue()
 })
 
 // DO NOT CHANGE OR REMOVE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
