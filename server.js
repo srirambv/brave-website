@@ -158,8 +158,8 @@ map.forEach((entry) => {
         failAction: 'log'
       }
     },
-    handler: function (request, reply) {
-      reply.file(entry.file)
+    handler: {
+      file: entry.file
     }
   })
 })
@@ -189,30 +189,31 @@ server.route({
   }
 })
 
-// 404
-server.ext('onPostHandler', function (request, reply) {
-  var res = request.response
-  if (res && res.isBoom && res.output.statusCode === 404) {
-    return reply.file('public/404.html').code(404)
-  }
-  return reply.continue()
-})
-
 // DO NOT CHANGE OR REMOVE THIS UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING
 // We want Fastly to serve all of the static content and only update
 // edge caches when purges are triggered. Other methods (etags, etc...)
 // will make too many requests to Heroku and latency to responses
 server.ext('onPreResponse', function(request, reply) {
-  if (request.response.statusCode === 200) {
-    request.response.headers['cache-control'] = 'public' // override no-cache
-    // send surrogate control headers for Fastly
-    // this will cache files at the fastly edge servers for a long
-    // period of time or until purged, but the browser will
-    // use the default cache-control settings and etags when
-    // making requests to Fastly
-    request.response.headers['Surrogate-Control'] = 'max-age=2592000'
+  var out, res = request.response
+  if (res && res.isBoom) {
+    if (res.output.statusCode === 404) {
+      out = reply.file('public/404.html').code(404)
+      out.headers['cache-control'] = 'private'
+      return out
+    } else {
+      res.output.headers['cache-control'] = 'private'
+    }
+    if (res.output.statusCode === 200) {
+      // send surrogate control headers for Fastly
+      // this will cache files at the fastly edge servers for a long
+      // period of time or until purged, but the browser will
+      // use the default cache-control settings and etags when
+      // making requests to Fastly
+      res.headers['cache-control'] = 'public'
+      res.headers['Surrogate-Control'] = 'max-age=2592000'
+    }
   }
-  reply(request.response)
+  return reply(res)
 })
 
 server.start(() => {
