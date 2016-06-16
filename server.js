@@ -158,8 +158,8 @@ map.forEach((entry) => {
         failAction: 'log'
       }
     },
-    handler: function (request, reply) {
-      reply.file(entry.file)
+    handler: {
+      file: entry.file
     }
   })
 })
@@ -194,10 +194,14 @@ server.route({
 // edge caches when purges are triggered. Other methods (etags, etc...)
 // will make too many requests to Heroku and latency to responses
 server.ext('onPreResponse', function(request, reply) {
-  var res = request.response
+  var out, res = request.response
   if (res && res.isBoom) {
     if (res.output.statusCode === 404) {
-      return reply.file('public/404.html').code(404)
+      out = reply.file('public/404.html').code(404)
+      out.headers['cache-control'] = 'private'
+      return out
+    } else {
+      res.output.headers['cache-control'] = 'private'
     }
     if (res.output.statusCode === 200) {
       // send surrogate control headers for Fastly
