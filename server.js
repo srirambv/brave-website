@@ -7,7 +7,7 @@ const Hapi = require('hapi')
 var assets = require('./assets.js')
 var mailchimp = require('./mailchimp.js')
 
-const server = new Hapi.Server({ debug: { request: ['error'] } })
+const server = new Hapi.Server()
 var useragent = require('useragent')
 
 server.connection({ port: process.env.PORT || 3000 })
@@ -192,6 +192,9 @@ server.route({
 server.ext('onPostHandler', function (request, reply) {
   var res = request.response
   if (res && res.isBoom) {
+    if (typeof request.getLog() === 'object') {
+      console.log(JSON.stringify(request.getLog()))
+    }
     if (res.output.statusCode === 404) {
       var out = reply.file('public/404.html').code(404)
       out.headers['cache-control'] = 'private'
