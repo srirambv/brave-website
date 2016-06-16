@@ -157,8 +157,8 @@ map.forEach((entry) => {
         failAction: 'log'
       }
     },
-    handler: function (request, reply) {
-      reply.file(entry.file)
+    handler: {
+      file: entry.file
     }
   })
 })
