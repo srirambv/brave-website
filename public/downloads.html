@@ -62,12 +62,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 </button>
 
                 <a class="logo" href="/">
-                    <div id="brave-logo" class="pull-left">Brave</div>
+                    <div id="brave-logo">Brave</div>
                 </a>
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse pull-right">
+            <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse">
                 <div class="menu-container">
                         <ul class="nav navbar-nav brave-nav" style="">
 
@@ -93,7 +93,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li class="download">
                             <a href="downloads.html">Download</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -146,11 +145,11 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
         <div class="col-md-4">
           <div class="margin-bottom-30">
-            <img alt="Brave for macOS" class="responsive" src="assets/img/contents/MacOS_large.svg" width="58">
-            <h2>Brave 0.10.dev for macOS</h2>
+            <img alt="Brave for Mac" class="responsive" src="assets/img/contents/MacOS_large.svg" width="58">
+            <h2>Brave 0.10.dev for Mac OS</h2>
 
-          </div><a class="btn cta-button" href="https://laptop-updates.brave.com/latest/osx">Download Brave for macOS
-          10.9+</a><p>To run Brave, you must have macOS 10.9 or newer.</p>
+          </div><a class="btn cta-button" href="https://laptop-updates.brave.com/latest/osx">Download Brave for Mac OS
+          10.9+</a><p>To run Brave, you must have Mac OS 10.9 or newer.</p>
         </div>
 
         <div class="col-md-4">
@@ -499,20 +498,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="assets/js/home.js"></script>
     <script src="assets/js/interior.js"></script>
     <script src="assets/js/about.js"></script>
-    <script src="assets/js/youthProgram.js"></script>
     <script>
         jQuery(document).ready(function() {
             // Home route
-            if(window.location.pathname.match('index') || window.location.pathname === '/') {
+            if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
                 return Brave.app.home.on();
             }
             // About route
-            if(window.location.pathname.match('about')) {
+            if(window.location.pathname.match('about.html')) {
                 return Brave.app.about.on();
-            }
-            // Youth Program route
-            if(window.location.pathname.match('brave_youth_program')) {
-                return Brave.app.youthProgram.on();
             }
             // Interior page route
             return Brave.app.interior.on();
