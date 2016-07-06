@@ -134,6 +134,8 @@ var map = [
   { path: '/privacy_android', file: './public/android_privacy.html' },
   { path: '/privacy_ios', file: './public/ios_privacy.html' },
   { path: '/terms_of_use', file: './public/terms_of_use.html' },
+  { path: '/asset', file: './public/index.html' },
+  { path: '/jobs', file: './public/about.html#careers' },
   { path: '/downloads', file: './public/downloads.html' }
 ]
 
