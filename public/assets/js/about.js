@@ -26,19 +26,11 @@ var Brave = Brave || window.Brave || { app: {} };
       hasPhotographicHeader: true,
 
       carousel: {
-
         index: 1,
-
         length: 4,
-
-        // set interval to 0 to disable auto-pagination,
-        // otherwise 1000 is a reasonable minimum
-        interval: 0,
-
+        interval: 0,   /* 1000 minimum interval for auto-pagination; 0 disables auto-pagination */
         duration: 500,
-
         timeout: 1000
-
       },
 
       bootstrap: {
@@ -47,27 +39,8 @@ var Brave = Brave || window.Brave || { app: {} };
 
     },
 
-    makeSlideActive: function(index, element) {
-      $(element).css({ display: 'block' });
-      this.state.timeout = setTimeout(function() { $(element).addClass('active'); }, this.properties.carousel.duration);
-      return element;
-    },
-
-    makeSlideInactive: function(index, element) {
-      return $(element).removeClass('inactive').removeClass('active').css({ display: 'none' });
-    },
-
     resizeTeamImages: function(event) {
       return $('.team-img').height($('.team-img').width());
-    },
-
-    stopCarousel: function() {
-      return clearInterval(this.state.interval);
-    },
-
-    startCarousel: function() {
-      this.state.interval = setInterval(this.tick.bind(this), this.properties.carousel.interval);
-      return this.state.interval;
     },
 
     tick: function() {

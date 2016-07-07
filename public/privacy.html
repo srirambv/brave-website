@@ -62,12 +62,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 </button>
 
                 <a class="logo" href="/">
-                    <div id="brave-logo">Brave</div>
+                    <div id="brave-logo" class="pull-left">Brave</div>
                 </a>
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse">
+            <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse pull-right">
                 <div class="menu-container">
                         <ul class="nav navbar-nav brave-nav" style="">
 
@@ -93,6 +93,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li class="download">
                             <a href="downloads.html">Download</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -128,7 +129,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <h2>Software Privacy</h2>
                     </div>
 
-                    <p>This privacy statement describes how our suite of Brave browsers for iOS, Android, Mac OS and Windows &#8220;<strong>Brave</strong>&#8221;, (&#8220;<strong>Brave</strong>&#8221;, &#8220;<strong>us</strong>&#8221;, &#8220;<strong>we</strong>&#8221; and/or &#8220;<strong>our</strong>&#8221;) collect and use the personal information you provide through Brave. It also describes the choices available to you regarding our use of your personal information and how you can access and update this information. Note, this privacy statement covers your use of the Brave browsers only. If you are visiting the Brave Software web site or using other Brave Software products or services, additional terms may apply.</p>
+                    <p>This privacy statement describes how our suite of Brave browsers for iOS, Android, macOS and Windows &#8220;<strong>Brave</strong>&#8221;, (&#8220;<strong>Brave</strong>&#8221;, &#8220;<strong>us</strong>&#8221;, &#8220;<strong>we</strong>&#8221; and/or &#8220;<strong>our</strong>&#8221;) collect and use the personal information you provide through Brave. It also describes the choices available to you regarding our use of your personal information and how you can access and update this information. Note, this privacy statement covers your use of the Brave browsers only. If you are visiting the Brave Software web site or using other Brave Software products or services, additional terms may apply.</p>
 
                     <div class="headline">
                         <h2>Overview</h2>
@@ -144,7 +145,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <p>We use a third party application performance analytics provider called Crashlytics to collect crash report data and other data about the usage of Brave. We do not store any user identifiable data, nor IP address, nor unique IDs. For more information on the type of data Crashlytics collects through Brave and how that data is used, please visit <a href="https://answers.io/img/privacy.pdf" target="_blank">https://answers.io/img/privacy.pdf</a>. The data collected by Crashlytics is provided to Brave in aggregated form through a crash report – the report contains information about crashes, specifically what kind of device was being used when Brave crashed and which version was in use during the crash. We use these reports information to improve the overall performance of Brave. These crash reports do not include personally identifiable information or other personal account information.</p>
 
-                    <h4>Brave for Mac OSX and Windows:</h4>
+                    <h4>Brave for macOS and Windows:</h4>
 
                     <p>We collect user data regarding crashes and requests for updates. We do not store any personally identifiable data of our users, IP addresses, or unique IDs. We send a request to our server to see if an update is available and whether it was the first ever, first daily, first weekly, or first monthly request. These requests do not rely on third party software. We use a Node.js heroku server, which is based on Electron.</p>
 
@@ -188,7 +189,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <p>
                             <br><br>
                             <a href="index.html">
-                                <img id="logo-footer" class="footer-logo" src="assets/img/brave_logo_icon_grey.png" alt="">
+                                <img id="logo-footer" class="footer-logo" src="/assets/img/brave_logo_icon_grey.png" alt="">
                             </a>
                         </p>
                         <p>
@@ -217,7 +218,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <div>
                             <a href="mailto:support@brave.com" target="_blank">Support</a>
                         </div>
-                          <div>
+                         <div>
                             <a href="/about.html#careers">Jobs</a>
                         </div>
                     </nav>
@@ -437,29 +438,34 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="/assets/js/home.js"></script>
     <script src="/assets/js/interior.js"></script>
     <script src="/assets/js/about.js"></script>
+    <script src="/assets/js/youthProgram.js"></script>
     <script>
         jQuery(document).ready(function() {
             // Home route
-            if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
+            if(window.location.pathname.match('index') || window.location.pathname === '/') {
                 return Brave.app.home.on();
             }
             // About route
-            if(window.location.pathname.match('about.html')) {
+            if(window.location.pathname.match('about')) {
                 return Brave.app.about.on();
+            }
+            // Youth Program route
+            if(window.location.pathname.match('brave_youth_program')) {
+                return Brave.app.youthProgram.on();
             }
             // Interior page route
             return Brave.app.interior.on();
         });
     </script>
     <!--[if lt IE 9]>
-        <script src="assets/plugins/respond.js"></script>
-        <script src="assets/plugins/html5shiv.js"></script>
-        <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+        <script src="/assets/plugins/respond.js"></script>
+        <script src="/assets/plugins/html5shiv.js"></script>
+        <script src="/assets/js/plugins/placeholder-IE-fixes.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
     <![endif]-->
 
     <!--[if lt IE 10]>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
     <![endif]-->
 </body>
 </html>

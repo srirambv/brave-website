@@ -62,12 +62,12 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                 </button>
 
                 <a class="logo" href="/">
-                    <div id="brave-logo">Brave</div>
+                    <div id="brave-logo" class="pull-left">Brave</div>
                 </a>
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse">
+            <div id="fullsize-menu" class="collapse navbar-collapse navbar-ex1-collapse pull-right">
                 <div class="menu-container">
                         <ul class="nav navbar-nav brave-nav" style="">
 {% block navMenu %}
@@ -89,10 +89,11 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <li>
                             <a href="https://blog.brave.com/">Blog</a>
                         </li>
-{% endblock %}
+
                         <li class="download">
                             <a href="downloads.html">Download</a>
                         </li>
+{% endblock %}
                     </ul>
                 </div>
             </div>
@@ -120,7 +121,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <p>
                             <br><br>
                             <a href="index.html">
-                                <img id="logo-footer" class="footer-logo" src="assets/img/brave_logo_icon_grey.png" alt="">
+                                <img id="logo-footer" class="footer-logo" src="/assets/img/brave_logo_icon_grey.png" alt="">
                             </a>
                         </p>
                         <p>
@@ -149,7 +150,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <div>
                             <a href="mailto:support@brave.com" target="_blank">Support</a>
                         </div>
-                          <div>
+                         <div>
                             <a href="/about.html#careers">Jobs</a>
                         </div>
                     </nav>
@@ -369,29 +370,34 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="/assets/js/home.js"></script>
     <script src="/assets/js/interior.js"></script>
     <script src="/assets/js/about.js"></script>
+    <script src="/assets/js/youthProgram.js"></script>
     <script>
         jQuery(document).ready(function() {
             // Home route
-            if(window.location.pathname.match('index.html') || window.location.pathname === '/') {
+            if(window.location.pathname.match('index') || window.location.pathname === '/') {
                 return Brave.app.home.on();
             }
             // About route
-            if(window.location.pathname.match('about.html')) {
+            if(window.location.pathname.match('about')) {
                 return Brave.app.about.on();
+            }
+            // Youth Program route
+            if(window.location.pathname.match('brave_youth_program')) {
+                return Brave.app.youthProgram.on();
             }
             // Interior page route
             return Brave.app.interior.on();
         });
     </script>
     <!--[if lt IE 9]>
-        <script src="assets/plugins/respond.js"></script>
-        <script src="assets/plugins/html5shiv.js"></script>
-        <script src="assets/js/plugins/placeholder-IE-fixes.js"></script>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+        <script src="/assets/plugins/respond.js"></script>
+        <script src="/assets/plugins/html5shiv.js"></script>
+        <script src="/assets/js/plugins/placeholder-IE-fixes.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
     <![endif]-->
 
     <!--[if lt IE 10]>
-        <script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
     <![endif]-->
 </body>
 </html>
