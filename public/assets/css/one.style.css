@@ -1626,7 +1626,7 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   display: block;
   float: left;
   width: 15%;
-  margin: 2.5%;
+  margin: 2.5%; 
 }
 
 #team ul.container li.title-v1,
@@ -1680,7 +1680,7 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 #assets ul.assets-container > li h4 {
