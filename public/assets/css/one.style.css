@@ -319,7 +319,7 @@ a.block-link {
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
   #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
-    background: linear-gradient(transparent 5%, rgba(20, 20, 25, 0.75) 80%, rgba(20, 20, 25, 1));
+    background: linear-gradient(transparent 1%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, .9));
   }
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home > li > a,
