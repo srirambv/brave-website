@@ -1,0 +1,31 @@
+{{! 
+	
+	POST - FEATURE HEADER
+	- Configuration of this file is not required. 
+
+}}
+
+	<div class="featureheader {{post_class}}">
+		<div class="background" {{#if image}} style="background-image: url({{image}})" {{/if}}></div>
+		<a href="{{@blog.url}}" class="logo"><img src="{{@blog.cover}}" alt="{{@blog.title}}"></a>
+		<div class="wrapper">
+			<div class="title">
+				<h1>{{{title}}}</h1>
+				<div class="info">
+					<div class="left">
+						{{#if author.image}}<img src="{{author.image}}" alt="author" class="minigravatar">{{/if}}
+						{{author}}
+					</div>
+					<div class="right">
+						<a href="#" class="date"><i class="fa fa-clock-o"></i>{{date format="MMMM Do, YYYY"}}</a>
+						<span class="tags">
+							<i class="fa fa-tags"></i>
+							{{#foreach tags}}
+							<a href="{{url}}" class="{{name}}">{{name}}</a>
+							{{/foreach}}
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

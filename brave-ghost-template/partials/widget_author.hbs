@@ -1,0 +1,15 @@
+{{! 
+	
+	WIDGET - AUTHOR
+	- Configuration of this file is not required. 
+
+}}
+
+	<div class="widget author_widget {{post_class}}">
+		{{#if author.image}}
+		<a href="{{author.website}}"><img src="{{author.image}}" class="gravatar" alt="{{author.name}}"></a>
+		{{/if}}
+		<h3>{{author}}</h3>
+		<a href="{{author.website}}" class="author_url">{{author.website}}</a>
+		<p>{{author.bio}}</p>
+	</div>

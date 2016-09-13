@@ -1,0 +1,162 @@
+/*
+	BUTTON STYLES
+*/
+
+.smallrounded {
+	font: 400 13px 'Montserrat', Arial, Sans-Serif;
+	display: inline-block;
+	padding: 6px 20px;
+	color: #fff;
+	border-radius: 4px;
+	background: #2b2626;
+	@include transition(background 0.2s ease-out, border 0.2s ease-out, color 0.2s ease-out);
+
+	&.blue {
+		color: #fff;
+		background: #3885d5;
+
+		&:hover {
+			background: #2866a6;
+		}
+	}
+
+	&.gray {
+		color: #bfbfbf;
+		border: 1px solid #edf0f1;
+		background: transparent;
+
+		&:hover {
+			color: $accent_color;
+			border-color: #c6c8c8;
+		}
+	}
+
+	&.tall {
+		padding: 8px 20px;
+	}
+}
+
+.largesolid {
+	font: 400 13px 'Montserrat', Arial, Sans-Serif;
+	display: inline-block;
+	padding: 12px 32px;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 4px;
+	background: $accent_color;
+	@include transition(background 0.2s ease-out);
+
+	i {
+		margin: 0 10px 0 0;
+		color: #fff;
+	}
+
+	&.orange {
+		color: #fff;
+		background: $accent_color;
+
+		&:hover {
+			background: $accent_dark_color;
+		}
+	}
+
+	&.twitter {
+		margin-right: 10px;
+		padding: 12px 22px;
+		color: #fff;
+		background: $twitter_color;
+
+		&:hover {
+			background: darken($twitter_color, 10%);
+		}
+	}
+
+	&.facebook {
+		margin-right: 10px;
+		padding: 12px 22px;
+		color: #fff;
+		background: $facebook_color;
+
+		&:hover {
+			background: darken($facebook_color, 10%);
+		}
+	}
+
+	&.google {
+		margin-right: 10px;
+		padding: 12px 22px;
+		color: #fff;
+		background: $google_color;
+
+		&:hover {
+			background: darken($google_color, 10%);
+		}
+	}
+}
+
+.largeoutline {
+	font: 400 13px 'Montserrat', Arial, Sans-Serif;
+	display: inline-block;
+	padding: 12px 20px;
+	text-transform: uppercase;
+	color: #c6c8c8;
+	border: 1px solid #edf0f1;
+	border-radius: 4px;
+	@include transition(border 0.2s ease-out, color 0.2s ease-out, background 0.2s ease-out);
+
+	i {
+		margin-right: 10px;
+		color: #c6c8c8;
+	}
+
+	&.wide {
+		padding: 12px 26px;
+	}
+
+	&.thin {
+		padding: 12px 16px;
+	}
+
+	&.dark {
+		color: #c6c8c8;
+		border-color: #c6c8c8;
+	}
+
+	&.active {
+		color: #3e4041;
+		border-color: #ecedee;
+		background: #ecedee;
+	}
+
+	&:hover {
+		color: $accent_color;
+		border-color: #c6c8c8;
+
+		i {
+			color: $accent_color;
+		}
+	}
+}
+
+.tags_list,
+.tags_list li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tags_list li a {
+	font: 400 12px 'Montserrat', Arial, Sans-Serif;
+	display: inline-block;
+	float: left;
+	margin: 0 6px 12px 0;
+	padding: 6px 14px;
+	color: #808080;
+	border-radius: 4px;
+	background: #f7f6f6;
+
+	&:hover {
+		color: #fff;
+		background: $accent_color;
+	}
+}
