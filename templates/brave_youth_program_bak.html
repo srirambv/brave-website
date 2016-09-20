@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block title %}Brave Youth Program | Brave Software{% endblock %}
+
+                        {% block navMenu %}
+
+                          <li>
+                              <button id="brave-ambassador" class="btn cta-button pull-right">Become an Ambassador</button>
+                          </li>
+
+                        {% endblock %}
+
+{% block mainContent %}
+
+    <div class="page" id="youth-program-page">
+
+      <!-- Modal Overlay -->
+      <div id="brave-overlay" style="display: none;">
+          <div class="clear"></div>
+          <form id="ambassador-form">
+            <div class="close"><i></i><i></i></div>
+            <img src="assets/img/brave_youth_program_logo.png" alt="Brave Youth Program">
+            <input placeholder="Name">
+            <input placeholder="Email address" type="email">
+            <input placeholder="City" class="pull-left">
+            <input placeholder="Country" class="pull-right">
+            <textarea placeholder="Tell us why you want to be Brave"></textarea>
+            <button id="ambassador-submit" class="btn cta-button">Submit</button>
+          </form>
+      </div>
+      <!-- End Modal Overlay -->
+
+      <!-- Hero Area -->
+      <div id="brave-hero">
+         <div class="text-group">
+             <div class="text-group-logo"></div>
+             <p class="container">
+                <em>Brave Youth Program</em> acts as a stepping stone for college students to get introduced to the open source community, and to gain practical knowledge from a wide array of dynamic, successful, and experienced people.
+              </p>
+         </div>
+      </div>
+      <!-- End Hero Area -->
+
+      <!--  Mission Section -->
+      <section id="mission" class="row">
+        <div class="container">
+          <h3 class="heading-sm">Goals &amp; Mission</h3>
+          <div class="col-md-6 content-boxes-v3 pull-left">
+              <div class="clearfix margin-bottom-30">
+                <i class="icon-custom icon-lg rounded-x fa fa-group"></i>
+                <div class="content-boxes-in-v3">
+                    <h2 class="heading-sm">Leadership</h2>
+                    <p>By stepping up to the challenge of building and growing a community with a vision, Brave Youths learn the most fundamental aspects of leadership first-hand.</p>
+                </div>
+              </div>
+              <div class="clearfix margin-bottom-30">
+                <i class="icon-custom icon-lg rounded-x fa fa-child"></i>
+                <div class="content-boxes-in-v3">
+                    <h2 class="heading-sm">Coaching</h2>
+                    <p>Coaching and leadership programs make valuable, practical knowledge more available to communities by fostering interactions between experienced and proactive people.</p>
+                </div>
+              </div>
+              <div class="clearfix margin-bottom-30">
+                <i class="icon-custom icon-lg rounded-x fa fa-cubes"></i>
+                <div class="content-boxes-in-v3">
+                    <h2 class="heading-sm">Participation</h2>
+                    <p>Brave Youths run squads at their universities to build a Brave community and to support the cause. Brave Youth Program will be a one huge stepping stone to keep the web safer.</p>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6 pull-right">
+            <ul id="gallery-carousel">
+              <li class="active" style="display:block;">
+                <img src="assets/img/contents/bravesquad1.jpg" alt="Brave Youth Program">
+              </li>
+              <li style="display:none;">
+                <img src="assets/img/contents/braveindia2.jpg" alt="Brave Youth Program">
+              </li>
+              <li style="display:none;">
+                <img src="assets/img/contents/bravesquad2.jpg" alt="Brave Youth Program">
+              </li>
+              <li style="display:none;">
+                <img src="assets/img/contents/braveindia3.jpg" alt="Brave Youth Program">
+              </li>
+              <li style="display:none;">
+                <img src="assets/img/contents/braveindia1.jpg" alt="Brave Youth Program">
+              </li>
+            </ul>
+            <ul class="pager" role="navigation">
+              <li role="control" class="active"></li>
+              <li role="control"></li>
+              <li role="control"></li>
+              <li role="control"></li>
+              <li role="control"></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--  End Mission Section -->
+
+      <!--  Structure Section -->
+      <section id="structure" class="row">
+        <h3 class="heading-sm">Structure</h3>
+        <div class="block-v1">
+            <div class="container">
+                <div class="row content-boxes-v3">
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-globe"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Youth Squad</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-star-o"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Squad Captain</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-info-circle"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Youth Coordinator</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content-boxes-v3 col-md-8 container">
+                    <div class="col-md-6">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-smile-o"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Youth Council</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <i class="icon-custom rounded-x icon-bg-orange fa fa-smile-o"></i>
+                        <div class="content-boxes-in-v3">
+                            <h2 class="heading-sm">Youth Council Chair</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--  End Structure Section -->
+
+      <hr>
+
+      <!--  Chapters Section -->
+      <section id="chapters" class="row">
+        <h3 class="heading-sm">Chapters</h3>
+        <div id="world" class="block-v1">
+          <div class="marker" role="control" title="San Francisco"></div>
+        </div>
+      </section>
+      <!--  End Structure Section -->
+
+    </div>
+
+{% endblock %}

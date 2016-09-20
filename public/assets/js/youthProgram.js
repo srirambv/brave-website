@@ -18,7 +18,11 @@ var Brave = Brave || window.Brave || { app: {} };
     events: [
       [window, 'scroll', 'handleScroll'],
       ['.pager > li', 'click', 'handlePagerClick'],
+<<<<<<< HEAD
       ['#brave-ambassador', 'click', 'showOverlay'],
+=======
+//      ['#brave-ambassador', 'click', 'showOverlay'],
+>>>>>>> master
       ['#brave-overlay, #ambassador-form > .close', 'click', 'handleClose'],
       ['#ambassador-submit', 'click', 'handleAmbassadorSubmit']
     ],

@@ -1,0 +1,12 @@
+{{!
+
+	NAVIGATION
+	- Configuration of this file is not required.
+
+}}
+	<a href="https://www.brave.com" class="logo"><img src="/content/images/2016/04/brave_logo_big.png" alt="Brave Blog"></a>
+	<ul class="menu">
+		{{#foreach navigation}}
+		<li role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+		{{/foreach}}
+	</ul>

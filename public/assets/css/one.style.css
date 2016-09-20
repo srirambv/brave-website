@@ -319,7 +319,11 @@ a.block-link {
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home,
   #fullsize-menu.navbar-collapse.in ul.navbar-nav.brave-nav.home {
+<<<<<<< HEAD
     background: linear-gradient(transparent 5%, rgba(20, 20, 25, 0.75) 80%, rgba(20, 20, 25, 1));
+=======
+    background: linear-gradient(transparent 1%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, .9));
+>>>>>>> master
   }
 
   #fullsize-menu.navbar-collapse.collapsing ul.navbar-nav.brave-nav.home > li > a,
@@ -1626,7 +1630,7 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   display: block;
   float: left;
   width: 15%;
-  margin: 2.5%;
+  margin: 2.5%; 
 }
 
 #team ul.container li.title-v1,
@@ -1680,7 +1684,7 @@ ul#press-carousel > li > ul > li article > a i.icon.theguardian {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 #assets ul.assets-container > li h4 {

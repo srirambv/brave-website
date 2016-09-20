@@ -1,0 +1,41 @@
+{{!
+
+	AUTHOR TEMPLATE
+	- Configuration of this file is not required.
+
+}}
+{{!< default}}
+
+	<div class="container">
+
+		{{> sidebar_default}}
+
+		<div class="content">
+
+			{{! PAGE NOTIFICATION / TITLE }}
+			<div class="notification">
+				<div class="left"><i class="fa fa-user"></i>AUTHOR: <span>{{author.name}}</span></div>
+				<div class="right"><a href="{{@blog.url}}"><i class="fa fa-times"></i></a></div>
+			</div>
+
+			{{! WIDGET - BLOG INFO }}
+			{{> widget_bloginfo}}
+
+			{{! RESPONSIVE NAVIGATION }}
+			<div class="inlinemenu">
+				<div class="graybar">
+					<a href="https://www.brave.com" class="logo left"><img src="/content/images/2016/04/brave_logo_big.png" alt="Brave Blog"></a>
+					<div class="right"><i class="fa fa-bars"></i></div>
+				</div>
+				{{navigation}}
+			</div>
+
+			{{! POSTLIST }}
+			<div class="postlist">
+				{{> loop}}
+				{{pagination}}
+			</div>
+
+		</div>
+
+	</div>

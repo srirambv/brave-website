@@ -1,0 +1,35 @@
+{{!
+
+	INDEX TEMPLATE
+	- Configuration of this file is not required.
+
+}}
+{{!< default}}
+
+	<div class="container">
+
+		{{> sidebar_default}}
+
+		<div class="content">
+
+			{{! WIDGET - BLOG INFO }}
+			{{> widget_bloginfo}}
+
+			{{! RESPONSIVE NAVIGATION }}
+			<div class="inlinemenu">
+				<div class="graybar">
+					<a href="https://www.brave.com" class="logo left"><img src="/content/images/2016/04/brave_logo_big.png" alt="Brave Blog"></a>
+					<div class="right"><i class="fa fa-bars"></i></div>
+				</div>
+				{{navigation}}
+			</div>
+
+			{{! POSTLIST }}
+			<div class="postlist">
+				{{> loop}}
+				{{pagination}}
+			</div>
+
+		</div>
+
+	</div>

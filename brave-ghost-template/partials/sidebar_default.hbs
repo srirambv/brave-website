@@ -1,0 +1,28 @@
+{{! 
+	
+	SIDEBAR - DEFAULT
+	- Configuration of this file is not required. 
+
+}}
+
+	<div class="alternate">
+		<aside>
+
+			<!-- WIDGET - DESCRIPTION -->
+			<div class="widget info_widget">
+				{{#if @blog.logo}}
+				<a href="{{@blog.url}}" class="logo"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+				{{/if}}
+				<p>{{@blog.description}}</p>
+			</div>
+
+			<!-- WIDGET - SOCIAL -->
+			<div class="widget social_widget">
+				{{> social_sidebar}}
+			</div>
+
+			<!-- WIDGET - TAG -->
+			{{> widget_tags}}
+			
+		</aside>
+	</div>

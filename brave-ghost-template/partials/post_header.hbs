@@ -1,0 +1,36 @@
+{{! 
+	
+	POST - HEADER
+	- Configuration of this file is not required. 
+
+}}
+
+	<div class="header {{post_class}}">
+		{{#has tag="feature"}}
+			<div class="largeimage postfeature" {{#if image}} style="background-image: url({{image}})" {{/if}}>
+				<div class="shadow"></div>
+				<h1>{{{title}}}</h1>
+			</div>
+		{{/has}}
+		{{#has tag="banner"}}
+			<div class="basicfeature postfeature" href="{{url}}" {{#if image}} style="background-image: url({{image}})" {{/if}}></div>
+			<h1>{{{title}}}</h1>
+		{{/has}}
+		{{^has tag="banner, feature"}}
+			<h1>{{{title}}}</h1>
+		{{/has}}
+		<div class="info">
+			<div class="left">
+				<a href="{{url}}" class="author">{{#if author.image}}<img src="{{author.image}}" alt="author" class="minigravatar">{{/if}}{{author.name}}</a>
+			</div>
+			<div class="right">
+				<a href="{{url}}" class="date"><i class="fa fa-clock-o"></i>{{date format="MMMM Do, YYYY"}}</a>
+				<span class="tags">
+					<i class="fa fa-tags"></i>
+					{{#foreach tags}}
+					<a href="{{url}}" class="{{name}}">{{name}}</a>
+					{{/foreach}}
+				</span>
+			</div>
+		</div>
+	</div>
