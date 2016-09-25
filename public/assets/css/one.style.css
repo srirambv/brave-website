@@ -869,7 +869,7 @@ a.block-link {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  background-image: linear-gradient(rgba(0, 10, 20, 0.5) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
+  background-image: linear-gradient(rgba(0, 10, 20, 0.5) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook_sml.jpg');
 }
 
 #brave-hero .text-group {
