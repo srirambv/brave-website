@@ -1264,7 +1264,7 @@ a.button.blog-button:hover {
 }
 
 #safer {
-  background: radial-gradient(rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.25) 60%, rgb(0, 0, 0)), rgb(8, 8, 8) url('../img/bg/lion-transparent_sml.png') no-repeat calc(105%) center / contain;
+  background: radial-gradient(rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.25) 60%, rgb(0, 0, 0)), rgb(8, 8, 8) url('../img/bg/lion_on_black.jpg') no-repeat calc(105%) center / contain;
 }
 
 #safer .title-v1 h2,
