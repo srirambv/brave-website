@@ -1333,7 +1333,7 @@ a.button.blog-button:hover {
 
 
 #about-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-san-francisco.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-san-francisco.jpg');
   background-position: center top;
   background-size: contain;
   background-repeat: no-repeat;
