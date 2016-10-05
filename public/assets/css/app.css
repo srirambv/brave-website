@@ -27,6 +27,7 @@ a:focus {
 
 hr {
   margin: 30px 0;
+    color: aqua;
 }
 
 hr.hr-xs {
@@ -193,6 +194,13 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   z-index: 1;
   position: relative;
   text-align: center;
+  margin-bottom: 60px;
+}
+
+.title-v1-L {
+  z-index: 1;
+  position: relative;
+  text-align: left;
   margin-bottom: 60px;
 }
 

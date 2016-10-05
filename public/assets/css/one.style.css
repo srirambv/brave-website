@@ -869,7 +869,7 @@ a.block-link {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  background-image: linear-gradient(rgba(0, 10, 20, 0.5) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook.jpg');
+  background-image: linear-gradient(rgba(0, 10, 20, 0.5) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook_sml.jpg');
 }
 
 #brave-hero .text-group {
@@ -1264,7 +1264,7 @@ a.button.blog-button:hover {
 }
 
 #safer {
-  background: radial-gradient(rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.25) 60%, rgb(0, 0, 0)), rgb(8, 8, 8) url('../img/bg/lion-transparent.png') no-repeat calc(105%) center / contain;
+  background: radial-gradient(rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0.25) 60%, rgb(0, 0, 0)), rgb(8, 8, 8) url('../img/bg/lion_on_black.jpg') no-repeat calc(105%) center / contain;
 }
 
 #safer .title-v1 h2,
@@ -1329,11 +1329,28 @@ a.button.blog-button:hover {
 /*About Page
 ------------------------------------*/
 /*About Page*/
+
+
+
 #about-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-san-francisco.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/brave-san-francisco.jpg');
   background-position: center top;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+/*new code for pubs page*/
+#publishers-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/The_New_York_Times_newsroom_1942b.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:center top;
+  background-color: grey;
+}
+
+#publishers-page section:first-of-type {
+  margin: 16rem auto;
+  background: rgb(255, 255, 255);
 }
 
 #about-page section:first-of-type {
@@ -1391,6 +1408,14 @@ ul.page-submenu li a {
   }
 
   #about-page h1.fixed-page-heading.invert {
+    margin-top: 2rem;
+  }
+    
+  #publishers-page section:first-of-type {
+    margin: 0 auto;
+  }
+
+  #publishers-page h1.fixed-page-heading.invert {
     margin-top: 2rem;
   }
 
@@ -2318,7 +2343,7 @@ ul#faq-list li.panel p.panel-body a {
 ------------------------------------*/
 /*Interior Pages*/
 .page {
-  padding-top: 100px;
+  padding-top: 200px;
 }
 
 .page .row {
