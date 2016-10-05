@@ -1342,7 +1342,7 @@ a.button.blog-button:hover {
 /*new code for pubs page*/
 #publishers-page {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/The_New_York_Times_newsroom_1942b.jpg');
-/*  background-size: contain;*/
+  background-size: contain;
   background-repeat: no-repeat;
   background-position:center top;
   background-color: grey;
