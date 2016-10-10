@@ -89,6 +89,11 @@ $("#formNewsletterSubscriptionSubmit").on('click', function() {
     }
     formData.call = 'newsletter'
     formData.crumb = getCookieValue('crumb')
+    if (!formData.crumb) {
+      let newcookie = Math.random().toString()
+      document.cookie = "crumb=" + newcookie + "; max-age=3600"
+      formData.crumb = newcookie
+    }
     $("#formNewsletterSubscriptionSubmit").text('Sending...')
     $.ajax({
        url: '/api/mailchimp',
