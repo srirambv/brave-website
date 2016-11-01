@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="/assets/css/custom.css">
 
     <!-- Extra per-page stylesheets -->
-    
+
 </head>
 
 <!--
@@ -73,10 +73,10 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
 
                           <li>
-                              <a href="brave_youth_program_signup.html"><button id="brave-ambassador" class="btn cta-button pull-right">Become an Ambassador</button></a>
+                              <button id="brave-ambassador" class="btn cta-button pull-right">Become an Ambassador</button>
                           </li>
 
-                        
+
                     </ul>
                 </div>
             </div>
@@ -89,7 +89,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!--=== End Header ===-->
 
     <!--=== Main content ===-->
-    
+
 
     <div class="page" id="youth-program-page">
 
@@ -97,13 +97,17 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
       <div id="brave-overlay" style="display: none;">
           <div class="clear"></div>
           <form id="ambassador-form">
+            <input value="914b82b662" name="MC_LIST_ID" type="hidden">
             <div class="close"><i></i><i></i></div>
-            <img src="assets/img/brave_youth_program_logo.png" alt="Brave Youth Program">
-            <input placeholder="Name">
-            <input placeholder="Email address" type="email">
-            <input placeholder="City" class="pull-left">
-            <input placeholder="Country" class="pull-right">
-            <textarea placeholder="Tell us why you want to be Brave"></textarea>
+            <div class="img-wrap">
+              <img src="assets/img/brave_youth_program_logo.png" alt="Brave Youth Program">
+            </div>
+            <input autofocus name="name" placeholder="Name" required>
+            <input name="email" placeholder="Email address" type="email" required>
+            <input name="city" placeholder="City" class="pull-left" required>
+            <input name="country" placeholder="Country" class="pull-right" required>
+            <textarea name="reason" placeholder="Tell us why you want to be Brave" required></textarea>
+            <p id="ambassador-form-status"></p>
             <button id="ambassador-submit" class="btn cta-button">Submit</button>
           </form>
       </div>
@@ -280,7 +284,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <div>
                             <a href="/about.html#team">About Us</a>
                         </div>
-                        
+
                         <div>
                             <a href="mailto:support@brave.com" target="_blank">Support</a>
                         </div>
