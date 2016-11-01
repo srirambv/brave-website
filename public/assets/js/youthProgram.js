@@ -18,7 +18,7 @@ var Brave = Brave || window.Brave || { app: {} };
     events: [
       [window, 'scroll', 'handleScroll'],
       ['.pager > li', 'click', 'handlePagerClick'],
-//      ['#brave-ambassador', 'click', 'showOverlay'],
+      ['#brave-ambassador', 'click', 'showOverlay'],
       ['#brave-overlay, #ambassador-form > .close', 'click', 'handleClose'],
       ['#ambassador-submit', 'click', 'handleAmbassadorSubmit']
     ],
@@ -54,7 +54,43 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     handleAmbassadorSubmit: function(event) {
-      return alert('Ambassador applications are not being accepted yet.');
+      _paq.push(['trackEvent', 'FormSubmissions', 'Submitted', 'YouthProgramSignUp'])
+      var formData = $('#ambassador-form').serializeObject()
+      if (!formData.email || !formData.name || !formData.city || !formData.country || !formData.reason) {
+        $("#ambassador-form-status").text("All fields are required. Please try again.")
+        return false
+      }
+      formData.call = 'youth_program'
+      formData.crumb = getCookieValue('crumb')
+      if (!formData.crumb) {
+        let newcookie = Math.random().toString()
+        document.cookie = "crumb=" + newcookie + "; max-age=3600"
+        formData.crumb = newcookie
+      }
+      $("#ambassador-submit").text('Sending...')
+      $.ajax({
+        url: '/api/mailchimp',
+        type: 'POST',
+        xhrFields: {
+          withCredentials: true
+        },
+        dataType: 'json',
+        data: formData,
+        error: function(err) {
+          $("#ambassador-form-status").text("An error occurred.")
+          _paq.push(['trackEvent', 'FormSubmissions', 'Error', 'FooterNewsletterSignUp'])
+        },
+        success: function(data) {
+          if (data.euid) {
+            $("#ambassador-form img, #ambassador-form input, #ambassador-form textarea, #ambassador-submit").hide()
+            $("#ambassador-form-status").text("Thank you for signing up!")
+            _paq.push(['trackEvent', 'FormSubmissions', 'Success', 'YouthProgramSignUp'])
+          } else {
+            alert(data)
+            _paq.push(['trackEvent', 'FormSubmissions', 'Failed', 'YouthProgramSignUp'])
+          }
+        }
+      });
     },
 
     handleClose: function(event) {

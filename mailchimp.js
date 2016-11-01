@@ -1,11 +1,12 @@
 var mailchimpApiKey = process.env.MAILCHIMP_API_KEY
 
 if(!mailchimpApiKey) {
-  console.log('NO MAILCHIMP API KEY FOUND: process.env.MAILCHIMP_API_KEY')  
+  console.log('NO MAILCHIMP API KEY FOUND: process.env.MAILCHIMP_API_KEY')
 }
 
 var mcapi = require('mailchimp-api'),
     mc = new mcapi.Mailchimp(mailchimpApiKey)
+var sanitizer = require('sanitizer')
 
 exports.api = function(request, reply) {
   var apiCallName = request.payload.call
@@ -15,6 +16,9 @@ exports.api = function(request, reply) {
       break;
     case "getbrave":
       listSubscribeBuildRequests(request, reply)
+      break;
+    case "youth_program":
+      listSubscribeYouthProgram(request, reply)
       break;
     default:
       reply(null)
@@ -41,7 +45,7 @@ var listSubscribeNewsletter = function(request, reply) {
       }
 
     mc.lists.subscribe(
-      subscription, 
+      subscription,
       function(data) {
         reply(data)
       },
@@ -53,7 +57,7 @@ var listSubscribeNewsletter = function(request, reply) {
         }
         reply('error:' + error.code + ": " + error.error)
       })
-  }  
+  }
 }
 
 var listSubscribeBuildRequests = function(request, reply) {
@@ -70,7 +74,7 @@ var listSubscribeBuildRequests = function(request, reply) {
         "id":p.MC_LIST_ID,
         "email":{email:p.MERGE0},
         "merge_vars": {
-                  "NAME": p.MERGE1,
+                  "NAME": sanitizer.escape(sanitizer.sanitize(p.MERGE1)),
                   "groupings": null
         }
       }
@@ -92,7 +96,7 @@ var listSubscribeBuildRequests = function(request, reply) {
     }
 
     mc.lists.subscribe(
-      subscription, 
+      subscription,
       function(data) {
         reply(data)
       },
@@ -104,9 +108,51 @@ var listSubscribeBuildRequests = function(request, reply) {
         }
         reply('error:' + error.code + ": " + error.error)
       })
-  }  
+  }
 }
 
 
+var listSubscribeYouthProgram = function(request, reply) {
+  var payload = request.payload
+  if(
+      !payload.MC_LIST_ID
+      || !payload.email
+      || !payload.name
+      || !payload.city
+      || !payload.country
+      || !payload.reason
+      || typeof payload.MC_LIST_ID !== 'string'
+      || typeof payload.email !== 'string'
+      || typeof payload.name !== 'string'
+      || typeof payload.city !== 'string'
+      || typeof payload.country !== 'string'
+      || typeof payload.reason !== 'string'
+    ) { reply(null) }
+  else {
 
+    var subscription = {
+      "id": sanitizer.sanitize(payload.MC_LIST_ID),
+      "email": { email: payload.email },
+      "merge_vars": {
+        "NAME": sanitizer.escape(sanitizer.sanitize(payload.name)),
+        "CITY": sanitizer.escape(sanitizer.sanitize(payload.city)),
+        "COUNTRY": sanitizer.escape(sanitizer.sanitize(payload.country)),
+        "REASON": sanitizer.escape(sanitizer.sanitize(payload.reason))
+      }
+    }
 
+    mc.lists.subscribe(
+      subscription,
+      function(data) {
+        reply(data)
+      },
+      function(error) {
+        if (error.error) {
+          console.log(error.code + ": " + error.error)
+        } else {
+          console.log('There was an error signing up that user')
+        }
+        reply('error:' + error.code + ": " + error.error)
+      })
+  }
+}
