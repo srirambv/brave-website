@@ -6,6 +6,7 @@ if(!mailchimpApiKey) {
 
 var mcapi = require('mailchimp-api'),
     mc = new mcapi.Mailchimp(mailchimpApiKey)
+var sanitizer = require('sanitizer')
 
 exports.api = function(request, reply) {
   var apiCallName = request.payload.call
@@ -73,7 +74,7 @@ var listSubscribeBuildRequests = function(request, reply) {
         "id":p.MC_LIST_ID,
         "email":{email:p.MERGE0},
         "merge_vars": {
-                  "NAME": p.MERGE1,
+                  "NAME": sanitizer.escape(sanitizer.sanitize(p.MERGE1)),
                   "groupings": null
         }
       }
@@ -130,13 +131,13 @@ var listSubscribeYouthProgram = function(request, reply) {
   else {
 
     var subscription = {
-      "id": payload.MC_LIST_ID,
+      "id": sanitizer.sanitize(payload.MC_LIST_ID),
       "email": { email: payload.email },
       "merge_vars": {
-        "NAME": payload.name,
-        "CITY": payload.city,
-        "COUNTRY": payload.country,
-        "REASON": payload.reason
+        "NAME": sanitizer.escape(sanitizer.sanitize(payload.name)),
+        "CITY": sanitizer.escape(sanitizer.sanitize(payload.city)),
+        "COUNTRY": sanitizer.escape(sanitizer.sanitize(payload.country)),
+        "REASON": sanitizer.escape(sanitizer.sanitize(payload.reason))
       }
     }
 

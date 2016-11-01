@@ -35,6 +35,7 @@
     "hapi-permanent-redirect": "^1.0.1",
     "inert": "^3.0.1",
     "mailchimp-api": "^2.0.7",
+    "sanitizer": "^0.1.3",
     "standard": "^5.3.1",
     "useragent": "^2.1.9"
   },
