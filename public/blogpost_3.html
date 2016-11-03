@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/assets/css/one.style.css">
 
     <!-- CSS Footer -->
+    <link rel="stylesheet" href="/assets/css/footers/footer-v7.css">
     <link rel="stylesheet" href="/assets/css/footers/footer-v5.css">
     <link rel="stylesheet" href="/assets/css/footers/footer-v1.css">
 
@@ -30,6 +31,12 @@
     <link rel="stylesheet" href="/assets/plugins/animate.css">
     <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
     <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- Style Switcher -->
+    <link rel="stylesheet" href="/assets/css/plugins/style-switcher.css">
+
+    <!-- CSS Theme -->
+    <link rel="stylesheet" href="/assets/css/theme-colors/orange.css" id="style_color">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="/assets/css/custom.css">
@@ -73,10 +80,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                          <li>
                             <a href="index.html#devs">Devs</a>
-                        </li>
-
-                        <li>
-                            <a href="publishers.html">Publishers</a>
                         </li>
 
                         <li>
@@ -227,7 +230,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             </a>
                         </p>
                         <p>
-                            The new Brave browser blocks the ads and trackers that slow you down, spend your bandwidth, and invade your privacy. Now, Brave lets you contribute to your favorite publishers automatically, based on the sites you visit most.
+                            The new Brave browser blocks the ads and trackers that slow you down, spend your bandwidth, and invade your privacy. Then we put clean ads back, to fund website owners and Brave users alike. Users can spend their funds to go ad-free on their favorite sites.
                         </p>
                     </div>
                     <!-- End About -->
@@ -241,9 +244,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <a href="/about.html#press">Press</a>
                         </div>
                         <div>
-                            <a href="/publishers.html">Publishers</a>
-                        </div>
-                        <div>
                             <a href="/FAQ.html">FAQ</a>
                         </div>
                         <div>
@@ -255,7 +255,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <div>
                             <a href="/about.html#team">About Us</a>
                         </div>
-
+                        
                         <div>
                             <a href="mailto:support@brave.com" target="_blank">Support</a>
                         </div>
@@ -323,7 +323,13 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                     <i class="fa fa-facebook"></i>
                                 </a>
                             </li>
-
+                            <!--
+                            <li>
+                                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            -->
                             <li>
                                 <a href="https://twitter.com/brave" target="_blank" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
                                     <i class="fa fa-twitter"></i>
@@ -474,7 +480,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script src="/assets/js/home.js"></script>
     <script src="/assets/js/interior.js"></script>
     <script src="/assets/js/about.js"></script>
-    <script src="/assets/js/publishers.js"></script>
     <script src="/assets/js/youthProgram.js"></script>
     <script>
         jQuery(document).ready(function() {
@@ -486,10 +491,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             if(window.location.pathname.match('about')) {
                 return Brave.app.about.on();
             }
-            // publishers route
-            if(window.location.pathname.match('publishers')) {
-              return Brave.app.publishers.on();
-            }
             // Youth Program route
             if(window.location.pathname.match('brave_youth_program')) {
                 return Brave.app.youthProgram.on();
@@ -498,5 +499,15 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             return Brave.app.interior.on();
         });
     </script>
+    <!--[if lt IE 9]>
+        <script src="/assets/plugins/respond.js"></script>
+        <script src="/assets/plugins/html5shiv.js"></script>
+        <script src="/assets/js/plugins/placeholder-IE-fixes.js"></script>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/sky-forms-ie8.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 10]>
+        <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.placeholder.min.js"></script>
+    <![endif]-->
 </body>
 </html>

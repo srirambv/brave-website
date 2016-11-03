@@ -110,7 +110,7 @@ const downloadRedirects = (ua) => {
    return "https://itunes.apple.com/ca/app/brave-web-browser/id1052879175?mt=8#"
   }
   if (os.match(/^Android/)) {
-   return 'https://play.google.com/store/apps/details?id=com.linkbubble.playstore'
+   return 'https://play.google.com/store/apps/details?id=com.brave.browser'
   }
   return 'https://github.com/brave/browser-laptop/releases'
 }
