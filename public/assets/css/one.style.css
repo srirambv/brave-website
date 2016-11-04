@@ -107,7 +107,12 @@ a.block-link {
 
 ::selection {
   color: #ff6c00;
-  background: #fff;
+  background: transparent;
+}
+
+::-moz-selection {
+  color: #ff6c00;
+  background: transparent;
 }
 
 .navbar-fixed-bottom .navbar-collapse,
