@@ -872,13 +872,35 @@ a.block-link {
   background-image: linear-gradient(rgba(0, 10, 20, 0.5) 40%, rgb(8, 8, 24)), url('../img/bg/brave-notebook_sml.jpg');
 }
 
+#brave-hero-cd {
+  min-height: 80vh;
+  padding: 20px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: linear-gradient(rgba(0, 10, 20, 0.01) 40%, rgb(8, 8, 24)), url('../img/bg/brave-coindesk-bg.png');
+}
+
+
 #brave-hero .text-group {
+  padding-top: 10%;
+  text-align: center;
+}
+
+#brave-hero-cd .text-group {
   padding-top: 10%;
   text-align: center;
 }
 
 #brave-hero .text-group > * {
   font-size: 3.5em;
+  font-weight: 400;
+  margin: 10px auto 0;
+  max-width: 75%;
+}
+
+#brave-hero-cd .text-group > * {
+  font-size: 2.5em;
   font-weight: 400;
   margin: 10px auto 0;
   max-width: 75%;
@@ -893,13 +915,41 @@ a.block-link {
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
 }
 
+#brave-hero-cd .text-group > *,
+#brave-download {
+  -webkit-font-smoothing:antialiased;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.75em;
+  text-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
 #brave-hero .text-group-logo {
   background: url('../img/brave_logo_horz.svg') left center / cover no-repeat;
   width: 130px;
   height: 152px;
 }
 
+#brave-hero-cd .text-group-logo {
+  background: url('../img/brave_logo_horz.svg') left center / cover no-repeat;
+  width: 130px;
+  height: 152px;
+}
+
+
+
+#brave-hero-cd .text-group-logo-CD {
+  background: url('../img/CD_BR_logos.svg') left center / cover no-repeat;
+  width: 600px;
+  height: 100px;
+}
+
 #brave-hero .text-group h2 {
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+#brave-hero-cd .text-group h2 {
   font-weight: 500;
   color: rgb(255, 255, 255);
 }
@@ -911,7 +961,18 @@ a.block-link {
   color: rgb(255, 255, 255);
 }
 
+#brave-hero-cd .text-group p {
+  font-size: 1.67em;
+  margin-top: 1.5rem;
+  line-height: 1.5em;
+  color: rgb(255, 255, 255);
+}
+
 #brave-hero .control-group > * {
+  display: block;
+}
+
+#brave-hero-cd .control-group > * {
   display: block;
 }
 
@@ -923,7 +984,21 @@ a.block-link {
   margin: 10px auto;
 }
 
+#brave-hero-cd .control-group .label {
+  letter-spacing: 0.5px;
+  font-size: 1.1em;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  margin: 10px auto;
+}
+
 #brave-hero .control-group a.label {
+  color: rgb(255, 80, 0);
+  font-weight: 400;
+  font-size: 1.15em;
+}
+
+#brave-hero-cd .control-group a.label {
   color: rgb(255, 80, 0);
   font-weight: 400;
   font-size: 1.15em;
