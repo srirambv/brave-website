@@ -548,8 +548,8 @@ a.block-link {
 
   .one-page-header.navbar-default .navbar-nav.brave-nav.home > li > a:hover {
     color: rgb(255, 80, 0);
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   }
-
     
   .one-page-header.navbar-default .navbar-nav > li > a:hover,
   .one-page-header.navbar-default .navbar-nav .dropdown-menu > li > a:hover,
@@ -752,6 +752,10 @@ a.block-link {
 }
 
 .one-page-header.top-nav-collapse .navbar-nav.brave-nav.home > li.download a {
+  color: rgb(255, 80, 0);
+}
+
+.one-page-header.top-nav-collapse .navbar-nav.brave-nav.home > li.download-grey a {
   color: rgb(255, 80, 0);
 }
 
