@@ -550,7 +550,7 @@ a.block-link {
     color: rgb(255, 80, 0);
       text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   }
-    
+
   .one-page-header.navbar-default .navbar-nav > li > a:hover,
   .one-page-header.navbar-default .navbar-nav .dropdown-menu > li > a:hover,
   .one-page-header.top-nav-collapse.navbar-default .navbar-nav.brave-nav.home > li > a:hover,
@@ -2510,4 +2510,9 @@ ul#faq-list li.panel p.panel-body a {
   .well > div {
     margin-top: 80px;
   }
+}
+
+
+.has-error .email-error{
+  color: white;
 }
