@@ -1,7 +1,7 @@
 var ContactForm = function () {
 
     return {
-        
+
         //Contact Form
         initContactForm: function () {
 	        // Validation
@@ -29,7 +29,7 @@ var ContactForm = function () {
 	                    remote: 'assets/plugins/sky-forms/version-2.0.1/captcha/process.php'
 	                }
 	            },
-	                                
+
 	            // Messages for form validation
 	            messages:
 	            {
@@ -52,8 +52,8 @@ var ContactForm = function () {
 	                    remote: 'Correct captcha is required'
 	                }
 	            },
-	                                
-	            // Ajax form submition                  
+
+	            // Ajax form submition
 	            submitHandler: function(form)
 	            {
 	                $(form).ajaxSubmit(
@@ -68,7 +68,7 @@ var ContactForm = function () {
 	                    }
 	                });
 	            },
-	            
+
 	            // Do not change code below
 	            errorPlacement: function(error, element)
 	            {
@@ -78,5 +78,29 @@ var ContactForm = function () {
         }
 
     };
-    
+
 }();
+
+// Newsletter form validation
+$('#formNewsletterSubscription').validate({
+        rules: {
+        newsletteremail: {
+          required: true
+        }
+        },
+        highlight: function(element) {
+        $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function(element) {
+        $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block email-error',
+        errorPlacement: function(error, element) {
+        if (element.parent('.input-group').length) {
+          error.insertAfter(element.parent());
+        } else {
+          error.insertAfter(element);
+        }
+      }
+  });

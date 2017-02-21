@@ -254,7 +254,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <a href="/brave_youth_program.html">Youth Program</a>
                         </div>
                         <div>
-                            <a href="/about.html#team">About Us</a>
+                            <a href="/about.html">About Us</a>
                         </div>
 
                         <div>
@@ -275,17 +275,23 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <form id="formNewsletterSubscription" class="form-vertical" onsubmit="return false">
                           <input name="call" value="newsletter" type="hidden">
                           <div class="form-group">
-                              <input name="newsletteremail" type="email" class="form-textbox validate[Email]" id="newsletteremail" placeholder="Email" required aria-required="true">
+                              <input name="newsletteremail"
+                              type="email" class="form-textbox validate[Email]"
+                              id="newsletteremail" placeholder="Email" aria-required="true"
+                              >
                           </div>
+
                           <div class="form-group">
                               <button class="btn-u btn-u-black ls-s-1" id="formNewsletterSubscriptionSubmit">Stay In Touch</button>
                           </div>
                           <input value="cb26574db7" name="MC_LIST_ID" type="hidden">
                         </form>
                     </div>
+
                     <!-- End Newsletter -->
 
                     <!-- Address -->
+
                     <div id="footer-address" class="col-md-3 md-margin-bottom-40">
                         <div class="headline">
                             <h2>Contact Us</h2>
@@ -500,5 +506,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             return Brave.app.interior.on();
         });
     </script>
+
 </body>
 </html>
