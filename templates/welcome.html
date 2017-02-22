@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title data-l10n-id="welcomeTitle"></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="de, en-US, fr, pl">
+
+    <link rel="localization" href="/assets/locales/{locale}/welcome.properties">
 
     <meta property="og:title" content="Brave Software" />
     <meta property="og:type" content="website" />
@@ -27,6 +32,8 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel="stylesheet" href="/assets/css/welcome.css">
+    <script defer src="/assets/js/l20n.js"></script>
+
   </head>
 
   <body class="welcome-page">
