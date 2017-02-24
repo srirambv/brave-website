@@ -282,19 +282,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <li class="panel">
                         <h4 class="panel-title">
-                            16. What kind of data is stored in the Brave Vault? Can users access it?
-                        </h4>
-                        <p class="panel-body">
-                            The vault generates a UUID upon connection from your first Brave install on a laptop or smartphone. This UUID will be shared across devices so you can pair devices without a login system, using just a QR code or similar. The browser supplies a public key for authentication of this anonymous identity. Everything else inside the vault is encrypted by a browser-generated key that we have no access to.
-                        </p>
-                        <p class="panel-body">
-                            The Brave Vault can hold information that users would like to sync across devices such as bookmarks, passwords, etc. -- but only with user permission to sync this data. It also holds the combined, anonymized cross-device browser history captured by the browser. The user can access any of this information and has complete control over what is stored. The vault is not connected to any PII, email, username, etc.
-                        </p>
-                    </li>
-
-                    <li class="panel">
-                        <h4 class="panel-title">
-                            17. What might you use the anonymized history data for?
+                            16. What might you use the anonymized history data for?
                         </h4>
                         <p class="panel-body">
                             We hope to aggregate anonymized data across browsers to help improve the in-browser targeting engine, but Brave cannot receive cleartext data from any single user/device.
@@ -303,7 +291,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <li class="panel">
                         <h4 class="panel-title">
-                            18. Why doesn’t Brave block search ads, for example on Google search engine result pages?
+                            17. Why doesn’t Brave block search ads, for example on Google search engine result pages?
                         </h4>
                         <p class="panel-body">
                             While we will block third-party cookies where you have no first-party relationship with the cookie’s domain, we don't block first party cookies by default. However, the Brave user will have the option to selectively block/enable cookies globally or on a site-by-site basis. Google will only have the ability to track you within their own domain and they won't be able to use that information to target you outside of google.com.
@@ -312,7 +300,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <li class="panel">
                         <h4 class="panel-title">
-                            19. Are there any other ads that Brave would not block?
+                            18. Are there any other ads that Brave would not block?
                         </h4>
                         <p class="panel-body">
                             Our plan for the future includes allowing publishers to signal the browser in real-time when they have direct-sold ads that are worth more than what Brave can provide. The ads must be relevant and meet our general quality standards (non-intrusive, no trackers, etc…), but this determination will be made dynamically and will never involve any whitelisting fees. The goal is to maximize value while protecting user privacy and control. The user will always have the option to “downvote” an ad regardless of its source.
@@ -321,7 +309,7 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <li class="panel">
                         <h4 class="panel-title">
-                            20. Will Brave sell user data to advertisers?
+                            19. Will Brave sell user data to advertisers?
                         </h4>
                         <p class="panel-body">
                            As earlier answers explain, we do not even have access to identifiable user data. The anonymized aggregated ad campaign related data we do collect is used for accounting and reporting, but this data cannot be mapped back to devices or user identities of any kind.
@@ -407,17 +395,23 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         <form id="formNewsletterSubscription" class="form-vertical" onsubmit="return false">
                           <input name="call" value="newsletter" type="hidden">
                           <div class="form-group">
-                              <input name="newsletteremail" type="email" class="form-textbox validate[Email]" id="newsletteremail" placeholder="Email" required aria-required="true">
+                              <input name="newsletteremail"
+                              type="email" class="form-textbox validate[Email]"
+                              id="newsletteremail" placeholder="Email" aria-required="true"
+                              >
                           </div>
+
                           <div class="form-group">
                               <button class="btn-u btn-u-black ls-s-1" id="formNewsletterSubscriptionSubmit">Stay In Touch</button>
                           </div>
                           <input value="cb26574db7" name="MC_LIST_ID" type="hidden">
                         </form>
                     </div>
+
                     <!-- End Newsletter -->
 
                     <!-- Address -->
+
                     <div id="footer-address" class="col-md-3 md-margin-bottom-40">
                         <div class="headline">
                             <h2>Contact Us</h2>
@@ -632,5 +626,6 @@ The data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             return Brave.app.interior.on();
         });
     </script>
+
 </body>
 </html>
