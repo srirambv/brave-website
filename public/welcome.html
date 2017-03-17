@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
   <head>
-    <META NAME="robots" CONTENT="noindex,nofollow">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title data-l10n-id="welcomeTitle"></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="de, en-US, fr, pl">
+
+    <link rel="localization" href="/assets/locales/{locale}/welcome.properties">
 
     <meta property="og:title" content="Brave Software" />
     <meta property="og:type" content="website" />
@@ -28,33 +32,35 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel="stylesheet" href="/assets/css/welcome.css">
+
+    <script defer src="/assets/js/l20n.js"></script>
   </head>
 
   <body class="welcome-page">
     
 <header id="masthead" class="section-content">
   <div class="wrapper">
-    <h1 class="section-title container-small">Experience the fastest and safest browser available.</h1>
+    <h1 class="section-title container-small">Get ready to experience the fastest and safest browser on earth.</h1>
     <div class="container discover">
       <div class="discover-block col-sm-4">
-        <img src="assets/img/welcome/import_icon.png" alt="#">
-        <h2 class="discover-description">Import your data.</h2>
-        <a class="brave-button" href="#">I'm ready.</a>
+        <img src="assets/img/welcome/import_icon.png">
+        <h2 data-l10n-id="importYourData" class="discover-description"></h2>
+        <a data-l10n-id="imReady" class="brave-button" href="#"></a>
       </div>
       <div class="discover-block col-sm-4">
-        <img src="assets/img/welcome/shields_icon.png" alt="#">
-        <h2 class="discover-description">Adjust your shields.</h2>
-        <a class="brave-button" href="#">Learn how</a>
+        <img src="assets/img/welcome/shields_icon.png">
+        <h2 data-l10n-id="adjustYourShields" class="discover-description"></h2>
+        <a data-l10n-id="learnHow" class="brave-button" href="#"></a>
       </div>
       <div class="discover-block col-sm-4">
-        <img src="assets/img/welcome/extensions_icon.png" alt="#">
-        <h2 class="discover-description">Enable your extensions.</h2>
-        <a class="brave-button" href="#">Learn more</a>
+        <img src="assets/img/welcome/extensions_icon.png">
+        <h2 data-l10n-id="enableYourExtensions" class="discover-description"></h2>
+        <a data-l10n-id="learnMore" class="brave-button" href="#"></a>
       </div>
     </div>
     <div class="center-block next-section-link">
       <a href="#">
-        <span class="next-section-link-text">and more!</span>
+        <span data-l10n-id="andMore" class="next-section-link-text"></span>
         <span class="scroll-down-arrow"></span>
       </a>
     </div>
@@ -72,9 +78,9 @@
         </div>
         <article class="col-sm-7">
           <div class="shields-text-content">
-            <h2>Click the Shields Button</h2>
-            <p>Brave blocks ads and trackers that slow you down and invade your privacy.</p>
-            <p>Control your shields for each website you visit. Just click on the lion in the top-right.</p>
+            <h2 data-l10n-id="clickTheShieldsButton"></h2>
+            <p data-l10n-id="braveShieldsYou"></p>
+            <p data-l10n-id="controlYourSiteShields"></p>
           </div>
         </article>
       </div>
@@ -83,11 +89,11 @@
       <div class="row">
         <div class="col-sm-5">
           <div class="shields-text-content">
-            <p class="shields-text-content-one-line">See live reporting on trackers and more.</p>
+            <p data-l10n-id="viewTheTruth" class="shields-text-content-one-line"></p>
           </div>
         </div>
         <div class="col-sm-7">
-          <img src="assets/img/welcome/shields_banner.png" alt="#">
+          <img src="assets/img/welcome/shields_banner.png">
         </div>
       </div>
     </aside>
@@ -99,12 +105,12 @@
 <section id="extensions" class="section-content">
   <div class="row offset-style">
     <article class="col-sm-offset-2 col-sm-10 col-xs-12 col-xs-offset-0">
-      <h2>Many top extensions are built right in.</h2>
+      <h2 data-l10n-id="builtInExtensions"></h2>
       <div class="row">
         <div class="col-sm-5 extensions-content">
-          <img class="extensions-built-in" src="assets/img/welcome/extensions_group.png" alt="#">
-          <p class="extensions-boxed-content">From password managers to Pocket, we provide the most popular extensions. And we add more with each release.</p>
-          <a href="#" class="brave-button">Manage extensions</a>
+          <img class="extensions-built-in" src="assets/img/welcome/extensions_group.png">
+          <p data-l10n-id="extensionsIntegration" class="extensions-boxed-content"></p>
+          <a data-l10n-id="manageExtensions" href="#" class="brave-button">Manage extensions</a>
         </div>
         <div class="col-sm-7 no-padding">
           <img src="assets/img/welcome/extensions_page.png">
@@ -119,10 +125,10 @@
 <section id="publishers" class="section-content">
   <div class="wrapper">
     <article class="container container-small">
-      <h2 class="title-with-image verified">Help fund the publishers you love, even when you block their ads.</h2>
-      <p>Brave Payments allows you to give a little back to the sites you frequent most, rewarding great content. Once you opt in, it's all automatic.</p>
-      <p>Or, turn your own dials, customizing how your money flows, site by site.</p>
-      <a class="brave-button" href="#">Start using Brave Payments</a>
+      <h2 data-l10n-id="fundPublishers" class="title-with-image verified"></h2>
+      <p data-l10n-id="bravePayments"></p>
+      <p data-l10n-id="customizeMoneyFlows"></p>
+      <a data-l10n-id="startUsingBravePayments" class="brave-button" href="#"></a>
       <img class="publisher-highlight" src="assets/img/welcome/publishers_feat.png">
     </article>
   </div>
@@ -133,33 +139,33 @@
 <section id="features" class="section-content">
   <div class="wrapper">
     <div class="container container-small">
-      <h2>Brave puts a new spin on browser tabs, helping hoarders and pruners alike.</h2>
-      <p class="features-description">Visit the application prefs to adjust the tab settings.</p>
-      <a class="brave-button" href="#">Edit tab options</a>
+      <h2 data-l10n-id="braveBrowserTab"></h2>
+      <p data-l10n-id="visitPrefs" class="features-description"></p>
+      <a data-l10n-id="editTabOptions" class="brave-button" href="#"></a>
       <ul class="features-list list-inline">
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature1.png" alt="#">
-          <p>Tab Previews allow for quick glances and better hunting.</p>
+          <img src="assets/img/welcome/feature1.png">
+          <p data-l10n-id="tabPreviews"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature2.png" alt="#">
-          <p>Tab Pages let's you decide how many tabs per page to view. </p>
+          <img src="assets/img/welcome/feature2.png">
+          <p data-l10n-id="tabPages"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature3.png" alt="#">
-          <p>Pinned Tabs are ever present, always there when you need them.</p>
+          <img src="assets/img/welcome/feature3.png">
+          <p data-l10n-id="pinnedTabs"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature4.png" alt="#">
-          <p>Never lose a tab again with tab-page previewing.</p>
+          <img src="assets/img/welcome/feature4.png">
+          <p data-l10n-id="tabPagePreview"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature5.png" alt="#">
-          <p>Use Session Tabs to easily manage multiple social accounts.</p>
+          <img src="assets/img/welcome/feature5.png">
+          <p data-l10n-id="sessionTabs"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature6.png" alt="#">
-          <p>Private tabs work anywhere, any time.</p>
+          <img src="assets/img/welcome/feature6.png">
+          <p data-l10n-id="privateTabs"></p>
         </li>
       </ul>
     </div>
@@ -171,9 +177,19 @@
   <section id="about" class="section-content">
     <div class="wrapper">
       <article class="container container-small">
-        <h2 class="title-with-image brave github">Brave is open-source! Help us build the best browser on the planet. Go to <a href="https/github.com/brave/browser-laptop">GitHub.com/brave</a> and open your first pull request today!</h2>
-        <p>We love feedback and pride ourselves in creating a product that our users love. If you like Brave, <a href="">let us know</a>.</p>
-        <p>If you run into problems, let us know! Stop by the community at <a href="https://community.brave.com">community.brave.com</a>.</p>
+        <h2 class="title-with-image brave github">
+          <span data-l10n-id="braveIsOpenSource"></span>&nbsp;
+          <a href="https://github.com/brave/browser-laptop">GitHub.com/brave</a>&nbsp;
+          <span data-l10n-id="openYourFirstPullRequest"></span>
+        </h2>
+        <p>
+          <span data-l10n-id="feedback"></span>&nbsp;
+          <a data-l10n-id="letUsKnow" href="#"></a>.
+        </p>
+        <p>
+          <span data-l10n-id="communityHelp"></span>&nbsp;
+          <a href="https://community.brave.com">community.brave.com</a>.
+        </p>
       </article>
     </div>
   </section>
