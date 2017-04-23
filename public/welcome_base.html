@@ -1,26 +1,35 @@
 
 <header id="masthead" class="section-content">
   <div class="wrapper">
-    <h1 class="section-title container-small">Get ready to experience the fastest and safest browser on earth.</h1>
+    <h1 data-l10n-id="mainTitle" class="section-title container-small"></h1>
     <div class="container discover">
       <div class="discover-block col-sm-4">
         <img src="assets/img/welcome/import_icon.png">
         <h2 data-l10n-id="importYourData" class="discover-description"></h2>
-        <a data-l10n-id="imReady" class="brave-button" href="#"></a>
+        <a data-l10n-id="imReady"
+          class="brave-button"
+          target="_blank"
+          href="chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/about-bookmarks.html"></a>
       </div>
       <div class="discover-block col-sm-4">
         <img src="assets/img/welcome/shields_icon.png">
         <h2 data-l10n-id="adjustYourShields" class="discover-description"></h2>
-        <a data-l10n-id="learnHow" class="brave-button" href="#"></a>
+        <a data-l10n-id="learnHow"
+          class="brave-button"
+          target="_blank"
+          href="#"></a>
       </div>
       <div class="discover-block col-sm-4">
         <img src="assets/img/welcome/extensions_icon.png">
         <h2 data-l10n-id="enableYourExtensions" class="discover-description"></h2>
-        <a data-l10n-id="learnMore" class="brave-button" href="#"></a>
+        <a data-l10n-id="learnMore"
+          class="brave-button"
+          target="_blank"
+          href="chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/about-preferences.html#extensions"></a>
       </div>
     </div>
     <div class="center-block next-section-link">
-      <a href="#">
+      <a href="#shields" class="smooth-anchor">
         <span data-l10n-id="andMore" class="next-section-link-text"></span>
         <span class="scroll-down-arrow"></span>
       </a>
@@ -35,7 +44,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-5">
-          <img src="assets/img/welcome/shields_pointer.png" alt="">
+          <img src="assets/img/welcome/shields_pointer.png">
         </div>
         <article class="col-sm-7">
           <div class="shields-text-content">
@@ -65,13 +74,16 @@
 
 <section id="extensions" class="section-content">
   <div class="row offset-style">
-    <article class="col-sm-offset-2 col-sm-10 col-xs-12 col-xs-offset-0">
+    <article class="col-sm-offset-2 col-sm-10 col-xs-12 col-xs-offset-0 reset-when-large">
       <h2 data-l10n-id="builtInExtensions"></h2>
       <div class="row">
         <div class="col-sm-5 extensions-content">
           <img class="extensions-built-in" src="assets/img/welcome/extensions_group.png">
           <p data-l10n-id="extensionsIntegration" class="extensions-boxed-content"></p>
-          <a data-l10n-id="manageExtensions" href="#" class="brave-button">Manage extensions</a>
+          <a data-l10n-id="manageExtensions"
+            target="_blank"
+            href="chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/about-preferences.html#extensions"
+            class="brave-button">Manage extensions</a>
         </div>
         <div class="col-sm-7 no-padding">
           <img src="assets/img/welcome/extensions_page.png">
@@ -89,7 +101,10 @@
       <h2 data-l10n-id="fundPublishers" class="title-with-image verified"></h2>
       <p data-l10n-id="bravePayments"></p>
       <p data-l10n-id="customizeMoneyFlows"></p>
-      <a data-l10n-id="startUsingBravePayments" class="brave-button" href="#"></a>
+      <a data-l10n-id="startUsingBravePayments"
+        class="brave-button"
+        target="_blank"
+        href="chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/about-preferences.html#payments"></a>
       <img class="publisher-highlight" src="assets/img/welcome/publishers_feat.png">
     </article>
   </div>
@@ -102,30 +117,45 @@
     <div class="container container-small">
       <h2 data-l10n-id="braveBrowserTab"></h2>
       <p data-l10n-id="visitPrefs" class="features-description"></p>
-      <a data-l10n-id="editTabOptions" class="brave-button" href="#"></a>
+      <a data-l10n-id="editTabOptions"
+        class="brave-button"
+        target="_blank"
+        href="chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd/about-preferences.html#tabs"></a>
       <ul class="features-list list-inline">
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature1.png">
+          <div class="featured-image-wrapper">
+            <img src="assets/img/welcome/feature1.png">
+          </div>
           <p data-l10n-id="tabPreviews"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature2.png">
+          <div class="featured-image-wrapper">
+            <img src="assets/img/welcome/feature2.png">
+          </div>
           <p data-l10n-id="tabPages"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature3.png">
+          <div class="featured-image-wrapper">
+            <img src="assets/img/welcome/feature3.png">
+          </div>
           <p data-l10n-id="pinnedTabs"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature4.png">
+          <div class="featured-image-wrapper">
+            <img src="assets/img/welcome/feature4.png">
+          </div>
           <p data-l10n-id="tabPagePreview"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature5.png">
+          <div class="featured-image-wrapper">
+            <img src="assets/img/welcome/feature5.png">
+          </div>
           <p data-l10n-id="sessionTabs"></p>
         </li>
         <li class="col-sm-4">
-          <img src="assets/img/welcome/feature6.png">
+          <div class="featured-image-wrapper">
+            <img src="assets/img/welcome/feature6.png">
+          </div>
           <p data-l10n-id="privateTabs"></p>
         </li>
       </ul>
@@ -140,16 +170,16 @@
       <article class="container container-small">
         <h2 class="title-with-image brave github">
           <span data-l10n-id="braveIsOpenSource"></span>&nbsp;
-          <a href="https://github.com/brave/browser-laptop">GitHub.com/brave</a>&nbsp;
+          <a target="_blank" href="https://github.com/brave/browser-laptop">GitHub.com/brave</a>&nbsp;
           <span data-l10n-id="openYourFirstPullRequest"></span>
         </h2>
         <p>
-          <span data-l10n-id="feedback"></span>&nbsp;
-          <a data-l10n-id="letUsKnow" href="#"></a>.
+          <a target="_blank" data-l10n-id="letUsKnow" href="https://community.brave.com"></a>&nbsp;
+          <span data-l10n-id="feedback"></span>
         </p>
         <p>
           <span data-l10n-id="communityHelp"></span>&nbsp;
-          <a href="https://community.brave.com">community.brave.com</a>.
+          <a target="_blank" href="https://community.brave.com">community.brave.com</a>.
         </p>
       </article>
     </div>
