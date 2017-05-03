@@ -108,6 +108,7 @@ var Brave = Brave || window.Brave || { app: {} };
     },
 
     handleDownloadButtonClick: function(event) {
+      _paq.push(['trackEvent', 'DownloadClicked', 'Clicked', 'Home'])
       window.location.href = this.state.downloadURL;
     },
 
