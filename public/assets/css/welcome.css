@@ -110,7 +110,7 @@
 }
 
 .title-with-image.github:after {
-  background-image: url('../img/welcome/github_logo.png');
+  /*background-image: url('../img/welcome/github_logo.png');*/
 }
 
 /**
