@@ -6,6 +6,8 @@
 const Hapi = require('hapi')
 var assets = require('./assets.js')
 var mailchimp = require('./mailchimp.js')
+var Blankie = require('blankie')
+var Scooter = require('scooter')
 
 const server = new Hapi.Server()
 var useragent = require('useragent')
@@ -32,6 +34,13 @@ server.register({
 server.register(require('inert'), (err) => {
   if (err) {
     console.log('Failed to load inert.')
+  }
+})
+
+// Register Blankie to make use CSP directives
+server.register([Scooter, { register: Blankie }], (err) => {
+  if (err) {
+    console.log(err)
   }
 })
 
@@ -179,6 +188,18 @@ server.route({
         preload: true
       },
       xframe: true
+    },
+    plugins: {
+      blankie: {
+        frameAncestors: 'chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd',
+        defaultSrc: '\'self\'',
+        styleSrc: '\'unsafe-inline\' https://fonts.googleapis.com/ \'self\'',
+        scriptSrc: '\'unsafe-inline\' *.brave.com \'self\'',
+        fontSrc: 'https://fonts.gstatic.com data: \'self\'',
+        imgSrc:  '*.brave.com \'self\'',
+        // don't generate nonces automatically
+        generateNonces: false
+      }
     }
   },
   handler: {
