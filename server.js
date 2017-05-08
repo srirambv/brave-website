@@ -191,7 +191,14 @@ server.route({
     },
     plugins: {
       blankie: {
-        frameAncestors: 'chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd'
+        frameAncestors: 'chrome-extension://mnojpmjdmbbfmejpflffifhffcmidifd',
+        defaultSrc: '\'self\'',
+        styleSrc: '\'unsafe-inline\' https://fonts.googleapis.com/ \'self\'',
+        scriptSrc: '\'unsafe-inline\' *.brave.com \'self\'',
+        fontSrc: 'https://fonts.gstatic.com data: \'self\'',
+        imgSrc:  '*.brave.com \'self\'',
+        // don't generate nonces automatically
+        generateNonces: false
       }
     }
   },
